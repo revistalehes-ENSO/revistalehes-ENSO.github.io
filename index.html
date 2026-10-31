@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revista LEHES</title>
+<meta name="description" content="LEHES, Revista: Leer, Escribir, Hablar & Escuchar. Revista institucional de investigación de la Escuela Normal Superior Oiba, Santander, Colombia. Acceso abierto.">
+<meta property="og:title" content="Revista LEHES · Escuela Normal Superior Oiba">
+<meta property="og:description" content="Donde la escuela se lee, se escribe, se habla y se escucha.">
+<meta property="og:image" content="img/logo-lehes@2x.png">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/colores.css">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="progreso" id="progreso" aria-hidden="true"></div>
+
+<header class="cabecera">
+  <div class="envoltura barra">
+    <a class="marca" href="#inicio" aria-label="LEHES, ir al inicio">
+      <img src="img/logo-lehes@2x.png" alt="Logotipo de LEHES" width="78" height="53">
+      <span class="marca-texto">
+        <b>Revista LEHES</b>
+        <small>Leer, Escribir, Hablar &amp; Escuchar</small>
+      </span>
+    </a>
+    <div class="barra-der">
+      <img class="escudo" src="img/escudo-enso.png" alt="Escudo de la Escuela Normal Superior Oiba" width="44" height="45">
+      <a class="btn" href="#suscribirse">Suscribirme</a>
+    </div>
+  </div>
+  <nav class="envoltura pestanas" aria-label="Secciones de la revista">
+    <a href="#inicio">Inicio</a>
+    <a href="#numero-actual">Número actual</a>
+    <a href="#secciones">Secciones</a>
+    <a href="#archivo">Archivo</a>
+    <a href="#envios">Publicar</a>
+    <a href="#comite">Comité editorial</a>
+    <a href="#acerca">Acerca de</a>
+  </nav>
+</header>
+
+<main id="contenido" class="envoltura" tabindex="-1">
+  <p class="cargando">Cargando la revista…</p>
+</main>
+
+<footer class="pie">
+  <div class="pie-franja" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="envoltura pie-rejilla">
+    <div>
+      <img src="img/logo-lehes.png" alt="" width="64" height="44">
+      <p><b>Revista LEHES</b><br><span data-campo="nombre_largo"></span></p>
+    </div>
+    <div>
+      <p><span data-campo="institucion"></span><br><span data-campo="ciudad"></span><br>ISSN: <span data-campo="issn"></span></p>
+    </div>
+    <div>
+      <p>Los contenidos se publican bajo licencia<br><a data-enlace="licencia" href="#" rel="license"></a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/vendor/marked.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

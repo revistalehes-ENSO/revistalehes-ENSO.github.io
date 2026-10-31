@@ -1,0 +1,30 @@
+[
+  {
+    "id": "estrategia-ludica-ingles",
+    "numero": "v1n1",
+    "seccion": "investigacion",
+    "tipo": "Artículo de investigación original",
+    "titulo": "Estrategia lúdica para fortalecer la habilidad escrita en inglés en el grado cuarto uno",
+    "titulo_ingles": "A playful strategy to strengthen English writing skills in fourth grade",
+    "autores": [
+      {
+        "nombre": "Farid Santiago Niño Vargas",
+        "correo": "santiagovargasfn@gmail.com",
+        "orcid": "0009-0005-2077-6476",
+        "filiacion": "Escuela Normal Superior Oiba"
+      }
+    ],
+    "autores_apa": "Niño Vargas, F. S.",
+    "anio": 2024,
+    "paginas": "1–26",
+    "fechas": { "recibido": "24 de septiembre de 2024", "aceptado": "15 de noviembre de 2024", "aprobado": "20 de noviembre de 2024" },
+    "resumen": "El inglés es crucial a nivel global y en Colombia ha cobrado importancia con las políticas del Ministerio de Educación que buscan mejorar su aprendizaje. Sin embargo, los resultados de pruebas nacionales muestran que los estudiantes colombianos alcanzan niveles intermedios, destacando la escritura como su habilidad más débil. En la Escuela Normal Superior Oiba (ENSO), muchos estudiantes no alcanzan el nivel B1 en inglés al graduarse, y en primaria, las competencias aún no se desarrollan por completo, lo que afecta los objetivos de bilingüismo. Para abordar esta problemática, se implementó el juego como estrategia lúdica para fortalecer la habilidad escrita en estudiantes de cuarto grado. Asimismo, se empleó la investigación participativa, lo que permitió analizar la situación mediante diversas técnicas e instrumentos flexibles para la recolección de datos. Como resultado, se lograron avances significativos en la enseñanza y aprendizaje de la escritura en inglés, con un enfoque en las competencias gramatical, semántica y fonológica. Además, el juego resultó ser efectivo para crear un ambiente de aprendizaje divertido y competitivo, beneficiando también el desarrollo cognitivo, social y emocional de los estudiantes.",
+    "abstract": "English is crucial globally and in Colombia it has gained importance with the policies of the Ministry of Education that seek to improve its learning. However, national test results show that Colombian students reach intermediate levels, with writing standing out as their weakest skill. At the Escuela Normal Superior Oiba (ENSO), many students do not reach B1 level in English upon graduation, and in primary school, competencies are still not fully developed, which affects bilingualism objectives. To address this problem, the game was implemented as a ludic strategy to strengthen writing skills in fourth grade students. Likewise, participatory research was used, which made it possible to analyze the situation by means of various techniques and flexible instruments for data collection. As a result, significant progress was achieved in the teaching and learning of writing in English, with a focus on grammatical, semantic and phonological skills. In addition, the game proved to be effective in creating a fun and competitive learning environment, also benefiting the cognitive, social and emotional development of the students.",
+    "palabras_clave": ["investigación participativa", "juego", "lengua extranjera", "escritura", "inglés"],
+    "keywords": ["participatory research", "play", "foreign language", "writing", "English"],
+    "voz_autor": "",
+    "texto": "articulos/2024-v1n1-estrategia-ludica-ingles.md",
+    "pdf": "pdf/2024-v1n1-estrategia-ludica-ingles.pdf",
+    "doi": ""
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "_instrucciones": "Edite los valores entre comillas. Todo lo que esté entre [CORCHETES] es un espacio por llenar y en el sitio aparece como 'Por designar'.",
+
+  "nombre_corto": "LEHES",
+  "nombre_largo": "Revista: Leer, Escribir, Hablar & Escuchar",
+  "nombre_ingles": "Lehes Journal",
+  "institucion": "Escuela Normal Superior Oiba",
+  "sigla_institucion": "ENSO",
+  "ciudad": "Oiba, Santander, Colombia",
+  "issn": "[ISSN EN TRÁMITE]",
+  "periodicidad": "Semestral",
+  "lema": "Donde la escuela se lee, se escribe, se habla y se escucha",
+  "correo_contacto": "[CORREO DE LA REVISTA]",
+  "licencia": {
+    "nombre": "Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional",
+    "sigla": "CC BY-NC-ND 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es"
+  },
+
+  "enlaces": {
+    "formulario_suscripcion": "[URL DEL FORMULARIO DE GOOGLE PARA SUSCRIPCIÓN]",
+    "formulario_envio": "[URL DEL FORMULARIO DE GOOGLE PARA ENVIAR ARTÍCULOS]",
+    "canal_whatsapp": "[URL DEL CANAL DE WHATSAPP]",
+    "sitio_enso": "[URL DEL SITIO WIX DE LA ENSO]",
+    "plantilla_word": "plantillas/Plantilla-LEHES.docx",
+    "plantilla_latex": "plantillas/Plantilla-LEHES-LaTeX.zip"
+  },
+
+  "secciones": [
+    { "id": "investigacion", "nombre": "Artículos de investigación", "verbo": "leer",
+      "descripcion": "Resultados de investigaciones terminadas, con revisión por pares." },
+    { "id": "procesos", "nombre": "Procesos en curso", "verbo": "escribir",
+      "descripcion": "Avances de investigación: preguntas, métodos y primeros hallazgos." },
+    { "id": "aula", "nombre": "Experiencias de aula", "verbo": "hablar",
+      "descripcion": "Prácticas pedagógicas sistematizadas por docentes y maestros en formación." },
+    { "id": "semillero", "nombre": "Voces del semillero", "verbo": "escuchar",
+      "descripcion": "Textos de los semilleros y del PFC, entrevistas y reseñas." }
+  ],
+
+  "numeros": [
+    { "id": "v1n1", "volumen": 1, "numero": 1, "fecha": "Noviembre de 2024",
+      "titulo": "Número inaugural",
+      "nota_editor": "[NOTA DEL EDITOR DEL VOL. 1, NÚM. 1]" }
+  ],
+  "numero_actual": "v1n1",
+
+  "comite": [
+    { "cargo": "Director(a) / Editor(a) general", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
+    { "cargo": "Coeditor(a)", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
+    { "cargo": "Comité editorial — Lenguaje", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
+    { "cargo": "Comité editorial — Matemáticas", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
+    { "cargo": "Representante del PFC", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
+    { "cargo": "Par evaluador externo", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
+    { "cargo": "Diseño y desarrollo web", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" }
+  ]
+}

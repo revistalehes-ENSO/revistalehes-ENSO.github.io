@@ -1,0 +1,65 @@
+/* =====================================================================
+   LEHES · PANEL DE CONTROL VISUAL
+   ---------------------------------------------------------------------
+   Este es el ÚNICO archivo que hay que tocar para cambiar colores,
+   tipografías, bordes o la velocidad de las animaciones.
+   El resto del sitio (estilos.css y app.js) solo usa estos nombres.
+
+   Origen de los colores:
+   · azul-noche y ambar ........ logotipo oficial de LEHES
+   · rojo-enso y verde-enso .... escudo de la Escuela Normal Superior Oiba
+   · azul-articulo y celeste ... franjas y líneas del artículo maquetado
+   ===================================================================== */
+
+:root {
+  /* 1. Colores de identidad (no cambiar sin aprobación institucional) */
+  --azul-noche:      #1a1b41;  /* fondo del logo LEHES */
+  --ambar:           #fbaf00;  /* la "H" del logo LEHES */
+  --rojo-enso:       #b3191f;  /* triángulo del escudo ENSO */
+  --verde-enso:      #2f8f46;  /* campo verde del escudo ENSO */
+  --azul-articulo:   #2b6497;  /* franja del pie de página del artículo */
+  --celeste:         #5b9bd5;  /* línea bajo el título del artículo */
+
+  /* 2. Un color por verbo (cada sección de la revista toma uno) */
+  --color-leer:      var(--azul-articulo);
+  --color-escribir:  var(--verde-enso);
+  --color-hablar:    var(--ambar);
+  --color-escuchar:  var(--rojo-enso);
+  /* Texto que va encima de cada color de verbo */
+  --texto-sobre-leer:     #ffffff;
+  --texto-sobre-escribir: #ffffff;
+  --texto-sobre-hablar:   var(--azul-noche);
+  --texto-sobre-escuchar: #ffffff;
+
+  /* 3. Neutros (papel, tinta y líneas) */
+  --papel:        #f4f5f9;   /* fondo general, gris con un toque del azul del logo */
+  --hoja:         #ffffff;   /* tarjetas y cajas */
+  --tinta:        var(--azul-noche);
+  --tinta-suave:  #4f5272;
+  --tinta-tenue:  #7d8099;
+  --linea:        #dcdeea;
+  --sombra:       0 10px 30px -18px rgba(26, 27, 65, .45);
+
+  /* 4. Tipografías
+     Jost recuerda a Century Gothic (títulos del artículo impreso)
+     EB Garamond es la misma familia del cuerpo del artículo impreso
+     Caveat es la "letra a mano" para los toques humanos */
+  --letra-titulos: "Jost", "Century Gothic", "Avenir Next", system-ui, sans-serif;
+  --letra-texto:   "EB Garamond", Garamond, "Times New Roman", serif;
+  --letra-mano:    "Caveat", "Segoe Print", cursive;
+
+  /* 5. Formas */
+  --radio-grande:  20px;
+  --radio:         14px;
+  --radio-chico:   8px;
+  --ancho-maximo:  1120px;
+  --ancho-lectura: 68ch;
+
+  /* 6. Animación (pon 0ms para apagarlas todas) */
+  --vel-rapida:  180ms;
+  --vel-normal:  420ms;
+  --vel-lenta:   900ms;
+  --curva:       cubic-bezier(.2, .7, .2, 1);
+
+  color-scheme: light;
+}
