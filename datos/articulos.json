@@ -17,14 +17,118 @@
     "autores_apa": "Niño Vargas, F. S.",
     "anio": 2024,
     "paginas": "1–26",
-    "fechas": { "recibido": "24 de septiembre de 2024", "aceptado": "15 de noviembre de 2024", "aprobado": "20 de noviembre de 2024" },
+    "fechas": {
+      "recibido": "24 de septiembre de 2024",
+      "aceptado": "15 de noviembre de 2024",
+      "aprobado": "20 de noviembre de 2024"
+    },
     "resumen": "El inglés es crucial a nivel global y en Colombia ha cobrado importancia con las políticas del Ministerio de Educación que buscan mejorar su aprendizaje. Sin embargo, los resultados de pruebas nacionales muestran que los estudiantes colombianos alcanzan niveles intermedios, destacando la escritura como su habilidad más débil. En la Escuela Normal Superior Oiba (ENSO), muchos estudiantes no alcanzan el nivel B1 en inglés al graduarse, y en primaria, las competencias aún no se desarrollan por completo, lo que afecta los objetivos de bilingüismo. Para abordar esta problemática, se implementó el juego como estrategia lúdica para fortalecer la habilidad escrita en estudiantes de cuarto grado. Asimismo, se empleó la investigación participativa, lo que permitió analizar la situación mediante diversas técnicas e instrumentos flexibles para la recolección de datos. Como resultado, se lograron avances significativos en la enseñanza y aprendizaje de la escritura en inglés, con un enfoque en las competencias gramatical, semántica y fonológica. Además, el juego resultó ser efectivo para crear un ambiente de aprendizaje divertido y competitivo, beneficiando también el desarrollo cognitivo, social y emocional de los estudiantes.",
     "abstract": "English is crucial globally and in Colombia it has gained importance with the policies of the Ministry of Education that seek to improve its learning. However, national test results show that Colombian students reach intermediate levels, with writing standing out as their weakest skill. At the Escuela Normal Superior Oiba (ENSO), many students do not reach B1 level in English upon graduation, and in primary school, competencies are still not fully developed, which affects bilingualism objectives. To address this problem, the game was implemented as a ludic strategy to strengthen writing skills in fourth grade students. Likewise, participatory research was used, which made it possible to analyze the situation by means of various techniques and flexible instruments for data collection. As a result, significant progress was achieved in the teaching and learning of writing in English, with a focus on grammatical, semantic and phonological skills. In addition, the game proved to be effective in creating a fun and competitive learning environment, also benefiting the cognitive, social and emotional development of the students.",
-    "palabras_clave": ["investigación participativa", "juego", "lengua extranjera", "escritura", "inglés"],
-    "keywords": ["participatory research", "play", "foreign language", "writing", "English"],
+    "palabras_clave": [
+      "investigación participativa",
+      "juego",
+      "lengua extranjera",
+      "escritura",
+      "inglés"
+    ],
+    "keywords": [
+      "participatory research",
+      "play",
+      "foreign language",
+      "writing",
+      "English"
+    ],
     "voz_autor": "",
     "texto": "articulos/2024-v1n1-estrategia-ludica-ingles.md",
     "pdf": "pdf/2024-v1n1-estrategia-ludica-ingles.pdf",
+    "doi": ""
+  },
+  {
+    "id": "gamificacion-vocabulario-ingles",
+    "numero": "v1n1",
+    "seccion": "investigacion",
+    "tipo": "Artículo de investigación original",
+    "titulo": "Gamificación para el fortalecimiento de vocabulario básico en inglés en estudiantes de grado segundo",
+    "titulo_ingles": "Gamification for the strengthening of basic English vocabulary in second grade students",
+    "autores": [
+      {
+        "nombre": "Lizeth Dayana López Martínez",
+        "correo": "lizethdayanalopez02@gmail.com",
+        "orcid": "0009-0006-4475-7963",
+        "filiacion": "Escuela Normal Superior Oiba"
+      }
+    ],
+    "autores_apa": "López Martínez, L. D.",
+    "anio": 2024,
+    "paginas": "1–35",
+    "fechas": {
+      "recibido": "24 de septiembre de 2024",
+      "aceptado": "15 de noviembre de 2024",
+      "aprobado": "20 de noviembre de 2024"
+    },
+    "resumen": "Esta investigación es el resultado de un estudio cuyo objetivo fue analizar el alcance de la gamificación como estrategia didáctica en el fortalecimiento del vocabulario básico en inglés de estudiantes de grado segundo uno de la Escuela Normal Superior Oiba. Lo anterior teniendo en cuenta la importancia del inglés como puerta de acceso a mejores oportunidades laborales y académicas; además, se destacó la relevancia del vocabulario para desarrollar competencias comunicativas. A través de las técnicas de recolección de datos, como un diagnóstico y entrevistas, se identificaron problemáticas relacionadas con el aprendizaje de vocabulario. Para abordar esta situación, se adoptó un enfoque cualitativo, basado en un paradigma socio crítico y una metodología de investigación-acción. Se diseñó una secuencia didáctica fundamentada en la gamificación, enfocándose en los estilos de vida saludable para priorizar las habilidades de lectura y escritura. El análisis de los datos evidenció la mejora en el vocabulario de los estudiantes, quienes pasaron de niveles bajos a altos en comprensión y uso de las palabras aprendidas. Los resultados destacan la efectividad de la gamificación para dinamizar los procesos de enseñanza y aprendizaje del inglés.",
+    "abstract": "This research is the result of a study whose objective was to analyze the scope of gamification as a didactic strategy in strengthening the basic English vocabulary of second grade students at the Escuela Normal Superior Oiba. The above, taking into account the importance of English as a gateway to better job and academic opportunities, was considered; in addition, the relevance of vocabulary to develop communicative competencies was highlighted. Through data collection techniques, such as diagnosis and interviews, problems related to vocabulary learning were identified. To address this situation, a qualitative approach was adopted, based on a socio-critical paradigm and an action research methodology. A didactic sequence based on gamification was designed, focusing on healthy lifestyles to prioritize reading and writing skills. The data analysis evidenced the improvement in the vocabulary of the students, who went from low to high levels in comprehension and use of the words learned. The results highlight the effectiveness of gamification to dynamize the processes of teaching and learning English.",
+    "palabras_clave": [
+      "lengua extranjera",
+      "inglés",
+      "vocabulario",
+      "estrategia didáctica",
+      "gamificación"
+    ],
+    "keywords": [
+      "foreign language",
+      "English",
+      "vocabulary",
+      "didactic strategy",
+      "gamification"
+    ],
+    "voz_autor": "",
+    "texto": "articulos/2024-v1n1-gamificacion-vocabulario-ingles.md",
+    "pdf": "pdf/2024-v1n1-gamificacion-vocabulario-ingles.pdf",
+    "doi": ""
+  },
+  {
+    "id": "ludica-problemas-multiplicativos",
+    "numero": "v1n1",
+    "seccion": "investigacion",
+    "tipo": "Artículo de investigación original",
+    "titulo": "Impacto de la lúdica en la resolución de problemas multiplicativos",
+    "titulo_ingles": "The impact of playful learning on multiplicative problem-solving",
+    "autores": [
+      {
+        "nombre": "Sandra Julieth Otálora Mantilla",
+        "correo": "sanjuliethtalora@gmail.com",
+        "orcid": "0009-0006-0923-9570",
+        "filiacion": "Escuela Normal Superior Oiba"
+      }
+    ],
+    "autores_apa": "Otálora Mantilla, S. J.",
+    "anio": 2024,
+    "paginas": "1–34",
+    "fechas": {
+      "recibido": "24 de septiembre de 2024",
+      "aceptado": "15 de noviembre de 2024",
+      "aprobado": "20 de noviembre de 2024"
+    },
+    "resumen": "La presente investigación tuvo como objetivo analizar el impacto de la integración de enfoques lúdicos en la resolución de problemas que involucran el uso de las tablas de multiplicar en los estudiantes de grado tercero dos de la Escuela Normal Superior Oiba (ENSO). La investigación se sustenta en Alcedo y Chacón (2011) y Huizinga (1987), quienes promueven el uso de enfoques lúdicos en el aprendizaje. Asimismo, Pólya (1978), citado por Leal y Anderson (2015), destaca la importancia de la resolución de problemas en la enseñanza de la matemática. Se empleó un enfoque cualitativo con un diseño de investigación basado en Kemmis & Mc Taggart (1989), citados por Latorre (2005). A partir de estos referentes, se diseñó y aplicó una secuencia didáctica (Díaz Barriga, 2013), con el propósito de implementar los enfoques lúdicos para fortalecer habilidades matemáticas y disminuir la negativa de los estudiantes frente el área, donde se pudo evidenciar una mejora significativa en las competencias de interpretar, ejecutar y argumentar, consideradas como básicas en el área además de despertar y captar el interés de gran parte de los estudiantes.",
+    "abstract": "The purpose of this research was to analyze the impact of the integration of playful approaches in problem solving involving the use of multiplication tables in third grade two students of the Escuela Normal Superior Oiba (ENSO). The research is supported by Alcedo and Chacón (2011) and Huizinga (1987), who promote the use of ludic approaches in learning. Likewise, Pólya (1978), cited by Leal and Anderson (2015), highlights the importance of problem solving in mathematics teaching. A qualitative approach was used with an action research design based on Kemmis & Mc Taggart (1989), cited by Latorre (2005). From this, a didactic sequence was designed and applied (Díaz Barriga, 2013), with the purpose of implementing the ludic approaches to strengthen mathematical skills, where a significant improvement in the basic competencies of the area could be evidenced: interpreting, executing and arguing.",
+    "palabras_clave": [
+      "resolución de problemas",
+      "enfoques lúdicos",
+      "multiplicación",
+      "aprendizaje significativo",
+      "pensamiento numérico"
+    ],
+    "keywords": [
+      "problem solving",
+      "playful approaches",
+      "multiplication",
+      "meaningful learning",
+      "numerical thinking"
+    ],
+    "voz_autor": "",
+    "texto": "articulos/2024-v1n1-ludica-problemas-multiplicativos.md",
+    "pdf": "pdf/2024-v1n1-ludica-problemas-multiplicativos.pdf",
     "doi": ""
   }
 ]
