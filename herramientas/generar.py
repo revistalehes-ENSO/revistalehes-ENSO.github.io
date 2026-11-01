@@ -406,7 +406,7 @@ def cabecera(raiz, actual, titulo, desc, url, extra_head=""):
 <meta property="og:title" content="{e(titulo)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{BASE}/img/compartir/portada.png">
+{"" if "og:image" in extra_head else f'<meta property="og:image" content="{BASE}/img/compartir/portada.png">'}
 {extra_head}
 <link rel="icon" href="{raiz}img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -492,7 +492,8 @@ def pagina_docente(p):
           **({"sameAs": same} if same else {}),
           **({"image": f"{BASE}/{p['foto']}"} if p.get("foto") and not vacio(p["foto"]) else {})}
     robots = "" if p.get("aparecer_en_buscadores", True) else '<meta name="robots" content="noindex">'
-    extra = f'{robots}\n<meta property="og:type" content="profile">\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
+    foto_og = f'\n<meta property="og:image" content="{BASE}/{e(p["foto"])}">' if p.get("foto") and not vacio(p["foto"]) else ""
+    extra = f'{robots}{foto_og}\n<meta property="og:type" content="profile">\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
     color_chip = "var(--azul-noche)" if n["color"] == "color-hablar" else "#fff"
     cajas = f'<div class="caja"><h3>Formación</h3>' + (f'<ul>{"".join(f"<li>{e(f)}</li>" for f in formacion)}</ul>' if formacion else '<p class="por-llenar">Por completar</p>') + "</div>"
     if not vacio(p.get("investigacion")) or pubs or not vacio(p.get("otros_cargos")) or same:
@@ -527,7 +528,7 @@ def pagina_docente(p):
 
 def pagina_maestros():
     raiz = "../"; url = f"{BASE}/maestros/"
-    gente = perfiles()
+    gente = [p for p in perfiles() if p.get("aparecer_en_buscadores", True)]   # solo quienes aceptan aparecer en buscadores
     bloques = ""
     for n in D.get("nucleos", []):
         g = [p for p in gente if p.get("nucleo") == n["id"]]
@@ -550,6 +551,7 @@ def pagina_maestros():
   <h1>Nuestros maestros</h1>
   <p class="lead">El equipo directivo y docente de la {e(R['institucion'])} ({e(SIGLA)}), en Oiba, Santander. Cada perfil cuenta su formación y su recorrido en la investigación.</p>
   {bloques}
+  <p><a class="btn claro" href="{raiz}#docentes">Ver a todo el equipo de la {e(SIGLA)}</a></p>
   <p class="aviso">Los perfiles se publican con autorización de cada persona, según la Ley 1581 de 2012 de protección de datos personales.</p>
 </section>
 """
