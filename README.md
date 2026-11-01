@@ -11,6 +11,8 @@ Sitio estático (HTML, CSS y JavaScript, sin servidor ni base de datos). Se publ
 |---|---|---|
 | `css/colores.css` | **Panel de control visual**: todos los colores, letras y velocidades de animación | Sí, aquí se cambia el aspecto |
 | `datos/revista.json` | Nombre, ISSN, enlaces, secciones, números y **comité editorial** (los `[CORCHETES]` se muestran como "Por designar") | Sí |
+| `datos/docentes.json` | Perfiles de "Nuestros maestros" por núcleos (solo se publica quien autoriza) | Sí |
+| `img/docentes/` | Retratos de los docentes | Sí |
 | `datos/articulos.json` | Ficha de cada artículo: título, autores, fechas, resumen, abstract, palabras clave | Sí, uno por artículo |
 | `articulos/*.md` | Texto completo del artículo en Markdown, para leerlo dentro del sitio | Sí |
 | `articulos/img/` | Figuras de los artículos | Sí |
@@ -39,3 +41,11 @@ y abra `http://localhost:8000`. (Con VS Code también sirve la extensión *Live 
 5. Suba los cambios a GitHub. En uno o dos minutos el sitio se actualiza solo.
 
 Licencias de terceros: `js/vendor/marked.min.js` (MIT, ver `marked-LICENSE.md`).
+
+## Contador de visitas (GoatCounter, gratis y sin cookies)
+
+1. Cree una cuenta en goatcounter.com (gratis para uso no comercial). Elija un código, por ejemplo `revistalehes`.
+2. En *Settings*, marque **Allow adding visitor counts on your website** y guarde.
+3. En `datos/revista.json`, cambie `"goatcounter": "[CÓDIGO DE GOATCOUNTER]"` por `"goatcounter": "revistalehes"`.
+
+El sitio contará las lecturas, las descargas de PDF y los clics en "Me fue útil" de cada artículo, y las visitas totales. Las cifras se actualizan cada 30 minutos aproximadamente.

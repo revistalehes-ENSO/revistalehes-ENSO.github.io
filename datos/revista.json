@@ -17,6 +17,11 @@
     "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es"
   },
 
+  "estadisticas": {
+    "_ayuda": "Cree una cuenta gratis en goatcounter.com, active 'Allow adding visitor counts on your website' y escriba aquí su código (lo que va antes de .goatcounter.com).",
+    "goatcounter": "[CÓDIGO DE GOATCOUNTER]"
+  },
+
   "enlaces": {
     "formulario_suscripcion": "[URL DEL FORMULARIO DE GOOGLE PARA SUSCRIPCIÓN]",
     "formulario_envio": "[URL DEL FORMULARIO DE GOOGLE PARA ENVIAR ARTÍCULOS]",

@@ -14,10 +14,11 @@
     hablar:   { nombre: "Hablar",   frase: "Para poner las ideas en común." },
     escuchar: { nombre: "Escuchar", frase: "A la comunidad y a sus voces." }
   };
-  const VISTAS_FIJAS = ["inicio", "numero-actual", "secciones", "archivo", "envios", "comite", "acerca", "suscribirse"];
+  const VISTAS_FIJAS = ["inicio", "numero-actual", "secciones", "archivo", "docentes", "envios", "comite", "acerca", "suscribirse"];
 
   let R = null;       // datos de la revista
   let A = [];         // artículos
+  let D = null;       // docentes
   const app = document.getElementById("contenido");
 
   /* ---------- utilidades ---------- */
@@ -42,11 +43,48 @@
   }
   const rutaRecurso = (ruta) => (window.LEHES_IMAGENES && window.LEHES_IMAGENES[ruta]) || ruta;
 
+  /* ---------- estadísticas (GoatCounter, sin cookies) ---------- */
+  const GC = { codigo: "", listo: false, cola: [] };
+  function iniciarEstadisticas() {
+    const c = R.estadisticas && R.estadisticas.goatcounter;
+    if (vacio(c) || window.LEHES_EMBEBIDO) return;
+    GC.codigo = c.trim();
+    const sc = document.createElement("script");
+    sc.async = true; sc.src = "https://gc.zgo.at/count.js";
+    sc.dataset.goatcounter = `https://${GC.codigo}.goatcounter.com/count`;
+    sc.dataset.goatcounterSettings = JSON.stringify({ no_onload: true });
+    sc.onload = () => { GC.listo = true; GC.cola.splice(0).forEach(contar); };
+    document.head.appendChild(sc);
+  }
+  function contar(x) {
+    if (!GC.codigo) return;
+    if (!GC.listo || !window.goatcounter || !window.goatcounter.count) { GC.cola.push(x); return; }
+    try { window.goatcounter.count({ path: x.path, title: x.title || x.path }); } catch (_) {}
+  }
+  async function cifra(path) {
+    if (!GC.codigo) return null;
+    try {
+      const r = await fetch(`https://${GC.codigo}.goatcounter.com/counter/${encodeURIComponent(path)}.json`);
+      if (r.status === 404) return "0";
+      if (!r.ok) return null;
+      return (await r.json()).count;
+    } catch (_) { return null; }
+  }
+  async function pintarCifras(raiz = document) {
+    raiz.querySelectorAll("[data-cifra]").forEach(async (el) => {
+      const v = await cifra(el.dataset.cifra);
+      el.textContent = v === null ? "—" : v;
+    });
+  }
+  const yaUtil = (id) => { try { return localStorage.getItem("lehes-util-" + id) === "1"; } catch (_) { return false; } };
+
   function citaAPA(a) {
     const n = numero(a.numero);
     const doi = a.doi ? ` https://doi.org/${esc(a.doi)}` : "";
     return `${esc(a.autores_apa)} (${a.anio}). ${esc(a.titulo)}. <i>LEHES. Revista Leer, Escribir, Hablar &amp; Escuchar</i>, <i>${n.volumen}</i>(${n.numero}), ${esc(a.paginas)}.${doi}`;
   }
+
+  const perfilDe = (nombre) => D && D.personas.find((p) => p.autoriza_publicacion && !p.ejemplo && sinTilde(p.nombre) === sinTilde(nombre));
 
   function tarjeta(a) {
     const s = seccion(a.seccion), n = numero(a.numero);
@@ -178,7 +216,7 @@
         <h1>${esc(a.titulo)}</h1>
         <p class="titulo-ingles" lang="en">${esc(a.titulo_ingles)}</p>
         <div class="autores">${a.autores.map((x) => `<div class="autor"><span class="avatar" aria-hidden="true">${iniciales(x.nombre)}</span>
-          <span><b>${esc(x.nombre)}</b>${x.orcid ? `<a href="https://orcid.org/${esc(x.orcid)}" rel="noopener"><span class="orcid" aria-hidden="true"></span>ORCID ${esc(x.orcid)}</a>` : ""}</span></div>`).join("")}</div>
+          <span><b>${perfilDe(x.nombre) ? `<a class="a-perfil" href="#docente-${esc(perfilDe(x.nombre).id)}">${esc(x.nombre)}</a>` : esc(x.nombre)}</b>${x.orcid ? `<a href="https://orcid.org/${esc(x.orcid)}" rel="noopener"><span class="orcid" aria-hidden="true"></span>ORCID ${esc(x.orcid)}</a>` : ""}</span></div>`).join("")}</div>
       </div>
       <div class="articulo">
         <div class="cuerpo">
@@ -198,6 +236,17 @@
           <div class="caja">
             <h3>Descargar</h3>
             ${pdfDisponible ? `<a class="btn" href="${esc(a.pdf)}" download>PDF maquetado</a>` : `<a class="btn" aria-disabled="true">PDF maquetado</a><p class="aviso">En la vista previa no se incluye el PDF; en el sitio publicado se descarga desde aquí.</p>`}
+          </div>
+          <div class="caja interaccion">
+            <h3>Lectores de este artículo</h3>
+            ${GC.codigo ? `<div class="cifras">
+              <div><b data-cifra="/articulo/${esc(a.id)}">…</b><span>lecturas</span></div>
+              <div><b data-cifra="/descarga/${esc(a.id)}">…</b><span>descargas</span></div>
+              <div><b data-cifra="/util/${esc(a.id)}">…</b><span>le fue útil</span></div>
+            </div>` : `<p class="aviso" style="margin:0 0 8px">Las cifras de lecturas y descargas aparecerán cuando se active el contador de visitas.</p>`}
+            <button class="btn claro util" type="button" id="btn-util" ${yaUtil(a.id) ? 'aria-pressed="true" disabled' : 'aria-pressed="false"'}>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/></svg>
+              <span>${yaUtil(a.id) ? "¡Gracias por contarnos!" : "Este artículo me fue útil"}</span></button>
           </div>
           <div class="caja">
             <h3>Cómo citar (APA 7)</h3>
@@ -227,7 +276,19 @@
     </section>`;
   };
 
-  function activarArticulo() {
+  function activarArticulo(id) {
+    contar({ path: `/articulo/${id}`, title: `Lectura: ${(A.find((x) => x.id === id) || {}).titulo || id}` });
+    const pdf = app.querySelector('.ficha a[download]');
+    if (pdf) pdf.addEventListener("click", () => contar({ path: `/descarga/${id}`, title: `Descarga PDF: ${id}` }));
+    const util = document.getElementById("btn-util");
+    if (util) util.addEventListener("click", () => {
+      contar({ path: `/util/${id}`, title: `Me fue útil: ${id}` });
+      try { localStorage.setItem("lehes-util-" + id, "1"); } catch (_) {}
+      util.disabled = true; util.setAttribute("aria-pressed", "true");
+      util.querySelector("span").textContent = "¡Gracias por contarnos!";
+      util.classList.add("latido");
+    });
+    pintarCifras(app);
     app.querySelectorAll(".idiomas button").forEach((b) => b.addEventListener("click", () => {
       app.querySelectorAll(".idiomas button").forEach((x) => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
       app.querySelectorAll("[data-panel]").forEach((p) => { p.hidden = p.dataset.panel !== b.dataset.idioma; });
@@ -258,6 +319,111 @@
       setTimeout(() => { e.target.textContent = "Copiar cita"; }, 2400);
     });
   }
+
+  const colorNucleo = (n) => `--c: var(--${n.color});`;
+  const visibles = () => (D ? D.personas.filter((p) => p.autoriza_publicacion) : []);
+  const nucleoDe = (id) => D.nucleos.find((n) => n.id === id) || D.nucleos[0];
+  function retrato(p, clase = "retrato") {
+    const n = nucleoDe(p.nucleo);
+    return !vacio(p.foto) && p.foto
+      ? `<img class="${clase}" src="${esc(rutaRecurso(p.foto))}" alt="Retrato de ${esc(p.nombre)}" loading="lazy" style="${colorNucleo(n)}">`
+      : `<span class="${clase} avatar-grande" style="${colorNucleo(n)}" aria-hidden="true">${iniciales(p.nombre)}</span>`;
+  }
+  const anios = (p) => vacio(p.anios_experiencia) ? "" : `<span class="anios"><b>${esc(p.anios_experiencia)}</b> años enseñando</span>`;
+
+  const etiquetaNucleo = (t) => { const x = t.replace(/^Núcleo (de )?/, ""); return x.charAt(0).toUpperCase() + x.slice(1); };
+  let filtroDocentes = "todos";
+  V.docentes = () => {
+    if (!D) return `<section class="vista"><h1>Nuestros maestros</h1><p class="aviso">Pronto conocerás aquí al equipo de la ENSO.</p></section>`;
+    return `<section class="vista">
+      <p class="mano">Quienes enseñan, también investigan</p>
+      <h1>Nuestros maestros</h1>
+      <p class="lead">El equipo directivo y docente de la ${esc(R.institucion)}, organizado por núcleos. Cada tarjeta cuenta su formación, su recorrido en la investigación y algo de lo que les mueve fuera del aula.</p>
+      <label class="etiqueta" for="buscar-docente">Buscar por nombre o área</label>
+      <input id="buscar-docente" class="campo" type="search" placeholder="Ej.: matemáticas, inglés, preescolar">
+      <div class="filtros" role="group" aria-label="Filtrar por núcleo">
+        <button type="button" data-n="todos">Todos</button>
+        ${D.nucleos.map((n) => `<button type="button" data-n="${esc(n.id)}">${esc(etiquetaNucleo(n.nombre))}</button>`).join("")}
+      </div>
+      <div id="nucleos"></div>
+      <p class="aviso" id="sin-docentes" hidden>No hay perfiles con esa búsqueda.</p>
+      <p class="aviso">Los perfiles se publican con autorización de cada persona, según la Ley 1581 de 2012 de protección de datos personales.</p>
+    </section>`;
+  };
+  function tarjetaDocente(p) {
+    const n = nucleoDe(p.nucleo);
+    return `<a class="docente ${p.ejemplo ? "ejemplo" : ""}" href="#docente-${esc(p.id)}" style="${colorNucleo(n)}">
+      ${retrato(p)}
+      <span class="docente-texto">
+        <b>${mostrarValor(p.nombre, "Por designar")}</b>
+        <span class="cargo-d">${mostrarValor(p.cargo, "")}</span>
+        ${vacio(p.aula) ? "" : `<span class="aula">${esc(p.aula)}</span>`}
+        ${anios(p)}
+        ${vacio(p.frase) ? "" : `<span class="frase">«${esc(p.frase)}»</span>`}
+        ${p.ejemplo ? `<span class="muestra">Perfil de ejemplo</span>` : ""}
+      </span></a>`;
+  }
+  function activarDocentes() {
+    const caja = document.getElementById("buscar-docente");
+    const botones = app.querySelectorAll(".filtros button");
+    const pintar = () => {
+      const q = sinTilde(caja.value.trim());
+      botones.forEach((b) => b.setAttribute("aria-pressed", b.dataset.n === filtroDocentes ? "true" : "false"));
+      let total = 0;
+      document.getElementById("nucleos").innerHTML = D.nucleos.filter((n) => filtroDocentes === "todos" || n.id === filtroDocentes).map((n) => {
+        const gente = visibles().filter((p) => p.nucleo === n.id && (!q || sinTilde([p.nombre, p.cargo, p.aula, (p.formacion || []).join(" ")].join(" ")).includes(q)));
+        total += gente.length;
+        if (!gente.length && (q || filtroDocentes === "todos")) return "";
+        return `<section class="nucleo" style="${colorNucleo(n)}">
+          <h2><span class="punto" aria-hidden="true"></span>${esc(n.nombre)}</h2>
+          <p class="nucleo-desc">${esc(n.descripcion)}</p>
+          <div class="rejilla-docentes">${gente.length ? gente.map(tarjetaDocente).join("") : `<p class="aviso">Pronto conocerás a los maestros de este núcleo.</p>`}</div>
+        </section>`;
+      }).join("");
+      document.getElementById("sin-docentes").hidden = total > 0 || !q;
+    };
+    caja.addEventListener("input", pintar);
+    botones.forEach((b) => b.addEventListener("click", () => { filtroDocentes = b.dataset.n; pintar(); }));
+    pintar();
+  }
+
+  V.docente = (id) => {
+    const p = visibles().find((x) => x.id === id);
+    if (!p) return `<section class="vista"><h1>Perfil no disponible</h1><p><a href="#docentes">Ver todos los maestros</a></p></section>`;
+    const n = nucleoDe(p.nucleo);
+    const formacion = (p.formacion || []).filter((f) => !vacio(f));
+    const enl = p.enlaces || {};
+    const enlaces = [
+      enl.orcid && `<a href="https://orcid.org/${esc(enl.orcid)}" rel="noopener">ORCID</a>`,
+      enl.cvlac && `<a href="${esc(enl.cvlac)}" rel="noopener">CvLAC (Minciencias)</a>`,
+      enl.scholar && `<a href="${esc(enl.scholar)}" rel="noopener">Google Académico</a>`,
+    ].filter(Boolean);
+    const pubs = (p.publicaciones || []).filter((x) => !vacio(x));
+    const suyos = A.filter((a) => a.autores.some((x) => sinTilde(x.nombre) === sinTilde(p.nombre)));
+    return `<section class="vista perfil" style="${colorNucleo(n)}">
+      <a class="volver" href="#docentes">← Nuestros maestros</a>
+      <div class="perfil-cabeza">
+        ${retrato(p, "retrato retrato-grande")}
+        <div>
+          <span class="chip" style="--c: var(--${n.color}); --t: ${n.color === "color-hablar" ? "var(--azul-noche)" : "#fff"}">${esc(n.nombre)}</span>
+          <h1>${mostrarValor(p.nombre)}</h1>
+          <p class="lead" style="margin:0">${mostrarValor(p.cargo, "")}${vacio(p.aula) ? "" : ` · ${esc(p.aula)}`}</p>
+          ${anios(p)}
+          ${vacio(p.frase) ? "" : `<p class="frase-grande">«${esc(p.frase)}»</p>`}
+        </div>
+      </div>
+      <div class="perfil-rejilla">
+        <div class="caja"><h3>Formación</h3>${formacion.length ? `<ul>${formacion.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : `<p class="por-llenar">Por completar</p>`}</div>
+        ${vacio(p.investigacion) && !pubs.length && vacio(p.otros_cargos) && !enlaces.length ? "" : `<div class="caja"><h3>Trayectoria en investigación</h3>
+          ${vacio(p.investigacion) ? "" : `<p>${esc(p.investigacion)}</p>`}
+          ${pubs.length ? `<h4 class="sub-caja">Publicaciones</h4><ul class="pubs">${pubs.map((x) => `<li>${esc(x).replace(/(https?:\/\/[^\s<]+[^\s<.,;])/g, '<a href="$1" rel="noopener">$1</a>')}</li>`).join("")}</ul>` : ""}
+          ${vacio(p.otros_cargos) ? "" : `<p class="aviso">${esc(p.otros_cargos)}</p>`}
+          ${enlaces.length ? `<p class="enlaces-perfil">${enlaces.join(" · ")}</p>` : ""}</div>`}
+        ${vacio(p.hobbies) ? "" : `<div class="caja"><h3>Fuera del aula</h3><p>${esc(p.hobbies)}</p></div>`}
+        ${suyos.length ? `<div class="caja"><h3>Publicado en LEHES</h3><ul>${suyos.map((a) => `<li><a href="#articulo-${esc(a.id)}">${esc(a.titulo)}</a></li>`).join("")}</ul></div>` : ""}
+      </div>
+    </section>`;
+  };
 
   V.envios = () => {
     const e = R.enlaces;
@@ -358,15 +524,18 @@
     let h = (location.hash || "#inicio").slice(1);
     let html;
     if (h.startsWith("articulo-")) html = await V.articulo(h.slice(9));
+    else if (h.startsWith("docente-")) html = V.docente(h.slice(8));
     else { if (!VISTAS_FIJAS.includes(h)) h = "inicio"; html = V[h](); }
     app.innerHTML = html;
-    const marcar = h.startsWith("articulo-") ? "archivo" : h;
+    const marcar = h.startsWith("articulo-") ? "archivo" : h.startsWith("docente-") ? "docentes" : h;
     document.querySelectorAll(".pestanas a").forEach((a) => {
       if (a.getAttribute("href") === `#${marcar}`) a.setAttribute("aria-current", "page");
       else a.removeAttribute("aria-current");
     });
     if (h === "archivo") activarArchivo();
-    if (h.startsWith("articulo-")) activarArticulo();
+    if (h === "docentes") activarDocentes();
+    if (!h.startsWith("articulo-")) contar({ path: "/" + h, title: document.title + " · " + h });
+    if (h.startsWith("articulo-")) activarArticulo(h.slice(9));
     if (h === "inicio") maquinaDeEscribir();
     app.querySelectorAll("[data-filtro]").forEach((x) => x.addEventListener("click", () => { filtroArchivo = x.dataset.filtro; }));
     scrollTo(0, 0);
@@ -382,6 +551,7 @@
   async function iniciar() {
     try {
       [R, A] = await Promise.all([leer("datos/revista.json", true), leer("datos/articulos.json", true)]);
+      try { D = await leer("datos/docentes.json", true); } catch (_) { D = null; }
     } catch (e) {
       app.innerHTML = `<section class="vista"><h1>No se pudieron cargar los datos</h1>
         <p>Si abriste el archivo index.html con doble clic, el navegador bloquea la lectura de los datos. Ábrelo con un servidor local (ver el paso a paso) o desde GitHub Pages.</p>
@@ -390,6 +560,11 @@
     }
     A.sort((x, y) => y.anio - x.anio);
     rellenarPie();
+    iniciarEstadisticas();
+    const total = document.getElementById("visitas-total");
+    if (total) {
+      if (GC.codigo) { total.hidden = false; total.querySelector("b").dataset.cifra = "TOTAL"; pintarCifras(total); }
+    }
     addEventListener("hashchange", mostrar);
     mostrar();
   }

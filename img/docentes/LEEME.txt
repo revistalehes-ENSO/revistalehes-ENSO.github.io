@@ -1,0 +1,3 @@
+Coloque aquí los retratos de los docentes que autoricen publicarlos.
+Formato: JPG o PNG, cuadrado, mínimo 400 x 400 px, nombre sin tildes ni espacios (ej. jorge-lopez.jpg).
+En datos/docentes.json escriba en "foto": "img/docentes/jorge-lopez.jpg".
