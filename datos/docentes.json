@@ -1,5 +1,5 @@
 {
-  "_instrucciones": "Un bloque por persona. Solo se publica quien tenga \"autoriza_publicacion\": true (autorización escrita, Ley 1581 de 2012). Lo que esté entre [CORCHETES] no se muestra. La foto va en img/docentes/ (cuadrada, mínimo 400 x 400 px); si \"foto\" está vacío se muestra un avatar con las iniciales. \"ejemplo\": true marca las tarjetas de muestra; bórrelas cuando tenga los perfiles reales. Cada perfil publicado tiene su propia página que Google puede encontrar; si alguien quiere aparecer en la revista pero no en los buscadores, agregue \"aparecer_en_buscadores\": false.",
+  "_instrucciones": "Un bloque por persona. Solo se publica quien tenga \"autoriza_publicacion\": true (autorización escrita, Ley 1581 de 2012). Lo que esté entre [CORCHETES] no se muestra. La foto va en img/docentes/ (cuadrada, mínimo 400 x 400 px); si \"foto\" está vacío se muestra un avatar con las iniciales. \"ejemplo\": true marca las tarjetas de muestra; bórrelas cuando tenga los perfiles reales.",
   "nucleos": [
     {
       "id": "directivos",
@@ -63,8 +63,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "laura-nataly-ayala-garces",
@@ -90,8 +89,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "yazmin-rocio-barbosa-hernandez",
@@ -116,8 +114,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "ana-joaquina-becerra-chaparro",
@@ -143,8 +140,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "pedro-anibal-beltran-carreno",
@@ -171,8 +167,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "valentina-cardenas-pachon",
@@ -198,8 +193,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "rita-delia-camacho-lopez",
@@ -227,8 +221,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "martha-elizabeth-castellanos-nino",
@@ -254,8 +247,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "monica-andrea-cortes-ardila",
@@ -281,8 +273,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "fernando-cortes-serrano",
@@ -310,8 +301,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "carmen-sofia-corredor-duran",
@@ -338,8 +328,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "omaira-diaz-boavita",
@@ -366,8 +355,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "yolanda-duarte-medina",
@@ -393,8 +381,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "ruth-fabiola-espinosa",
@@ -421,8 +408,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "yamile-galvis-pelayo",
@@ -448,8 +434,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "yanive-garcia-baez",
@@ -476,8 +461,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "natalia-gomez-santamaria",
@@ -503,8 +487,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "magda-liliana-gomez-manrique",
@@ -530,8 +513,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "martha-cecilia-hernandez-saenz",
@@ -558,8 +540,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "maritza-jaimes-jaimes",
@@ -586,8 +567,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "jorge-leonardo-lopez-agredo",
@@ -598,7 +578,7 @@
       "nucleo": "por-asignar",
       "cargo": "Docente de Matemáticas y Programación",
       "aula": "Grados décimo y once",
-      "foto": "img/docentes/jorge-leonardo-lopez-agredo.jpg",
+      "foto": "",
       "anios_experiencia": "3",
       "formacion": [
         "Matemático",
@@ -617,8 +597,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": true
+      "frase": ""
     },
     {
       "id": "alexandra-lopez-garcia",
@@ -644,8 +623,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "ana-lucia-mancilla-arenas",
@@ -673,8 +651,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "monica-mateus-mateus",
@@ -703,8 +680,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "miguel-angel-martinez-agudelo",
@@ -730,8 +706,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "santiago-andres-medina-pedraza",
@@ -757,8 +732,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "milena-mejia-bravo",
@@ -784,8 +758,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "erly-carolina-mora-cerdas",
@@ -812,8 +785,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "mario-augusto-osorio-pereira",
@@ -839,8 +811,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "leidy-catherine-parra-rincon",
@@ -868,8 +839,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "mireya-penuela-garces",
@@ -895,8 +865,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "yary-zulay-perez-solano",
@@ -922,8 +891,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "henry-ramirez-quiroga",
@@ -950,8 +918,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "elisabeth-saavedra-lizarazo",
@@ -977,8 +944,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "martha-isabel-salcedo-de-cala",
@@ -1005,8 +971,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "ricardo-alfredo-sanchez-sanchez",
@@ -1033,8 +998,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "margy-mildred-santander-mieles",
@@ -1061,8 +1025,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "jose-useda-gomez",
@@ -1088,8 +1051,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     },
     {
       "id": "luz-angela-vega-vargas",
@@ -1115,8 +1077,7 @@
         "scholar": ""
       },
       "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
+      "frase": ""
     }
   ]
 }
