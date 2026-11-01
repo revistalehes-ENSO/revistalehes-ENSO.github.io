@@ -110,13 +110,13 @@ El diseño de la investigación que da lugar al presente artículo está sustent
 
 Teniendo en cuenta el diseño metodológico de esta investigación, se aplicaron diversas técnicas e instrumentos para recoger información valiosa durante todo el proceso; a saber: La entrevista, la observación no participante, la encuesta, la secuencia didáctica y los test.
 
-Entrevista.
+#### Entrevista
 
 Se utilizó como técnica la entrevista semiestructurada y el instrumento empleado fue un formato físico de preguntas abiertas dirigido a la docente encargada del grado segundo uno de la ENSO. Según Díaz et al. (2014), esta técnica es útil principalmente para estudios descriptivos y fases de exploración, ya que facilita el diseño de instrumentos de recolección de datos. Además, permite obtener información completa y profunda, aclarando dudas durante el proceso y garantizando respuestas útiles y verídicas Encuesta.
 
 De acuerdo con Hernández et al. (2012), la encuesta es una técnica de búsqueda sistemática de información en la que se plantean preguntas a los investigados para obtener datos específicos, que luego se agregan y analizan. Arias (2006) la define como una técnica para recoger información de un grupo o muestra sobre ellos mismos o un tema particular.
 
-Test.
+#### Test
 
 Según Marzano (2007) el test es una herramienta efectiva para medir lo que los estudiantes saben y pueden hacer, y resalta la importancia del pre test para determinar el conocimiento previo sobre un tema. En ese sentido, se emplearon tres test para evaluar el nivel de vocabulario en tres momentos del proceso; los instrumentos usados fueron los formatos impresos. El pre test permitió evaluar los conocimientos iniciales de la muestra seleccionada sobre el vocabulario en inglés, el test intermedio sirvió para monitorear el progreso durante la intervención pedagógica, y el post test ayudó a medir el aprendizaje final alcanzado tras la implementación del plan de acción.
 
@@ -132,7 +132,11 @@ Ahora bien, es pertinente resaltar los criterios que se tuvieron en cuenta para 
 
 ![Tabla 1. Sesiones de la secuencia didáctica .](articulos/img/2024-v1n1-gamificacion-vocabulario-ingles-tabla-1.png)
 
-Healthy habits Nota: La tabla muestra las sesiones implementadas en la secuencia didáctica y el objetivo de cada una. . Contexto y participantes La Escuela Normal Superior Oiba se encuentra localizada en el casco urbano del mismo municipio, actualmente brinda el servicio educativo a estudiantes de básica primaria, secundaria, educación media y el Programa de Formación Complementaria.
+Nota: La tabla muestra las sesiones implementadas en la secuencia didáctica y el objetivo de cada una.
+
+### Contexto y participantes
+
+La Escuela Normal Superior Oiba se encuentra localizada en el casco urbano del mismo municipio, actualmente brinda el servicio educativo a estudiantes de básica primaria, secundaria, educación media y el Programa de Formación Complementaria.
 
 Para el desarrollo de la propuesta se ha seleccionado como población a los 65 estudiantes del grado segundo de la ENSO, sus edades oscilan entre los 6 y 8 años y están divididos en tres subgrupos. Así pues, la muestra seleccionada son los estudiantes del curso segundo uno que cuenta con un total de 23 educandos, 13 niñas y 10 niños, el 76 % de estos pertenece al sector urbano del municipio y el 24 % restante al sector rural.
 
@@ -142,7 +146,7 @@ Para el análisis de datos de la investigación que da lugar al presente artícu
 
 ### Vocabulario en inglés
 
-Nivel inicial de vocabulario.
+#### Nivel inicial de vocabulario
 
 ![Figura 2. Resultados del pre test en el vocabulario a través de la habilidad de](articulos/img/2024-v1n1-gamificacion-vocabulario-ingles-figura-2.png)
 
@@ -168,7 +172,7 @@ De acuerdo con lo expresado por el docente cooperador en la entrevista, se puede
 
 En ese sentido, la aplicación de estas dos técnicas e instrumentos permitió determinar que, en efecto, los estudiantes de grado segundo uno se encontraban en un nivel bajo o básico de dominio de vocabulario. A partir de lo anterior, se diseñó e implementó la secuencia didáctica enfocada en el fortalecimiento del vocabulario básico en inglés, mejorando también la habilidad de escritura y lectura, ya que en el pre test se evidenciaron dificultades al respecto.
 
-Nivel final de vocabulario.
+#### Nivel final de vocabulario
 
 ![Figura 3. Resultados del post test en el vocabulario a través de la habilidad de](articulos/img/2024-v1n1-gamificacion-vocabulario-ingles-figura-3.png)
 
@@ -192,11 +196,11 @@ Teniendo en cuenta lo anterior, es preciso indicar que los estudiantes alcanzaro
 
 La segunda categoría de análisis es Estrategia didáctica; la cual se encuentra dividida en dos subcategorías que responden a la estructura y el enfoque implementando en la intervención pedagógica, estas son: Secuencia didáctica y Gamificación.
 
-Secuencia didáctica.
+#### Secuencia didáctica
 
 Para la intervención pedagógica se aptó por implementar la secuencia didáctica respaldada por Diaz Barriga (2013), ya que permite estructurar y organizar de forma lógica los contenidos a trabajar, además posibilita la construcción de conocimientos a partir de los pre saberes de los estudiantes, la motivación, la retroalimentación y la evaluación formativa. En ese sentido, cada sesión estuvo estructurada bajo este concepto y permitió que los contenidos fueran presentados de manera coherente y progresiva, asegurando así que los estudiantes participaran activamente en su propio proceso de aprendizaje, consolidando habilidades y conocimientos a través de actividades interactivas y reflexivas.
 
-Gamificación.
+#### Gamificación
 
 La gamificación como estrategia didáctica implementada a través de diferentes herramientas digitales y actividades analógicas, potenció el aprendizaje y fortalecimiento de vocabulario de manera significativa al generar un ambiente de interés y emoción entre los estudiantes. La relación entre gamificación y TIC permitieron crear una dinámica donde los alumnos se sintieron motivados y comprometidos con las actividades, incentivados por la asignación de puntos y recompensas, lo que promovió una participación constante y entusiasta.
 
@@ -248,9 +252,7 @@ Finalmente, es preciso recomendar que se replanteen las estrategias de enseñanz
 
 El presente estudio contó con la aprobación del comité de investigación de la Escuela Normal Superior Oiba.
 
-## Contribución de los autores
-
-edición.
+## Contribución de los autores edición.
 
 ## Declaración de fuentes de financiación
 
@@ -318,9 +320,7 @@ González Alonso, D. (2017). La gamificación como elemento motivador en la ense
 
 Hernández, E. (2014). El B-learning como estrategia metodológica para mejorar el proceso de enseñanza-aprendizaje de los estudiantes de inglés de la modalidad semipresencial del departamento especializado de idiomas de la Universidad Técnica de Ambato . Departamento de Didáctica y Organización Escolar, Facultad de Educación, Universidad Complutense de Madrid. España.
 
-Hernandez, G.
-
-Lugo, C. y Montijo, E. (2012). El cuestionario de estilos de aprendizaje CHAEA y la escala de estrategias de aprendizaje ACRA como herramienta potencial para la tutoría académica. Revista de Estilos de Aprendizaje, 5(10).
+Hernandez, G. Lugo, C. y Montijo, E. (2012). El cuestionario de estilos de aprendizaje CHAEA y la escala de estrategias de aprendizaje ACRA como herramienta potencial para la tutoría académica. Revista de Estilos de Aprendizaje, 5(10).
 
 Hernández-Sampieri, R., & Mendoza, C. (2018). Metodología de la investigación. Las rutas cuantitativa, cualitativa y mixta. Journal of Research on Language Education, 1(1).
 
@@ -368,6 +368,4 @@ Vu, D.V.; Peters, E. (2021). Vocabulary in English Language Learning, Teaching, 
 
 Werbach, K., & Hunter, D. (2015). The gamification toolkit: dynamics, mechanics, and components for the win. University of Pennsylvania Press.
 
-Yudha, H. T. & Mandasari, B. (2021). The Analysis of Game Usage for Senior High School Students to Improve Their Vocabulary Mastery. Journal of English Language Teaching and Learning, 2(2), 74-79.
-
-DOI: <https://doi.org/10.33365/jeltl.v2i2.13>
+Yudha, H. T. & Mandasari, B. (2021). The Analysis of Game Usage for Senior High School Students to Improve Their Vocabulary Mastery. Journal of English Language Teaching and Learning, 2(2), 74-79. DOI: <https://doi.org/10.33365/jeltl.v2i2.13>

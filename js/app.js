@@ -33,6 +33,7 @@
   const numero = (id) => R.numeros.find((n) => n.id === id);
   // En el sitio publicado cada artículo tiene su propia página (articulo/<id>/), que es la que leen los buscadores.
   const enlaceArticulo = (id) => window.LEHES_EMBEBIDO ? `#articulo-${id}` : `articulo/${id}/`;
+  const enlaceDocente = (id) => window.LEHES_EMBEBIDO ? `#docente-${id}` : `docente/${id}/`;
   const reduceMov = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // Lee un archivo del sitio. En la vista previa los archivos vienen incrustados.
@@ -86,6 +87,7 @@
     return `${esc(a.autores_apa)} (${a.anio}). ${esc(a.titulo)}. <i>LEHES. Revista Leer, Escribir, Hablar &amp; Escuchar</i>, <i>${n.volumen}</i>(${n.numero}), ${esc(a.paginas)}.${doi}`;
   }
 
+  const perfilPublico = (id) => D && D.personas.some((p) => p.id === id && p.autoriza_publicacion && !p.ejemplo);
   const perfilDe = (nombre) => D && D.personas.find((p) => p.autoriza_publicacion && !p.ejemplo && sinTilde(p.nombre) === sinTilde(nombre));
 
   function tarjeta(a) {
@@ -218,7 +220,17 @@
         <h1>${esc(a.titulo)}</h1>
         <p class="titulo-ingles" lang="en">${esc(a.titulo_ingles)}</p>
         <div class="autores">${a.autores.map((x) => `<div class="autor"><span class="avatar" aria-hidden="true">${iniciales(x.nombre)}</span>
-          <span><b>${perfilDe(x.nombre) ? `<a class="a-perfil" href="#docente-${esc(perfilDe(x.nombre).id)}">${esc(x.nombre)}</a>` : esc(x.nombre)}</b>${x.orcid ? `<a href="https://orcid.org/${esc(x.orcid)}" rel="noopener"><span class="orcid" aria-hidden="true"></span>ORCID ${esc(x.orcid)}</a>` : ""}</span></div>`).join("")}</div>
+          <span><b>${perfilDe(x.nombre) ? `<a class="a-perfil" href="${esc(enlaceDocente(perfilDe(x.nombre).id))}">${esc(x.nombre)}</a>` : esc(x.nombre)}</b>${x.orcid ? `<a href="https://orcid.org/${esc(x.orcid)}" rel="noopener"><span class="orcid" aria-hidden="true"></span>ORCID ${esc(x.orcid)}</a>` : ""}</span></div>`).join("")}</div>
+      </div>
+      <div class="barra-indice">
+        <div class="barra-indice-interior">
+          <span class="indice-donde"><span class="indice-etiqueta">Estás leyendo</span> <b class="indice-actual">Resumen</b></span>
+          <span class="indice-acciones">
+            <button class="indice-arriba" type="button" aria-label="Volver al inicio del artículo" title="Volver arriba"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 5l-7 7m7-7 7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="indice-boton" type="button" aria-expanded="false" aria-controls="indice-panel"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Índice</span></button>
+          </span>
+        </div>
+        <nav class="indice-panel" id="indice-panel" aria-label="En este artículo" hidden><p class="indice-titulo">En este artículo</p><ol></ol></nav>
       </div>
       <div class="articulo">
         <div class="cuerpo">
@@ -266,7 +278,6 @@
               ${a.doi ? `<dt>DOI</dt><dd><a href="https://doi.org/${esc(a.doi)}">${esc(a.doi)}</a></dd>` : ""}
             </dl>
           </div>
-          <div class="caja indice" id="indice"><h3>En este artículo</h3><ol></ol></div>
           <div class="caja">
             <h3>Licencia</h3>
             <div class="cc" aria-hidden="true"><span>CC</span><span>BY</span><span>NC</span><span>ND</span></div>
@@ -297,23 +308,8 @@
     }));
     const texto = document.getElementById("texto-articulo");
     texto.querySelectorAll("table").forEach((t) => { const d = document.createElement("div"); d.className = "tabla"; t.replaceWith(d); d.appendChild(t); });
-    texto.querySelectorAll("img").forEach((im) => { im.src = rutaRecurso(im.getAttribute("src")); im.loading = "lazy"; });
-    const lista = document.querySelector("#indice ol");
-    const h2s = texto.querySelectorAll("h2");
-    h2s.forEach((h) => {
-      h.id = slug(h.textContent);
-      const li = document.createElement("li");
-      li.innerHTML = `<a href="#${h.id}" data-ancla="${h.id}">${esc(h.textContent)}</a>`;
-      lista.appendChild(li);
-    });
-    if (!h2s.length) document.getElementById("indice").remove();
-    // Los enlaces del índice desplazan la página sin cambiar de vista
-    lista.addEventListener("click", (e) => {
-      const a = e.target.closest("a[data-ancla]");
-      if (!a) return;
-      e.preventDefault();
-      document.getElementById(a.dataset.ancla).scrollIntoView({ behavior: reduceMov ? "auto" : "smooth" });
-    });
+    texto.querySelectorAll("img").forEach((im) => { im.src = rutaRecurso(im.getAttribute("src")); });
+    if (window.LEHESIndice) window.LEHESIndice.iniciar(app);
     document.getElementById("btn-citar").addEventListener("click", async (e) => {
       const t = document.getElementById("texto-cita").innerText;
       try { await navigator.clipboard.writeText(t); e.target.textContent = "¡Cita copiada!"; }
@@ -354,7 +350,7 @@
   };
   function tarjetaDocente(p) {
     const n = nucleoDe(p.nucleo);
-    return `<a class="docente ${p.ejemplo ? "ejemplo" : ""}" href="#docente-${esc(p.id)}" style="${colorNucleo(n)}">
+    return `<a class="docente ${p.ejemplo ? "ejemplo" : ""}" href="${esc(p.ejemplo ? "#docente-" + p.id : enlaceDocente(p.id))}" style="${colorNucleo(n)}">
       ${retrato(p)}
       <span class="docente-texto">
         <b>${mostrarValor(p.nombre, "Por designar")}</b>
@@ -527,6 +523,7 @@
     let html;
     if (h.startsWith("articulo-") && !window.LEHES_EMBEBIDO) { location.replace(enlaceArticulo(h.slice(9))); return; }
     if (h.startsWith("articulo-")) html = await V.articulo(h.slice(9));
+    else if (h.startsWith("docente-") && !window.LEHES_EMBEBIDO && perfilPublico(h.slice(8))) { location.replace(enlaceDocente(h.slice(8))); return; }
     else if (h.startsWith("docente-")) html = V.docente(h.slice(8));
     else { if (!VISTAS_FIJAS.includes(h)) h = "inicio"; html = V[h](); }
     app.innerHTML = html;

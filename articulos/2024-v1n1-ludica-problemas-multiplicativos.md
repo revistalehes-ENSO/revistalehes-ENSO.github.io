@@ -50,7 +50,7 @@ Por su parte, el cuarto principio alude a la forma en que se construye el aprend
 
 La contextualización de las matemáticas permite que los estudiantes relacionen el conocimiento abstracto con situaciones reales; lo que facilita una comprensión más profunda y significativa de los conceptos (Albertí, 2018). Lo anterior, teniendo en cuenta que los estudiantes encuentran la aplicabilidad de las temáticas que se están abordando, lo que incide en su interés por estas (Gualdron 2020). Al vincular los problemas matemáticos con escenarios cotidianos, los estudiantes no sólo desarrollan habilidades numéricas, sino también su capacidad de interpretar y resolver problemas prácticos. De acuerdo a lo anterior, esta estrategia promueve la relevancia de las matemáticas en la vida diaria; ya que los alumnos ven su utilidad, la cual trasciende fuera del aula y fomenta un aprendizaje significativo, siendo sujetos activos de las matemáticas (Rivas 2024).
 
-Competencias básicas de matemáticas.
+#### Competencias básicas de matemáticas
 
 Las competencias básicas de matemáticas son cruciales para resolver problemas, ya que permiten a los estudiantes comprender situaciones, aplicar estrategias adecuadas y justificar sus soluciones. Al desarrollarlas, los estudiantes adquieren las habilidades necesarias para abordar problemas de manera eficaz y con confianza, mejorando su capacidad de análisis y resolución en diversos contextos (Tomalá 2024).
 
@@ -142,7 +142,7 @@ En cada rol, ya sea como vendedor o comprador, los estudiantes tenían que hacer
 
 Ahora bien, se aplicaron una serie de técnicas, las cuales facilitaron la recolección de información, permitiendo conocer el estado actual de la problemática. Los resultados obtenidos fueron los siguientes:
 
-Observación no participante .
+#### Observación no participante
 
 Durante esta observación, se identificaron varias dificultades, las cuales influían en el bajo desempeño de los estudiantes en la resolución de problemas de multiplicación y en la actitud de ellos frente a él área de matemáticas. Ahora bien, en primer lugar, los estudiantes dependían de ayuda externa, como mirar en sus cuadernos o preguntar directamente a la docente, para brindar una respuesta, lo que evidenciaba una comprensión limitada de las tablas de multiplicar. Además, se destaca que solo dos estudiantes se sabían las tablas de multiplicar y muchos de ellos tardaron en resolver las actividades porque seguían un proceso secuencial, es decir, no alteraban el orden lógico de las tablas de multiplicar. Por ejemplo, para responder cuánto es 9 X 5, primero necesitaban pasar por 9 x 1, 9 x 2… hasta llegar al resultado correcto.
 
@@ -266,9 +266,7 @@ Por último, es relevante precisar que las tablas de multiplicar deben enseñars
 
 El presente estudio contó con la aprobación del comité de investigación de la Escuela Normal Superior Oiba.
 
-## Contribución de los autores
-
-edición.
+## Contribución de los autores edición.
 
 ## Declaración de fuentes de financiación
 

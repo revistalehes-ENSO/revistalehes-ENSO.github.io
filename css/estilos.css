@@ -153,8 +153,8 @@ label.etiqueta { display: block; font-family: var(--letra-titulos); font-weight:
 .autor a { font-family: var(--letra-titulos); font-size: .85rem; }
 .orcid { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #a6ce39; vertical-align: -2px; margin-right: 4px; }
 .cuerpo { max-width: var(--ancho-lectura); }
-.cuerpo h2 { margin-top: 1.8em; padding-top: .2em; scroll-margin-top: 140px; }
-.cuerpo h3 { margin-top: 1.5em; font-size: 1.18rem; scroll-margin-top: 140px; }
+.cuerpo h2 { margin-top: 1.8em; padding-top: .2em; scroll-margin-top: calc(var(--alto-cabecera, 120px) + 70px); }
+.cuerpo h3 { margin-top: 1.5em; font-size: 1.18rem; scroll-margin-top: calc(var(--alto-cabecera, 120px) + 70px); }
 .cuerpo h4 { margin-top: 1.3em; color: var(--tinta-suave); }
 .cuerpo p { margin: 0 0 1em; text-align: justify; hyphens: auto; }
 .cuerpo img { display: block; margin: 10px auto; border-radius: var(--radio-chico); border: 1px solid var(--linea); background: #fff; }
@@ -172,7 +172,7 @@ label.etiqueta { display: block; font-family: var(--letra-titulos); font-weight:
 .palabras { color: var(--tinta-suave); font-size: 1rem; }
 .voz { display: flex; gap: 14px; align-items: flex-start; background: color-mix(in srgb, var(--rojo-enso) 7%, var(--hoja)); border-radius: var(--radio); padding: 16px 18px; margin: 24px 0; }
 .voz p { margin: 0; font-style: italic; }
-aside.ficha { position: sticky; top: 140px; align-self: start; display: grid; gap: 14px; }
+aside.ficha { align-self: start; display: grid; gap: 14px; }
 .caja { background: var(--hoja); border: 1px solid var(--linea); border-radius: var(--radio); padding: 16px 18px; font-size: .98rem; }
 .caja h3 { font-size: .95rem; margin-bottom: .5em; }
 .caja .btn { width: 100%; margin-top: 8px; }
@@ -180,9 +180,6 @@ aside.ficha { position: sticky; top: 140px; align-self: start; display: grid; ga
 .caja dt { font-family: var(--letra-titulos); font-weight: 600; font-size: .85rem; padding-top: 2px; }
 .caja dd { margin: 0; }
 .cita { font-size: .93rem; background: var(--papel); border-radius: var(--radio-chico); padding: 10px 12px; word-break: break-word; }
-.indice ol { margin: 0; padding-left: 1.2em; font-size: .93rem; }
-.indice a { text-decoration: none; color: var(--tinta-suave); }
-.indice a:hover, .indice a.activo { color: var(--azul-articulo); text-decoration: underline; }
 .cc { display: flex; gap: 4px; margin-bottom: 6px; }
 .cc span { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--tinta); display: grid; place-items: center;
   font-family: var(--letra-titulos); font-weight: 700; font-size: .62rem; }
@@ -222,7 +219,6 @@ aside.ficha { position: sticky; top: 140px; align-self: start; display: grid; ga
   .portada, .numero-destacado, .articulo { grid-template-columns: minmax(0, 1fr); }
   .numero-destacado { padding: 20px; }
   .tapa { max-width: 190px; }
-  aside.ficha { position: static; }
   .marca-texto small { display: none; }
   body { font-size: 18px; }
 }
@@ -299,3 +295,39 @@ aside.ficha { position: sticky; top: 140px; align-self: start; display: grid; ga
 .migas { margin-bottom: 14px; }
 .migas a { text-decoration: none; }
 .exportar { margin: 10px 0 0; font-size: .88rem; }
+
+/* ---------- Índice flotante del artículo ---------- */
+.barra-indice { position: sticky; top: var(--alto-cabecera, 120px); z-index: 15; margin: 0 0 22px;
+  background: color-mix(in srgb, var(--papel) 88%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--linea); }
+.barra-indice::after { content: ""; position: absolute; left: 0; bottom: -1px; height: 3px; width: var(--avance, 0%);
+  background: linear-gradient(90deg, var(--color-leer), var(--color-escribir), var(--color-hablar), var(--color-escuchar));
+  border-radius: 0 3px 3px 0; transition: width var(--vel-normal) var(--curva); }
+.barra-indice-interior { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 0; }
+.indice-donde { min-width: 0; font-family: var(--letra-titulos); font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.indice-etiqueta { color: var(--tinta-tenue); font-size: .8rem; letter-spacing: .02em; }
+.indice-actual { font-weight: 600; color: var(--tinta); }
+.indice-acciones { display: flex; gap: 8px; flex: none; }
+.indice-boton, .indice-arriba { display: inline-flex; align-items: center; gap: 8px; font-family: var(--letra-titulos); font-weight: 600; font-size: .92rem;
+  border-radius: 999px; border: 2px solid var(--azul-noche); cursor: pointer; transition: transform var(--vel-rapida) var(--curva), background var(--vel-rapida); }
+.indice-boton { background: var(--azul-noche); color: #fff; padding: 7px 16px; }
+.indice-boton[aria-expanded="true"] { background: var(--ambar); border-color: var(--ambar); color: var(--azul-noche); }
+.indice-arriba { background: var(--hoja); color: var(--azul-noche); padding: 7px 9px; }
+.indice-boton:hover, .indice-arriba:hover { transform: translateY(-1px); }
+.indice-panel { position: absolute; right: 0; top: calc(100% + 8px); width: min(460px, 100%); max-height: min(70vh, 560px); overflow: auto;
+  background: var(--hoja); border: 1px solid var(--linea); border-radius: var(--radio); box-shadow: 0 24px 48px -20px rgba(26, 27, 65, .45);
+  padding: 14px 10px 10px; animation: desplegar var(--vel-normal) var(--curva); }
+@keyframes desplegar { from { opacity: 0; transform: translateY(-8px) scale(.98); } to { opacity: 1; transform: none; } }
+.indice-titulo { font-family: var(--letra-mano); font-size: 1.4rem; color: var(--rojo-enso); margin: 0 10px 6px; }
+.indice-panel ol { list-style: none; margin: 0; padding: 0; }
+.indice-panel a { display: grid; grid-template-columns: 30px 1fr; gap: 6px; align-items: baseline; padding: 8px 10px; border-radius: var(--radio-chico);
+  text-decoration: none; color: var(--tinta); font-family: var(--letra-titulos); font-size: .95rem; line-height: 1.3; border-left: 3px solid transparent; }
+.indice-panel a .num { color: var(--tinta-tenue); font-size: .78rem; font-variant-numeric: tabular-nums; }
+.indice-panel a:hover { background: var(--papel); }
+.indice-panel a.activo { background: color-mix(in srgb, var(--ambar) 16%, var(--hoja)); border-left-color: var(--ambar); font-weight: 600; }
+@media (max-width: 600px) {
+  .indice-etiqueta { display: none; }
+  .indice-boton span { display: none; }
+  .indice-boton { padding: 7px 10px; }
+  .indice-panel { width: 100%; }
+}

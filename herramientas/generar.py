@@ -28,6 +28,12 @@ import markdown
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 R = json.loads((RAIZ / "datos/revista.json").read_text(encoding="utf-8"))
 A = json.loads((RAIZ / "datos/articulos.json").read_text(encoding="utf-8"))
+_dp = RAIZ / "datos/docentes.json"
+D = json.loads(_dp.read_text(encoding="utf-8")) if _dp.exists() else {"nucleos": [], "personas": []}
+SIGLA = R.get("sigla_institucion", "ENSO")
+INSTITUCION_LD = {"@type": "EducationalOrganization", "name": R["institucion"],
+                  "alternateName": [SIGLA, "Normal Superior Oiba", "Escuela Normal Oiba"],
+                  "address": {"@type": "PostalAddress", "addressLocality": "Oiba", "addressRegion": "Santander", "addressCountry": "CO"}}
 BASE = R.get("url_sitio", "").rstrip("/")
 REVISTA = "LEHES. Revista Leer, Escribir, Hablar & Escuchar"
 HOY = dt.date.today().isoformat()
@@ -66,6 +72,24 @@ def autores_apa_lista(a):
     return partes if len(partes) == len(a["autores"]) else [a.get("autores_apa", "")] * len(a["autores"])
 
 
+def sin_tilde(t):
+    return unicodedata.normalize("NFD", t).encode("ascii", "ignore").decode().lower().strip()
+
+
+def perfiles():
+    """Personas publicables (con autorización y que no son tarjetas de ejemplo)."""
+    return [p for p in D.get("personas", []) if p.get("autoriza_publicacion") and not p.get("ejemplo") and not vacio(p.get("nombre"))]
+
+
+def perfil_de(nombre):
+    return next((p for p in perfiles() if sin_tilde(p["nombre"]) == sin_tilde(nombre)), None)
+
+
+def nombre_autor(au):
+    p = perfil_de(au["nombre"])
+    return f'<a class="a-perfil" href="../../docente/{e(p["id"])}/">{e(au["nombre"])}</a>' if p else e(au["nombre"])
+
+
 def cita_apa(a):
     n = numero(a["numero"])
     doi = f" https://doi.org/{e(a['doi'])}" if a.get("doi") else ""
@@ -89,7 +113,7 @@ def cuerpo_html(a):
     h = re.sub(r"<h([234])>(.*?)</h\1>", poner_id, h)
     h = re.sub(r"<table>", '<div class="tabla"><table>', h).replace("</table>", "</table></div>")
     h = re.sub(r'(src|href)="(?!https?:|mailto:|#|/)([^"]+)"', r'\1="../../\2"', h)
-    h = h.replace("<img ", '<img loading="lazy" ')
+    h = h.replace("<img ", '<img decoding="async" ')
     return h, indice
 
 
@@ -221,13 +245,14 @@ def pagina_articulo(a, cuerpo, indice, img_compartir):
         "alternativeHeadline": a.get("titulo_ingles", ""), "abstract": a["resumen"], "inLanguage": "es",
         "datePublished": fecha_iso, "url": url, "keywords": a.get("palabras_clave", []),
         "author": [{"@type": "Person", "name": au["nombre"],
+                    **({"url": f"{BASE}/docente/{perfil_de(au['nombre'])['id']}/"} if perfil_de(au["nombre"]) else {}),
                     **({"sameAs": f"https://orcid.org/{au['orcid']}"} if au.get("orcid") else {}),
-                    "affiliation": {"@type": "EducationalOrganization", "name": au.get("filiacion") or R["institucion"]}}
+                    "affiliation": INSTITUCION_LD}
                    for au in a["autores"]],
         "isPartOf": {"@type": "PublicationIssue", "issueNumber": str(n["numero"]),
                      "isPartOf": {"@type": "PublicationVolume", "volumeNumber": str(n["volumen"]),
                                   "isPartOf": {"@type": "Periodical", "name": REVISTA,
-                                               "publisher": {"@type": "EducationalOrganization", "name": R["institucion"]}}}},
+                                               "publisher": INSTITUCION_LD}}},
         "pageStart": p1, **({"pageEnd": p2} if p2 else {}), "license": R["licencia"]["url"],
         "encoding": {"@type": "MediaObject", "contentUrl": f"{BASE}/{a['pdf']}", "encodingFormat": "application/pdf"},
         **({"image": f"{BASE}/{img_compartir}"} if img_compartir else {}),
@@ -235,7 +260,7 @@ def pagina_articulo(a, cuerpo, indice, img_compartir):
     og_img = f'<meta property="og:image" content="{BASE}/{img_compartir}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">' if img_compartir else ""
     autores_html = "".join(
         f'<div class="autor"><span class="avatar" aria-hidden="true">{e("".join(p[0] for p in au["nombre"].split()[:2]).upper())}</span>'
-        f'<span><b>{e(au["nombre"])}</b>'
+        f'<span><b>{nombre_autor(au)}</b>'
         + (f'<a href="https://orcid.org/{e(au["orcid"])}" rel="noopener"><span class="orcid" aria-hidden="true"></span>ORCID {e(au["orcid"])}</a>' if au.get("orcid") else "")
         + "</span></div>" for au in a["autores"])
     indice_html = "".join(f'<li><a href="#{i}">{t}</a></li>' for i, t in indice)
@@ -247,7 +272,7 @@ def pagina_articulo(a, cuerpo, indice, img_compartir):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(a["titulo"])} · Revista LEHES</title>
+<title>{e(a["titulo"])} · Revista LEHES · {e(SIGLA)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{url}">
 <link rel="alternate" type="application/atom+xml" title="Revista LEHES" href="../../feed.xml">
@@ -295,6 +320,16 @@ def pagina_articulo(a, cuerpo, indice, img_compartir):
     <p class="titulo-ingles" lang="en">{e(a.get("titulo_ingles", ""))}</p>
     <div class="autores">{autores_html}</div>
   </div>
+  <div class="barra-indice">
+    <div class="barra-indice-interior">
+      <span class="indice-donde"><span class="indice-etiqueta">Estás leyendo</span> <b class="indice-actual">Resumen</b></span>
+      <span class="indice-acciones">
+        <button class="indice-arriba" type="button" aria-label="Volver al inicio del artículo" title="Volver arriba"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 5l-7 7m7-7 7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="indice-boton" type="button" aria-expanded="false" aria-controls="indice-panel"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Índice</span></button>
+      </span>
+    </div>
+    <nav class="indice-panel" id="indice-panel" aria-label="En este artículo" hidden><p class="indice-titulo">En este artículo</p><ol></ol></nav>
+  </div>
   <div class="articulo">
     <div class="cuerpo">
       <div class="resumen">
@@ -340,7 +375,6 @@ def pagina_articulo(a, cuerpo, indice, img_compartir):
           {f'<dt>DOI</dt><dd><a href="https://doi.org/{e(a["doi"])}">{e(a["doi"])}</a></dd>' if a.get("doi") else ""}
         </dl>
       </div>
-      {f'<div class="caja indice"><h3>En este artículo</h3><ol>{indice_html}</ol></div>' if indice else ""}
       <div class="caja">
         <h3>Licencia</h3>
         <div class="cc" aria-hidden="true"><span>CC</span><span>BY</span><span>NC</span><span>ND</span></div>
@@ -360,10 +394,178 @@ def pagina_articulo(a, cuerpo, indice, img_compartir):
       <p id="visitas-total" class="visitas" hidden><b>…</b> visitas a LEHES</p></div>
   </div>
 </footer>
+<script src="../../js/indice.js"></script>
 <script src="../../js/articulo.js"></script>
 </body>
 </html>
 """
+
+
+# ---------------------------------------------------------------- Perfiles de los maestros
+def cabecera(raiz, actual, titulo, desc, url, extra_head=""):
+    return f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{e(titulo)}</title>
+<meta name="description" content="{e(desc)}">
+<link rel="canonical" href="{url}">
+<meta property="og:site_name" content="Revista LEHES">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="{e(titulo)}">
+<meta property="og:description" content="{e(desc)}">
+<meta property="og:url" content="{url}">
+{"" if "og:image" in extra_head else f'<meta property="og:image" content="{BASE}/img/compartir/portada.png">'}
+{extra_head}
+<link rel="icon" href="{raiz}img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{raiz}css/colores.css">
+<link rel="stylesheet" href="{raiz}css/estilos.css">
+</head>
+<body data-raiz="{raiz}">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="envoltura barra">
+    <a class="marca" href="{raiz}#inicio" aria-label="LEHES, ir al inicio">
+      <img src="{raiz}img/logo-lehes@2x.png" alt="Logotipo de LEHES" width="78" height="53">
+      <span class="marca-texto"><b>Revista LEHES</b><small>Leer, Escribir, Hablar &amp; Escuchar</small></span>
+    </a>
+    <div class="barra-der">
+      <img class="escudo" src="{raiz}img/escudo-enso.png" alt="Escudo de la Escuela Normal Superior Oiba" width="44" height="45">
+      <a class="btn" href="{raiz}#suscribirse">Suscribirme</a>
+    </div>
+  </div>
+  <nav class="envoltura pestanas" aria-label="Secciones de la revista">
+    {"".join(f'<a href="{raiz}#{k}"' + (' aria-current="page"' if k == actual else "") + f'>{t}</a>' for k, t in NAV)}
+  </nav>
+</header>
+<main id="contenido" class="envoltura" tabindex="-1">
+"""
+
+
+def pie(raiz):
+    return f"""</main>
+<footer class="pie">
+  <div class="pie-franja" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="envoltura pie-rejilla">
+    <div><img src="{raiz}img/logo-lehes.png" alt="" width="64" height="44"><p><b>Revista LEHES</b><br>{e(R["nombre_largo"])}</p></div>
+    <div><p>{e(R["institucion"])} ({e(SIGLA)})<br>{e(R["ciudad"])}</p></div>
+    <div><p>Los contenidos se publican bajo licencia<br><a href="{e(R["licencia"]["url"])}" rel="license">{e(R["licencia"]["sigla"])}</a>.</p></div>
+  </div>
+</footer>
+</body>
+</html>
+"""
+
+
+def nucleo(id_):
+    return next((n for n in D.get("nucleos", []) if n["id"] == id_), {"id": id_, "nombre": "", "color": "tinta-suave", "descripcion": ""})
+
+
+def retrato(p, raiz, clase="retrato"):
+    n = nucleo(p.get("nucleo"))
+    if p.get("foto") and not vacio(p["foto"]):
+        return f'<img class="{clase}" src="{raiz}{e(p["foto"])}" alt="Retrato de {e(p["nombre"])}" style="--c: var(--{n["color"]})">'
+    ini = "".join(x[0] for x in p["nombre"].split()[:2]).upper()
+    return f'<span class="{clase} avatar-grande" style="--c: var(--{n["color"]})" aria-hidden="true">{e(ini)}</span>'
+
+
+def enlazar(t):
+    return re.sub(r"(https?://[^\s<]+[^\s<.,;])", r'<a href="\1" rel="noopener">\1</a>', e(t))
+
+
+def enlaces_perfil(enl):
+    pares = [("https://orcid.org/" + enl["orcid"] if enl.get("orcid") else "", "ORCID"),
+             (enl.get("cvlac", ""), "CvLAC (Minciencias)"), (enl.get("scholar", ""), "Google Académico")]
+    return '<p class="enlaces-perfil">' + " · ".join('<a href="{}" rel="noopener me">{}</a>'.format(e(u), t) for u, t in pares if u) + "</p>"
+
+
+def pagina_docente(p):
+    raiz = "../../"; n = nucleo(p.get("nucleo"))
+    url = f"{BASE}/docente/{p['id']}/"
+    cargo = "" if vacio(p.get("cargo")) else p["cargo"]
+    formacion = [f for f in p.get("formacion", []) if not vacio(f)]
+    pubs = [x for x in p.get("publicaciones", []) if not vacio(x)]
+    suyos = [a for a in A if any(sin_tilde(x["nombre"]) == sin_tilde(p["nombre"]) for x in a["autores"])]
+    anios = "" if vacio(p.get("anios_experiencia")) else str(p["anios_experiencia"])
+    titulo = f"{p['nombre']} · {cargo or 'Docente'} · {R['institucion']} ({SIGLA})"
+    desc = (f"{p['nombre']}, {(cargo or 'docente').lower()} de la {R['institucion']} ({SIGLA}), Oiba, Santander. "
+            + (f"{n['nombre']}. " if n.get("nombre") else "") + (f"Formación: {'; '.join(formacion)}." if formacion else ""))[:300]
+    enl = p.get("enlaces", {}) or {}
+    same = [x for x in [f"https://orcid.org/{enl['orcid']}" if enl.get("orcid") else "", enl.get("cvlac", ""), enl.get("scholar", "")] if x]
+    ld = {"@context": "https://schema.org", "@type": "Person", "name": p["nombre"], "url": url,
+          "jobTitle": cargo or "Docente", "worksFor": INSTITUCION_LD,
+          **({"hasCredential": [{"@type": "EducationalOccupationalCredential", "name": f} for f in formacion]} if formacion else {}),
+          **({"sameAs": same} if same else {}),
+          **({"image": f"{BASE}/{p['foto']}"} if p.get("foto") and not vacio(p["foto"]) else {})}
+    robots = "" if p.get("aparecer_en_buscadores", True) else '<meta name="robots" content="noindex">'
+    foto_og = f'\n<meta property="og:image" content="{BASE}/{e(p["foto"])}">' if p.get("foto") and not vacio(p["foto"]) else ""
+    extra = f'{robots}{foto_og}\n<meta property="og:type" content="profile">\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
+    color_chip = "var(--azul-noche)" if n["color"] == "color-hablar" else "#fff"
+    cajas = f'<div class="caja"><h3>Formación</h3>' + (f'<ul>{"".join(f"<li>{e(f)}</li>" for f in formacion)}</ul>' if formacion else '<p class="por-llenar">Por completar</p>') + "</div>"
+    if not vacio(p.get("investigacion")) or pubs or not vacio(p.get("otros_cargos")) or same:
+        cajas += ('<div class="caja"><h3>Trayectoria en investigación</h3>'
+                  + ("" if vacio(p.get("investigacion")) else f"<p>{e(p['investigacion'])}</p>")
+                  + (f'<h4 class="sub-caja">Publicaciones</h4><ul class="pubs">{"".join(f"<li>{enlazar(x)}</li>" for x in pubs)}</ul>' if pubs else "")
+                  + ("" if vacio(p.get("otros_cargos")) else f'<p class="aviso">{e(p["otros_cargos"])}</p>')
+                  + (enlaces_perfil(enl) if same else "")
+                  + "</div>")
+    if not vacio(p.get("hobbies")):
+        cajas += f'<div class="caja"><h3>Fuera del aula</h3><p>{e(p["hobbies"])}</p></div>'
+    if suyos:
+        items = "".join('<li><a href="{}articulo/{}/">{}</a></li>'.format(raiz, e(a["id"]), e(a["titulo"])) for a in suyos)
+        cajas += f'<div class="caja"><h3>Publicado en LEHES</h3><ul>{items}</ul></div>'
+    cuerpo = f"""<section class="vista perfil" style="--c: var(--{n['color']})">
+  <nav class="migas meta" aria-label="Ubicación"><a href="{raiz}maestros/">Nuestros maestros</a> › {e(n.get('nombre', ''))}</nav>
+  <div class="perfil-cabeza">
+    {retrato(p, raiz, "retrato retrato-grande")}
+    <div>
+      {f'<span class="chip" style="--c: var(--{n["color"]}); --t: {color_chip}">{e(n["nombre"])}</span>' if n.get("nombre") else ""}
+      <h1>{e(p['nombre'])}</h1>
+      <p class="lead" style="margin:0">{e(cargo)}{'' if vacio(p.get('aula')) else ' · ' + e(p['aula'])} · {e(R['institucion'])} ({e(SIGLA)})</p>
+      {f'<span class="anios"><b>{e(anios)}</b> años enseñando</span>' if anios else ''}
+      {'' if vacio(p.get('frase')) else f'<p class="frase-grande">«{e(p["frase"])}»</p>'}
+    </div>
+  </div>
+  <div class="perfil-rejilla">{cajas}</div>
+</section>
+"""
+    return cabecera(raiz, "docentes", titulo, desc, url, extra) + cuerpo + pie(raiz)
+
+
+def pagina_maestros():
+    raiz = "../"; url = f"{BASE}/maestros/"
+    gente = [p for p in perfiles() if p.get("aparecer_en_buscadores", True)]   # solo quienes aceptan aparecer en buscadores
+    bloques = ""
+    for n in D.get("nucleos", []):
+        g = [p for p in gente if p.get("nucleo") == n["id"]]
+        if not g:
+            continue
+        tarjetas = "".join(
+            f'<a class="docente" href="{raiz}docente/{e(p["id"])}/" style="--c: var(--{n["color"]})">{retrato(p, raiz)}'
+            f'<span class="docente-texto"><b>{e(p["nombre"])}</b><span class="cargo-d">{e(p.get("cargo", ""))}</span>'
+            + ("" if vacio(p.get("anios_experiencia")) else f'<span class="anios"><b>{e(p["anios_experiencia"])}</b> años enseñando</span>')
+            + "</span></a>" for p in g)
+        bloques += (f'<section class="nucleo" style="--c: var(--{n["color"]})"><h2><span class="punto" aria-hidden="true"></span>{e(n["nombre"])}</h2>'
+                    f'<p class="nucleo-desc">{e(n["descripcion"])}</p><div class="rejilla-docentes">{tarjetas}</div></section>')
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": f"Maestros de la {R['institucion']} ({SIGLA})",
+          "url": url, "about": INSTITUCION_LD,
+          "hasPart": [{"@type": "Person", "name": p["nombre"], "url": f"{BASE}/docente/{p['id']}/"} for p in gente]}
+    titulo = f"Nuestros maestros · {R['institucion']} ({SIGLA}) · Revista LEHES"
+    desc = f"Equipo directivo y docentes de la {R['institucion']} ({SIGLA}), Oiba, Santander: formación, trayectoria en investigación y experiencia."
+    cuerpo = f"""<section class="vista">
+  <p class="mano">Quienes enseñan, también investigan</p>
+  <h1>Nuestros maestros</h1>
+  <p class="lead">El equipo directivo y docente de la {e(R['institucion'])} ({e(SIGLA)}), en Oiba, Santander. Cada perfil cuenta su formación y su recorrido en la investigación.</p>
+  {bloques}
+  <p><a class="btn claro" href="{raiz}#docentes">Ver a todo el equipo de la {e(SIGLA)}</a></p>
+  <p class="aviso">Los perfiles se publican con autorización de cada persona, según la Ley 1581 de 2012 de protección de datos personales.</p>
+</section>
+"""
+    return cabecera(raiz, "docentes", titulo, desc, url, f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>') + cuerpo + pie(raiz)
 
 
 # ---------------------------------------------------------------- Archivos para buscadores
@@ -372,6 +574,10 @@ def sitemap():
     for a in A:
         urls.append((f"{BASE}/articulo/{a['id']}/", numero(a["numero"]).get("fecha_iso", HOY), "monthly", "0.8"))
         urls.append((f"{BASE}/{a['pdf']}", numero(a["numero"]).get("fecha_iso", HOY), "yearly", "0.6"))
+    urls.append((f"{BASE}/maestros/", HOY, "monthly", "0.7"))
+    for p in perfiles():
+        if p.get("aparecer_en_buscadores", True):
+            urls.append((f"{BASE}/docente/{p['id']}/", HOY, "monthly", "0.5"))
     filas = "".join(f"  <url><loc>{e(u)}</loc><lastmod>{m}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>\n"
                     for u, m, c, p in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{filas}</urlset>\n'
@@ -414,13 +620,19 @@ def principal():
         (carpeta / "cita.bib").write_text(bibtex(a), encoding="utf-8")
         (carpeta / "cita.ris").write_text(ris(a), encoding="utf-8")
         print("  artículo:", a["id"])
+    for p in perfiles():
+        carpeta = RAIZ / "docente" / p["id"]
+        carpeta.mkdir(parents=True, exist_ok=True)
+        (carpeta / "index.html").write_text(pagina_docente(p), encoding="utf-8")
+    (RAIZ / "maestros").mkdir(exist_ok=True)
+    (RAIZ / "maestros/index.html").write_text(pagina_maestros(), encoding="utf-8")
+    print(f"  perfiles: {len(perfiles())} y el directorio maestros/")
     (RAIZ / "sitemap.xml").write_text(sitemap(), encoding="utf-8")
     (RAIZ / "feed.xml").write_text(feed(), encoding="utf-8")
     # Metadatos de la portada (index.html), entre las marcas SEO
     ld = {"@context": "https://schema.org", "@type": "Periodical", "name": REVISTA, "alternateName": "Revista LEHES",
           "url": f"{BASE}/", "inLanguage": "es", "isAccessibleForFree": True, "license": R["licencia"]["url"],
-          "publisher": {"@type": "EducationalOrganization", "name": R["institucion"],
-                        "address": {"@type": "PostalAddress", "addressLocality": "Oiba", "addressRegion": "Santander", "addressCountry": "CO"}},
+          "publisher": INSTITUCION_LD,
           **({"issn": R["issn"]} if not vacio(R.get("issn")) else {}),
           "hasPart": [{"@type": "ScholarlyArticle", "headline": a["titulo"], "url": f"{BASE}/articulo/{a['id']}/"} for a in A]}
     bloque = (f'<!--SEO:INICIO-->\n<link rel="canonical" href="{BASE}/">\n'
