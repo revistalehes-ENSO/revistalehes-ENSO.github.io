@@ -1,0 +1,3 @@
+Fuentes incluidas (libres, se pueden redistribuir):
+- EB Garamond (Georg Duffner y Octavio Pardo): SIL Open Font License 1.1 — https://openfontlicense.org
+- TeX Gyre Adventor (GUST e-foundry), similar a Century Gothic: GUST Font License — https://www.gust.org.pl/projects/e-foundry/licenses

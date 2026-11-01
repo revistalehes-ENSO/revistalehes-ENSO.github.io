@@ -31,6 +31,8 @@
   const colorVerbo = (v) => `--c: var(--color-${v}); --t: var(--texto-sobre-${v});`;
   const seccion = (id) => (R.secciones.find((s) => s.id === id) || R.secciones[0]);
   const numero = (id) => R.numeros.find((n) => n.id === id);
+  // En el sitio publicado cada artículo tiene su propia página (articulo/<id>/), que es la que leen los buscadores.
+  const enlaceArticulo = (id) => window.LEHES_EMBEBIDO ? `#articulo-${id}` : `articulo/${id}/`;
   const reduceMov = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // Lee un archivo del sitio. En la vista previa los archivos vienen incrustados.
@@ -89,7 +91,7 @@
   function tarjeta(a) {
     const s = seccion(a.seccion), n = numero(a.numero);
     const autores = a.autores.map((x) => x.nombre).join(", ");
-    return `<a class="art" href="#articulo-${esc(a.id)}" style="${colorVerbo(s.verbo)}">
+    return `<a class="art" href="${esc(enlaceArticulo(a.id))}" style="${colorVerbo(s.verbo)}">
       <span class="cinta" aria-hidden="true"></span>
       <span>
         <span class="chip">${esc(s.nombre)}</span>
@@ -420,7 +422,7 @@
           ${vacio(p.otros_cargos) ? "" : `<p class="aviso">${esc(p.otros_cargos)}</p>`}
           ${enlaces.length ? `<p class="enlaces-perfil">${enlaces.join(" · ")}</p>` : ""}</div>`}
         ${vacio(p.hobbies) ? "" : `<div class="caja"><h3>Fuera del aula</h3><p>${esc(p.hobbies)}</p></div>`}
-        ${suyos.length ? `<div class="caja"><h3>Publicado en LEHES</h3><ul>${suyos.map((a) => `<li><a href="#articulo-${esc(a.id)}">${esc(a.titulo)}</a></li>`).join("")}</ul></div>` : ""}
+        ${suyos.length ? `<div class="caja"><h3>Publicado en LEHES</h3><ul>${suyos.map((a) => `<li><a href="${esc(enlaceArticulo(a.id))}">${esc(a.titulo)}</a></li>`).join("")}</ul></div>` : ""}
       </div>
     </section>`;
   };
@@ -523,6 +525,7 @@
     clearTimeout(temporizador);
     let h = (location.hash || "#inicio").slice(1);
     let html;
+    if (h.startsWith("articulo-") && !window.LEHES_EMBEBIDO) { location.replace(enlaceArticulo(h.slice(9))); return; }
     if (h.startsWith("articulo-")) html = await V.articulo(h.slice(9));
     else if (h.startsWith("docente-")) html = V.docente(h.slice(8));
     else { if (!VISTAS_FIJAS.includes(h)) h = "inicio"; html = V[h](); }

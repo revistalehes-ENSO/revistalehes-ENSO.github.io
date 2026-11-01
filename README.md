@@ -49,3 +49,20 @@ Licencias de terceros: `js/vendor/marked.min.js` (MIT, ver `marked-LICENSE.md`).
 3. En `datos/revista.json`, cambie `"goatcounter": "[CÓDIGO DE GOATCOUNTER]"` por `"goatcounter": "revistalehes"`.
 
 El sitio contará las lecturas, las descargas de PDF y los clics en "Me fue útil" de cada artículo, y las visitas totales. Las cifras se actualizan cada 30 minutos aproximadamente.
+
+## Buscadores, Google Académico y publicación automática
+
+Cada artículo tiene su propia página en `articulo/<id>/`, con los metadatos que leen Google, Google Académico,
+Zotero y Mendeley, su cita en BibTeX y RIS y una imagen para compartir en redes (`img/compartir/`).
+Todo eso lo crea `herramientas/generar.py` a partir de `datos/articulos.json`, junto con `sitemap.xml`,
+`feed.xml`, `robots.txt` y `404.html`.
+
+**Publicación automática (recomendada).** El archivo `.github/workflows/publicar.yml` hace que GitHub ejecute
+el generador y publique el sitio cada vez que se suben cambios. Se activa una sola vez en
+*Settings → Pages → Source: GitHub Actions*. El avance se ve en la pestaña *Actions* del repositorio.
+
+**Sin publicación automática.** Ejecute en su computador `pip install markdown pillow` y luego
+`python herramientas/generar.py`, y suba las carpetas `articulo/`, `img/compartir/` y los archivos generados.
+
+**Dirección del sitio.** `url_sitio` en `datos/revista.json` debe ser la dirección pública exacta,
+porque los buscadores la usan en el mapa del sitio y en los metadatos.

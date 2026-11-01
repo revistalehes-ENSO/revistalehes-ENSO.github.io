@@ -1,6 +1,9 @@
 {
   "_instrucciones": "Edite los valores entre comillas. Todo lo que esté entre [CORCHETES] es un espacio por llenar y en el sitio aparece como 'Por designar'.",
 
+  "url_sitio": "https://revistalehes-enso.github.io",
+  "_url_ayuda": "Dirección pública del sitio, sin barra al final. Si el repositorio no se llama usuario.github.io, agregue el nombre del repositorio: https://usuario.github.io/repositorio",
+
   "nombre_corto": "LEHES",
   "nombre_largo": "Revista: Leer, Escribir, Hablar & Escuchar",
   "nombre_ingles": "Lehes Journal",
@@ -43,7 +46,7 @@
   ],
 
   "numeros": [
-    { "id": "v1n1", "volumen": 1, "numero": 1, "fecha": "Noviembre de 2024",
+    { "id": "v1n1", "volumen": 1, "numero": 1, "fecha": "Noviembre de 2024", "fecha_iso": "2024-11-20",
       "titulo": "Número inaugural",
       "nota_editor": "[NOTA DEL EDITOR DEL VOL. 1, NÚM. 1]" }
   ],

@@ -296,3 +296,6 @@ aside.ficha { position: sticky; top: 140px; align-self: start; display: grid; ga
 .sub-caja { font-size: .85rem; letter-spacing: .03em; text-transform: uppercase; color: var(--tinta-suave); margin: 12px 0 6px; }
 .pubs { font-size: .93rem; padding-left: 1.1em; word-break: break-word; }
 .pubs li { margin-bottom: 6px; }
+.migas { margin-bottom: 14px; }
+.migas a { text-decoration: none; }
+.exportar { margin: 10px 0 0; font-size: .88rem; }
