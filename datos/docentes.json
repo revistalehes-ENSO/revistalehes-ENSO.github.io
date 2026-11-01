@@ -1,5 +1,5 @@
 {
-  "_instrucciones": "Un bloque por persona. Solo se publica quien tenga \"autoriza_publicacion\": true (autorización escrita, Ley 1581 de 2012). Lo que esté entre [CORCHETES] no se muestra. La foto va en img/docentes/ (cuadrada, mínimo 400 x 400 px); si \"foto\" está vacío se muestra un avatar con las iniciales. \"ejemplo\": true marca las tarjetas de muestra; bórrelas cuando tenga los perfiles reales.",
+  "_instrucciones": "Un bloque por persona. Solo se publica quien tenga \"autoriza_publicacion\": true (autorización escrita, Ley 1581 de 2012). Lo que esté entre [CORCHETES] no se muestra. La foto va en img/docentes/ (cuadrada, mínimo 400 x 400 px); si \"foto\" está vacío se muestra un avatar con las iniciales. \"ejemplo\": true marca las tarjetas de muestra; bórrelas cuando tenga los perfiles reales. Cada perfil publicado tiene su propia página que Google puede encontrar; si alguien quiere aparecer en la revista pero no en los buscadores, agregue \"aparecer_en_buscadores\": false.",
   "nucleos": [
     {
       "id": "directivos",

@@ -33,6 +33,7 @@
   const numero = (id) => R.numeros.find((n) => n.id === id);
   // En el sitio publicado cada artículo tiene su propia página (articulo/<id>/), que es la que leen los buscadores.
   const enlaceArticulo = (id) => window.LEHES_EMBEBIDO ? `#articulo-${id}` : `articulo/${id}/`;
+  const enlaceDocente = (id) => window.LEHES_EMBEBIDO ? `#docente-${id}` : `docente/${id}/`;
   const reduceMov = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // Lee un archivo del sitio. En la vista previa los archivos vienen incrustados.
@@ -86,6 +87,7 @@
     return `${esc(a.autores_apa)} (${a.anio}). ${esc(a.titulo)}. <i>LEHES. Revista Leer, Escribir, Hablar &amp; Escuchar</i>, <i>${n.volumen}</i>(${n.numero}), ${esc(a.paginas)}.${doi}`;
   }
 
+  const perfilPublico = (id) => D && D.personas.some((p) => p.id === id && p.autoriza_publicacion && !p.ejemplo);
   const perfilDe = (nombre) => D && D.personas.find((p) => p.autoriza_publicacion && !p.ejemplo && sinTilde(p.nombre) === sinTilde(nombre));
 
   function tarjeta(a) {
@@ -218,7 +220,7 @@
         <h1>${esc(a.titulo)}</h1>
         <p class="titulo-ingles" lang="en">${esc(a.titulo_ingles)}</p>
         <div class="autores">${a.autores.map((x) => `<div class="autor"><span class="avatar" aria-hidden="true">${iniciales(x.nombre)}</span>
-          <span><b>${perfilDe(x.nombre) ? `<a class="a-perfil" href="#docente-${esc(perfilDe(x.nombre).id)}">${esc(x.nombre)}</a>` : esc(x.nombre)}</b>${x.orcid ? `<a href="https://orcid.org/${esc(x.orcid)}" rel="noopener"><span class="orcid" aria-hidden="true"></span>ORCID ${esc(x.orcid)}</a>` : ""}</span></div>`).join("")}</div>
+          <span><b>${perfilDe(x.nombre) ? `<a class="a-perfil" href="${esc(enlaceDocente(perfilDe(x.nombre).id))}">${esc(x.nombre)}</a>` : esc(x.nombre)}</b>${x.orcid ? `<a href="https://orcid.org/${esc(x.orcid)}" rel="noopener"><span class="orcid" aria-hidden="true"></span>ORCID ${esc(x.orcid)}</a>` : ""}</span></div>`).join("")}</div>
       </div>
       <div class="articulo">
         <div class="cuerpo">
@@ -354,7 +356,7 @@
   };
   function tarjetaDocente(p) {
     const n = nucleoDe(p.nucleo);
-    return `<a class="docente ${p.ejemplo ? "ejemplo" : ""}" href="#docente-${esc(p.id)}" style="${colorNucleo(n)}">
+    return `<a class="docente ${p.ejemplo ? "ejemplo" : ""}" href="${esc(p.ejemplo ? "#docente-" + p.id : enlaceDocente(p.id))}" style="${colorNucleo(n)}">
       ${retrato(p)}
       <span class="docente-texto">
         <b>${mostrarValor(p.nombre, "Por designar")}</b>
@@ -527,6 +529,7 @@
     let html;
     if (h.startsWith("articulo-") && !window.LEHES_EMBEBIDO) { location.replace(enlaceArticulo(h.slice(9))); return; }
     if (h.startsWith("articulo-")) html = await V.articulo(h.slice(9));
+    else if (h.startsWith("docente-") && !window.LEHES_EMBEBIDO && perfilPublico(h.slice(8))) { location.replace(enlaceDocente(h.slice(8))); return; }
     else if (h.startsWith("docente-")) html = V.docente(h.slice(8));
     else { if (!VISTAS_FIJAS.includes(h)) h = "inicio"; html = V[h](); }
     app.innerHTML = html;
