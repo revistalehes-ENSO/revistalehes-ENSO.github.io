@@ -482,6 +482,7 @@
       <p>Cada artículo declara la aprobación del comité de investigación de la ENSO, la contribución de cada autor, sus fuentes de financiación y sus posibles conflictos de interés. La revisión es por pares, con los nombres ocultos.</p>
       <h2>Periodicidad e identificación</h2>
       <p>${esc(R.periodicidad)}. ISSN: ${mostrarValor(R.issn, "en trámite")}.</p>
+      ${SITIOS().length ? `<h2>Sitios de la ENSO</h2><p>Conoce más de la institución en sus sitios oficiales:</p><ul class="sitios sitios-grandes">${listaSitios()}</ul>` : ""}
       <h2>Financiación</h2>
       <p>LEHES es financiada por la ${esc(R.financiacion || R.institucion)}. Sello editorial: ${esc(R.sello_editorial || R.institucion)}.</p>
       <h2>Adquisición, canje y contacto</h2>
@@ -562,7 +563,14 @@
     progreso();
   }
 
+  const SITIOS = () => [
+    [R.enlaces.sitio_enso, "Escuela Normal Superior Oiba", "Sitio institucional"],
+    [R.enlaces.pfc_medios, "ENSO PFC Medios", "Programa de Formación Complementaria"],
+  ].filter(([u]) => !vacio(u));
+  const listaSitios = () => SITIOS().map(([u, t, d]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span>${esc(d)}</span></li>`).join("");
   function rellenarPie() {
+    const ul = document.getElementById("sitios-enso");
+    if (ul) ul.innerHTML = listaSitios();
     document.querySelectorAll("[data-campo]").forEach((el) => { el.innerHTML = mostrarValor(R[el.dataset.campo], "en trámite"); });
     const lic = document.querySelector('[data-enlace="licencia"]');
     lic.href = R.licencia.url; lic.textContent = R.licencia.sigla;

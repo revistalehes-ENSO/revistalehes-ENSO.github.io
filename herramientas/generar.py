@@ -33,7 +33,9 @@ D = json.loads(_dp.read_text(encoding="utf-8")) if _dp.exists() else {"nucleos":
 SIGLA = R.get("sigla_institucion", "ENSO")
 INSTITUCION_LD = {"@type": "EducationalOrganization", "name": R["institucion"],
                   "alternateName": [SIGLA, "Normal Superior Oiba", "Escuela Normal Oiba"],
-                  "address": {"@type": "PostalAddress", "addressLocality": "Oiba", "addressRegion": "Santander", "addressCountry": "CO"}}
+                  "address": {"@type": "PostalAddress", "streetAddress": "Calle 9 # 6-05", "addressLocality": "Oiba", "addressRegion": "Santander", "addressCountry": "CO"},
+                  **({"url": R["enlaces"]["sitio_enso"]} if R["enlaces"].get("sitio_enso", "").startswith("http") else {}),
+                  "sameAs": [u for u in [R["enlaces"].get("sitio_enso"), R["enlaces"].get("pfc_medios")] if u and u.startswith("http")]}
 BASE = R.get("url_sitio", "").rstrip("/")
 REVISTA = "LEHES. Revista Leer, Escribir, Hablar & Escuchar"
 HOY = dt.date.today().isoformat()
@@ -392,6 +394,7 @@ def pagina_articulo(a, cuerpo, indice, img_compartir):
     <div><p>{e(R["institucion"])}<br>{e(R["ciudad"])}<br>ISSN: {"en trámite" if vacio(R.get("issn")) else e(R["issn"])}</p></div>
     <div><p>Los contenidos se publican bajo licencia<br><a href="{e(R["licencia"]["url"])}" rel="license">{e(R["licencia"]["sigla"])}</a>.</p>
       <p id="visitas-total" class="visitas" hidden><b>…</b> visitas a LEHES</p></div>
+    {sitios_html()}
   </div>
 </footer>
 <script src="../../js/indice.js"></script>
@@ -446,6 +449,14 @@ def cabecera(raiz, actual, titulo, desc, url, extra_head=""):
 """
 
 
+def sitios_html():
+    sitios = [(R["enlaces"].get("sitio_enso"), "Escuela Normal Superior Oiba", "Sitio institucional"),
+              (R["enlaces"].get("pfc_medios"), "ENSO PFC Medios", "Programa de Formación Complementaria")]
+    flecha = '<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    items = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}{flecha}</a><span>{e(d)}</span></li>' for u, t, d in sitios if u and not vacio(u))
+    return f'<div><p><b>Sitios de la ENSO</b></p><ul class="sitios">{items}</ul></div>' if items else ""
+
+
 def pie(raiz):
     return f"""</main>
 <footer class="pie">
@@ -454,6 +465,7 @@ def pie(raiz):
     <div><img src="{raiz}img/logo-lehes.png" alt="" width="64" height="44"><p><b>Revista LEHES</b><br>{e(R["nombre_largo"])}</p></div>
     <div><p>{e(R["institucion"])} ({e(SIGLA)})<br>{e(R["ciudad"])}</p></div>
     <div><p>Los contenidos se publican bajo licencia<br><a href="{e(R["licencia"]["url"])}" rel="license">{e(R["licencia"]["sigla"])}</a>.</p></div>
+    {sitios_html()}
   </div>
 </footer>
 </body>

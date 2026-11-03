@@ -340,3 +340,12 @@ aside.ficha { align-self: start; display: grid; gap: 14px; }
 .btn.whatsapp:hover { color: #fff; }
 .persona > div { min-width: 0; }
 .persona p { overflow-wrap: anywhere; }
+.sitios { list-style: none; margin: .4em 0 0; padding: 0; display: grid; gap: 10px; }
+.sitios li { display: grid; gap: 1px; }
+.sitios a { display: inline-flex; align-items: center; gap: 6px; font-family: var(--letra-titulos); font-weight: 600; }
+.sitios a svg { transition: transform var(--vel-rapida) var(--curva); }
+.sitios a:hover svg { transform: translate(2px, -2px); }
+.sitios span { font-size: .85rem; opacity: .8; }
+.sitios-grandes { gap: 12px; }
+.sitios-grandes li { background: var(--hoja); border: 1px solid var(--linea); border-left: 5px solid var(--verde-enso); border-radius: var(--radio-chico); padding: 12px 16px; }
+.sitios-grandes span { color: var(--tinta-suave); opacity: 1; }

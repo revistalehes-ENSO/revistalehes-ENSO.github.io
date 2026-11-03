@@ -25,9 +25,10 @@
     "formulario_suscripcion": "[URL DEL FORMULARIO DE GOOGLE PARA SUSCRIPCIÓN]",
     "formulario_envio": "[URL DEL FORMULARIO DE GOOGLE PARA ENVIAR ARTÍCULOS]",
     "canal_whatsapp": "https://wa.me/573118233637?text=Hola%2C%20quiero%20recibir%20la%20Revista%20LEHES",
-    "sitio_enso": "[URL DEL SITIO WIX DE LA ENSO]",
+    "sitio_enso": "https://escuelanormaloiba.wixsite.com/normal-superior-oiba/",
     "plantilla_word": "plantillas/Plantilla-LEHES.docx",
-    "plantilla_latex": "plantillas/Plantilla-LEHES-LaTeX.zip"
+    "plantilla_latex": "plantillas/Plantilla-LEHES-LaTeX.zip",
+    "pfc_medios": "https://www.ensopfcmedios.com/"
   },
   "secciones": [
     {
