@@ -331,3 +331,12 @@ aside.ficha { align-self: start; display: grid; gap: 14px; }
   .indice-boton { padding: 7px 10px; }
   .indice-panel { width: 100%; }
 }
+.persona img.avatar { object-fit: cover; }
+.persona.grupo .avatar { background: var(--ambar); color: var(--azul-noche); font-size: 1.4rem; }
+.tabla-creditos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 28px; margin-top: 8px; }
+.credito { display: grid; gap: 2px; padding: 12px 0; border-bottom: 1px solid var(--linea); }
+.credito .rol { font-family: var(--letra-titulos); font-size: .78rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--azul-articulo); }
+.btn.whatsapp { background: #1f8f4e; border-color: #1f8f4e; color: #fff; }
+.btn.whatsapp:hover { color: #fff; }
+.persona > div { min-width: 0; }
+.persona p { overflow-wrap: anywhere; }

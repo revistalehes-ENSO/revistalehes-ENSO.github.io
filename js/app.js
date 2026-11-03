@@ -445,16 +445,30 @@
     </section>`;
   };
 
-  V.comite = () => `<section class="vista">
+  const perfilPorNombre = (n) => D && D.personas.find((p) => p.autoriza_publicacion && !p.ejemplo && sinTilde(p.nombre) === sinTilde(n));
+  const nombreEnlazado = (n) => { const p = perfilPorNombre(n); return p ? `<a class="a-perfil" href="${esc(enlaceDocente(p.id))}">${esc(n)}</a>` : esc(n); };
+  V.comite = () => {
+    const n = numero(R.numero_actual);
+    const fotoDe = (nom) => { const p = perfilPorNombre(nom); return p && !vacio(p.foto) ? rutaRecurso(p.foto) : ""; };
+    return `<section class="vista">
       <h1>Comité editorial</h1>
       <p class="lead">Las personas que cuidan la calidad de lo que se publica en LEHES.</p>
       <div class="comite">
-        ${R.comite.map((p) => `<div class="persona ${vacio(p.nombre) ? "vacia" : ""}">
-          <span class="avatar" aria-hidden="true">${iniciales(p.nombre)}</span>
-          <div><span class="cargo">${esc(p.cargo)}</span><p><b>${mostrarValor(p.nombre)}</b><br>${vacio(p.filiacion) ? "" : esc(p.filiacion)}
-          ${p.orcid ? `<br><a href="https://orcid.org/${esc(p.orcid)}">ORCID</a>` : ""}</p></div></div>`).join("")}
+        ${R.comite.map((p) => {
+          const foto = vacio(p.nombre) ? "" : fotoDe(p.nombre);
+          return `<div class="persona ${vacio(p.nombre) ? "vacia" : ""} ${p.grupo ? "grupo" : ""}">
+          ${foto ? `<img class="avatar" src="${esc(foto)}" alt="">` : `<span class="avatar" aria-hidden="true">${p.grupo ? "∞" : iniciales(p.nombre)}</span>`}
+          <div><span class="cargo">${esc(p.cargo)}</span><p><b>${vacio(p.nombre) ? mostrarValor(p.nombre) : nombreEnlazado(p.nombre)}</b>
+          ${vacio(p.filiacion) ? "" : `<br>${esc(p.filiacion)}`}
+          ${p.correo ? `<br><a href="mailto:${esc(p.correo)}">${esc(p.correo)}</a>` : ""}
+          ${p.orcid ? `<br><a href="https://orcid.org/${esc(p.orcid)}">ORCID</a>` : ""}</p></div></div>`;
+        }).join("")}
       </div>
+      ${n.creditos ? `<h2 style="margin-top:1.6em">Equipo del Vol. ${n.volumen}, Núm. ${n.numero}</h2>
+      <div class="tabla-creditos">${n.creditos.map(([rol, nom]) => `<div class="credito"><span class="rol">${esc(rol)}</span><span>${vacio(nom) ? `<span class="por-llenar">Por registrar</span>` : nom.split(/\s+y\s+/).map(nombreEnlazado).join(" y ")}</span></div>`).join("")}</div>` : ""}
+      <p class="aviso">Sello editorial: ${esc(R.sello_editorial || R.institucion)}. Este número es financiado por la ${esc(R.financiacion || R.institucion)}.</p>
     </section>`;
+  };
 
   V.acerca = () => `<section class="vista texto-largo">
       <p class="mano">Leer, escribir, hablar &amp; escuchar</p>
@@ -468,8 +482,13 @@
       <p>Cada artículo declara la aprobación del comité de investigación de la ENSO, la contribución de cada autor, sus fuentes de financiación y sus posibles conflictos de interés. La revisión es por pares, con los nombres ocultos.</p>
       <h2>Periodicidad e identificación</h2>
       <p>${esc(R.periodicidad)}. ISSN: ${mostrarValor(R.issn, "en trámite")}.</p>
-      <h2>Contacto</h2>
-      <p>${vacio(R.correo_contacto) ? '<span class="por-llenar">Correo por definir</span>' : `<a href="mailto:${esc(R.correo_contacto)}">${esc(R.correo_contacto)}</a>`}</p>
+      <h2>Financiación</h2>
+      <p>LEHES es financiada por la ${esc(R.financiacion || R.institucion)}. Sello editorial: ${esc(R.sello_editorial || R.institucion)}.</p>
+      <h2>Adquisición, canje y contacto</h2>
+      <p>${esc(R.institucion)}${R.direccion ? `<br>${esc(R.direccion)}` : ""}
+      ${vacio(R.correo_contacto) ? "" : `<br>Correo: <a href="mailto:${esc(R.correo_contacto)}">${esc(R.correo_contacto)}</a>`}
+      ${R.whatsapp && !vacio(R.whatsapp.numero) ? `<br>WhatsApp: <a href="${esc(R.enlaces.canal_whatsapp)}" rel="noopener">${esc(R.whatsapp.numero)}</a> (${esc(R.whatsapp.nombre)}, ${esc(R.whatsapp.cargo)})` : ""}</p>
+      ${R.estado_legal ? `<p class="aviso">Estado legal: NIT ${esc(R.estado_legal.nit)} · DANE ${esc(R.estado_legal.dane)}</p>` : ""}
     </section>`;
 
   V.suscribirse = () => {
@@ -480,8 +499,9 @@
       <p class="lead">Es gratis. Te avisamos cuando salga un número nuevo, con el enlace para leerlo aquí o descargarlo en PDF, y te contamos cuando abra una convocatoria.</p>
       <div class="descargas">
         ${vacio(e.formulario_suscripcion) ? `<a class="btn" aria-disabled="true">Formulario de suscripción (pronto)</a>` : `<a class="btn" href="${esc(e.formulario_suscripcion)}" rel="noopener">Suscribirme por correo</a>`}
-        ${vacio(e.canal_whatsapp) ? "" : `<a class="btn claro" href="${esc(e.canal_whatsapp)}" rel="noopener">Seguir el canal de WhatsApp</a>`}
+        ${vacio(e.canal_whatsapp) ? "" : `<a class="btn whatsapp" href="${esc(e.canal_whatsapp)}" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>Recibir la revista por WhatsApp</a>`}
       </div>
+      ${R.whatsapp && !vacio(R.whatsapp.numero) ? `<p class="aviso">Por WhatsApp te atiende ${esc(R.whatsapp.nombre)}, ${esc(R.whatsapp.cargo)}: <b>${esc(R.whatsapp.numero)}</b>.</p>` : ""}
       <p class="aviso">Tus datos solo se usan para enviarte la revista. Puedes darte de baja cuando quieras.</p>
     </section>`;
   };

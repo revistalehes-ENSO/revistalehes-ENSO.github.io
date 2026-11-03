@@ -1,9 +1,7 @@
 {
   "_instrucciones": "Edite los valores entre comillas. Todo lo que esté entre [CORCHETES] es un espacio por llenar y en el sitio aparece como 'Por designar'.",
-
   "url_sitio": "https://revistalehes-enso.github.io",
   "_url_ayuda": "Dirección pública del sitio, sin barra al final. Si el repositorio no se llama usuario.github.io, agregue el nombre del repositorio: https://usuario.github.io/repositorio",
-
   "nombre_corto": "LEHES",
   "nombre_largo": "Revista: Leer, Escribir, Hablar & Escuchar",
   "nombre_ingles": "Lehes Journal",
@@ -11,54 +9,152 @@
   "sigla_institucion": "ENSO",
   "ciudad": "Oiba, Santander, Colombia",
   "issn": "[ISSN EN TRÁMITE]",
-  "periodicidad": "Semestral",
+  "periodicidad": "Anual",
   "lema": "Donde la escuela se lee, se escribe, se habla y se escucha",
-  "correo_contacto": "[CORREO DE LA REVISTA]",
+  "correo_contacto": "escuelanormalsuperioroiba@santander.edu.co",
   "licencia": {
     "nombre": "Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional",
     "sigla": "CC BY-NC-ND 4.0",
     "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es"
   },
-
   "estadisticas": {
     "_ayuda": "Cree una cuenta gratis en goatcounter.com, active 'Allow adding visitor counts on your website' y escriba aquí su código (lo que va antes de .goatcounter.com).",
-    "goatcounter": "revistalehes"
+    "goatcounter": "[CÓDIGO DE GOATCOUNTER]"
   },
-
   "enlaces": {
     "formulario_suscripcion": "[URL DEL FORMULARIO DE GOOGLE PARA SUSCRIPCIÓN]",
     "formulario_envio": "[URL DEL FORMULARIO DE GOOGLE PARA ENVIAR ARTÍCULOS]",
-    "canal_whatsapp": "[URL DEL CANAL DE WHATSAPP]",
+    "canal_whatsapp": "https://wa.me/573118233637?text=Hola%2C%20quiero%20recibir%20la%20Revista%20LEHES",
     "sitio_enso": "[URL DEL SITIO WIX DE LA ENSO]",
     "plantilla_word": "plantillas/Plantilla-LEHES.docx",
     "plantilla_latex": "plantillas/Plantilla-LEHES-LaTeX.zip"
   },
-
   "secciones": [
-    { "id": "investigacion", "nombre": "Artículos de investigación", "verbo": "leer",
-      "descripcion": "Resultados de investigaciones terminadas, con revisión por pares." },
-    { "id": "procesos", "nombre": "Procesos en curso", "verbo": "escribir",
-      "descripcion": "Avances de investigación: preguntas, métodos y primeros hallazgos." },
-    { "id": "aula", "nombre": "Experiencias de aula", "verbo": "hablar",
-      "descripcion": "Prácticas pedagógicas sistematizadas por docentes y maestros en formación." },
-    { "id": "semillero", "nombre": "Voces del semillero", "verbo": "escuchar",
-      "descripcion": "Textos de los semilleros y del PFC, entrevistas y reseñas." }
+    {
+      "id": "investigacion",
+      "nombre": "Artículos de investigación",
+      "verbo": "leer",
+      "descripcion": "Resultados de investigaciones terminadas, con revisión por pares."
+    },
+    {
+      "id": "procesos",
+      "nombre": "Procesos en curso",
+      "verbo": "escribir",
+      "descripcion": "Avances de investigación: preguntas, métodos y primeros hallazgos."
+    },
+    {
+      "id": "aula",
+      "nombre": "Experiencias de aula",
+      "verbo": "hablar",
+      "descripcion": "Prácticas pedagógicas sistematizadas por docentes y maestros en formación."
+    },
+    {
+      "id": "semillero",
+      "nombre": "Voces del semillero",
+      "verbo": "escuchar",
+      "descripcion": "Textos de los semilleros y del PFC, entrevistas y reseñas."
+    }
   ],
-
   "numeros": [
-    { "id": "v1n1", "volumen": 1, "numero": 1, "fecha": "Noviembre de 2024", "fecha_iso": "2024-11-20",
+    {
+      "id": "v1n1",
+      "volumen": 1,
+      "numero": 1,
+      "fecha": "Noviembre de 2024",
+      "fecha_iso": "2024-11-20",
       "titulo": "Número inaugural",
-      "nota_editor": "[NOTA DEL EDITOR DEL VOL. 1, NÚM. 1]" }
+      "nota_editor": "[NOTA DEL EDITOR DEL VOL. 1, NÚM. 1]",
+      "creditos": [
+        [
+          "Revisión editorial",
+          "Iván Alirio Suárez Jaímes y Sandra Liliana Bernal Villate"
+        ],
+        [
+          "Traducción de resúmenes al inglés",
+          "Andrés Santiago Medina Pedraza"
+        ],
+        [
+          "Diseño de la portada",
+          "Yary Zulay Pérez Solano"
+        ],
+        [
+          "Diseño y fotografía de los separadores",
+          "Yary Zulay Pérez Solano"
+        ],
+        [
+          "Composición de texto",
+          "Rita Delia Camacho López"
+        ],
+        [
+          "Corrección de estilo",
+          "Natalia Gómez Santamaría"
+        ],
+        [
+          "Coordinación de la edición impresa",
+          "Marcela Morales Ballesteros"
+        ],
+        [
+          "Fotografía de la portada",
+          "[POR REGISTRAR]"
+        ],
+        [
+          "Diagramación",
+          "[POR REGISTRAR]"
+        ]
+      ],
+      "edicion_impresa": "Tamaño 17 × 24 cm, papel propalibros de 70 g a una tinta, carátula en propalcote de 70 g plastificado en mate."
+    }
   ],
   "numero_actual": "v1n1",
-
   "comite": [
-    { "cargo": "Director(a) / Editor(a) general", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
-    { "cargo": "Coeditor(a)", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
-    { "cargo": "Comité editorial — Lenguaje", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
-    { "cargo": "Comité editorial — Matemáticas", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
-    { "cargo": "Representante del PFC", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
-    { "cargo": "Par evaluador externo", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" },
-    { "cargo": "Diseño y desarrollo web", "nombre": "[NOMBRE]", "filiacion": "[FILIACIÓN]", "orcid": "" }
-  ]
+    {
+      "cargo": "Editor",
+      "nombre": "Iván Alirio Suárez Jaímes",
+      "filiacion": "Escuela Normal Superior Oiba",
+      "correo": "escuelanormalsuperioroiba@santander.edu.co",
+      "orcid": ""
+    },
+    {
+      "cargo": "Editora asistente",
+      "nombre": "Luz Angela Vega Vargas",
+      "filiacion": "Escuela Normal Superior Oiba",
+      "correo": "d.luzangela.vegavargas@santander.edu.co",
+      "orcid": ""
+    },
+    {
+      "cargo": "Asistente editorial",
+      "nombre": "Diana Milena Bello Gutiérrez",
+      "filiacion": "",
+      "correo": "",
+      "orcid": ""
+    },
+    {
+      "cargo": "Comité científico y editorial",
+      "nombre": "Todo el equipo docente de la ENSO",
+      "filiacion": "Escuela Normal Superior Oiba",
+      "correo": "",
+      "orcid": "",
+      "grupo": true
+    },
+    {
+      "cargo": "Comité asesor externo",
+      "nombre": "[EVALUADORES EXTERNOS]",
+      "filiacion": "Pares evaluadores de cada número",
+      "correo": "",
+      "orcid": ""
+    }
+  ],
+  "direccion": "Calle 9 # 6-05, Oiba, Santander, Colombia",
+  "estado_legal": {
+    "nit": "890212320-1",
+    "dane": "168500000218"
+  },
+  "financiacion": "Escuela Normal Superior Oiba",
+  "sello_editorial": "Escuela Normal Superior Oiba",
+  "whatsapp": {
+    "_ayuda": "Contacto por WhatsApp que aparece en Suscribirse y en Acerca de. Si se crea un canal de WhatsApp, pegue su enlace en enlaces.canal_whatsapp.",
+    "nombre": "Sandra Zulay Jáuregui Mora",
+    "cargo": "Coordinadora ENSO",
+    "numero": "+57 311 823 3637"
+  }
 }
