@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+# Datos internos: no se muestran en los resultados de búsqueda
+Disallow: /datos/docentes.json
+Disallow: /herramientas/
+Disallow: /articulos/*.md$
 
 Sitemap: https://revistalehes-enso.github.io/sitemap.xml

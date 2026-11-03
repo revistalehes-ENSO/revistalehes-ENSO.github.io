@@ -1,68 +1,13 @@
-# Revista LEHES · sitio web
+# Revista LEHES
 
-**LEHES. Revista: Leer, Escribir, Hablar & Escuchar**
-Revista institucional de la Escuela Normal Superior Oiba, Oiba, Santander, Colombia.
+**LEHES. Revista: Leer, Escribir, Hablar & Escuchar** es la revista institucional de investigación educativa de la
+**Escuela Normal Superior Oiba (ENSO)**, en Oiba, Santander, Colombia.
 
-Sitio estático (HTML, CSS y JavaScript, sin servidor ni base de datos). Se publica gratis en GitHub Pages.
+Publica artículos y procesos de investigación de docentes, maestros en formación del Programa de Formación
+Complementaria y semilleros de la institución. Es de acceso abierto: no se cobra por leer ni por publicar.
 
-## Qué hay en cada carpeta
+**Sitio web:** https://revistalehes-enso.github.io
 
-| Carpeta / archivo | Para qué sirve | ¿Se edita? |
-|---|---|---|
-| `css/colores.css` | **Panel de control visual**: todos los colores, letras y velocidades de animación | Sí, aquí se cambia el aspecto |
-| `datos/revista.json` | Nombre, ISSN, enlaces, secciones, números y **comité editorial** (los `[CORCHETES]` se muestran como "Por designar") | Sí |
-| `datos/docentes.json` | Perfiles de "Nuestros maestros" por núcleos (solo se publica quien autoriza) | Sí |
-| `img/docentes/` | Retratos de los docentes | Sí |
-| `datos/articulos.json` | Ficha de cada artículo: título, autores, fechas, resumen, abstract, palabras clave | Sí, uno por artículo |
-| `articulos/*.md` | Texto completo del artículo en Markdown, para leerlo dentro del sitio | Sí |
-| `articulos/img/` | Figuras de los artículos | Sí |
-| `pdf/` | PDF maquetado de cada artículo | Sí |
-| `plantillas/` | Plantillas para autores (Word y LaTeX) | Solo si cambia el formato |
-| `img/` | Logo LEHES, escudo ENSO, favicon, licencia CC | No |
-| `index.html`, `css/estilos.css`, `js/app.js` | Estructura y lógica del sitio | Normalmente no |
-
-## Probar en el computador
-
-El navegador no deja leer los archivos de datos si se abre `index.html` con doble clic. Use un servidor local:
-
-```bash
-cd lehes-web
-python -m http.server 8000
-```
-
-y abra `http://localhost:8000`. (Con VS Code también sirve la extensión *Live Server*.)
-
-## Publicar un artículo nuevo
-
-1. Copie el PDF en `pdf/` con un nombre sin tildes ni espacios, por ejemplo `2027-v2n1-apellido-tema.pdf`.
-2. Copie el texto en `articulos/2027-v2n1-apellido-tema.md` (títulos con `##`, subtítulos con `###`).
-3. Agregue un bloque nuevo en `datos/articulos.json` (copie el existente y cambie los valores).
-4. Si es un número nuevo, agréguelo en `numeros` de `datos/revista.json` y cambie `numero_actual`.
-5. Suba los cambios a GitHub. En uno o dos minutos el sitio se actualiza solo.
-
-Licencias de terceros: `js/vendor/marked.min.js` (MIT, ver `marked-LICENSE.md`).
-
-## Contador de visitas (GoatCounter, gratis y sin cookies)
-
-1. Cree una cuenta en goatcounter.com (gratis para uso no comercial). Elija un código, por ejemplo `revistalehes`.
-2. En *Settings*, marque **Allow adding visitor counts on your website** y guarde.
-3. En `datos/revista.json`, cambie `"goatcounter": "[CÓDIGO DE GOATCOUNTER]"` por `"goatcounter": "revistalehes"`.
-
-El sitio contará las lecturas, las descargas de PDF y los clics en "Me fue útil" de cada artículo, y las visitas totales. Las cifras se actualizan cada 30 minutos aproximadamente.
-
-## Buscadores, Google Académico y publicación automática
-
-Cada artículo tiene su propia página en `articulo/<id>/`, con los metadatos que leen Google, Google Académico,
-Zotero y Mendeley, su cita en BibTeX y RIS y una imagen para compartir en redes (`img/compartir/`).
-Todo eso lo crea `herramientas/generar.py` a partir de `datos/articulos.json`, junto con `sitemap.xml`,
-`feed.xml`, `robots.txt` y `404.html`.
-
-**Publicación automática (recomendada).** El archivo `.github/workflows/publicar.yml` hace que GitHub ejecute
-el generador y publique el sitio cada vez que se suben cambios. Se activa una sola vez en
-*Settings → Pages → Source: GitHub Actions*. El avance se ve en la pestaña *Actions* del repositorio.
-
-**Sin publicación automática.** Ejecute en su computador `pip install markdown pillow` y luego
-`python herramientas/generar.py`, y suba las carpetas `articulo/`, `img/compartir/` y los archivos generados.
-
-**Dirección del sitio.** `url_sitio` en `datos/revista.json` debe ser la dirección pública exacta,
-porque los buscadores la usan en el mapa del sitio y en los metadatos.
+Los artículos se publican bajo licencia
+[Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es).
+Los derechos de cada artículo pertenecen a sus autores.

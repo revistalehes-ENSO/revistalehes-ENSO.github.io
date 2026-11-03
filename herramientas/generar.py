@@ -659,7 +659,7 @@ def principal():
 <p class="lead" style="margin:0 auto 22px">Puede que el enlace haya cambiado. Desde la portada encontrarás todos los artículos de la revista.</p>
 <a class="btn" href="{BASE}/">Ir a la portada</a> <a class="btn claro" href="{BASE}/#archivo">Ver el archivo</a></div></main></body></html>
 """, encoding="utf-8")
-    (RAIZ / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n", encoding="utf-8")
+    (RAIZ / "robots.txt").write_text(f"User-agent: *\nAllow: /\n# Datos internos: no se muestran en los resultados de búsqueda\nDisallow: /datos/docentes.json\nDisallow: /herramientas/\nDisallow: /articulos/*.md$\n\nSitemap: {BASE}/sitemap.xml\n", encoding="utf-8")
     print(f"Listo: {len(A)} artículos, sitemap.xml, feed.xml y robots.txt para {BASE}")
 
 
