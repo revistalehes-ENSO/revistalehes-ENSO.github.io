@@ -11,31 +11,25 @@
       "id": "cientifico-tecnologico",
       "nombre": "Núcleo científico tecnológico",
       "color": "color-leer",
-      "descripcion": "Matemáticas, ciencias naturales, tecnología e informática."
+      "areas": "Ciencias naturales, física, química, matemáticas y tecnología",
+      "coordinador": "rita-delia-camacho-lopez",
+      "descripcion": "Áreas: ciencias naturales, física, química, matemáticas y tecnología."
+    },
+    {
+      "id": "social-cultural",
+      "nombre": "Núcleo social cultural",
+      "color": "color-escuchar",
+      "areas": "Filosofía, ciencias económicas, inglés, lenguaje, sociales, valores y religión",
+      "coordinador": "natalia-gomez-santamaria",
+      "descripcion": "Áreas: filosofía, ciencias económicas, inglés, lenguaje, ciencias sociales, valores y religión."
     },
     {
       "id": "ludico-pedagogico",
       "nombre": "Núcleo lúdico pedagógico",
       "color": "color-hablar",
-      "descripcion": "Pedagogía, artes, educación física y formación de maestros."
-    },
-    {
-      "id": "humanistico",
-      "nombre": "Núcleo humanístico",
-      "color": "color-escuchar",
-      "descripcion": "Lengua castellana, inglés, ciencias sociales, ética, filosofía y religión."
-    },
-    {
-      "id": "gestion-comunitario",
-      "nombre": "Núcleo de gestión y comunitario",
-      "color": "color-escribir",
-      "descripcion": "Proyectos institucionales, orientación escolar y trabajo con la comunidad."
-    },
-    {
-      "id": "por-asignar",
-      "nombre": "Docentes de la ENSO",
-      "color": "tinta-suave",
-      "descripcion": "Mientras se organiza la planta por núcleos, aquí están todos los docentes."
+      "areas": "Pedagogía, educación física y educación artística",
+      "coordinador": "miguel-angel-martinez-agudelo",
+      "descripcion": "Áreas: pedagogía, educación física y educación artística."
     }
   ],
   "personas": [
@@ -67,147 +61,12 @@
       "aparecer_en_buscadores": false
     },
     {
-      "id": "laura-nataly-ayala-garces",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Laura Nataly Ayala Garcés",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "13",
-      "formacion": [
-        "Licenciada en Sociales",
-        "Magíster en TIC para la educación"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "yazmin-rocio-barbosa-hernandez",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Yazmin Rocío Barbosa Hernández",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "3",
-      "formacion": [
-        "Licenciada en educación para la primera infancia"
-      ],
-      "investigacion": "Asesora de proyectos de investigación PFC.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "ana-joaquina-becerra-chaparro",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Ana Joaquina Becerra Chaparro",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "47",
-      "formacion": [
-        "Licenciada en ciencias sociales y políticas",
-        "Especialista en didáctica de las ciencias sociales"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "pedro-anibal-beltran-carreno",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Pedro Aníbal Beltrán Carreño",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "21",
-      "formacion": [
-        "Ingeniero Electrónico",
-        "Especialista en Administración de la información educativa",
-        "Magíster en Gestión de la Tecnología Educativa"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "valentina-cardenas-pachon",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Valentina Cárdenas Pachón",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "10",
-      "formacion": [
-        "Licenciada en Lengua extranjera e inglés",
-        "Especialista en pedagogía en educación superior"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
       "id": "rita-delia-camacho-lopez",
       "autoriza_publicacion": true,
       "ejemplo": false,
       "nombre": "Rita Delia Camacho López",
       "tipo": "docente",
-      "nucleo": "por-asignar",
+      "nucleo": "cientifico-tecnologico",
       "cargo": "Docente",
       "aula": "",
       "foto": "",
@@ -231,371 +90,12 @@
       "aparecer_en_buscadores": false
     },
     {
-      "id": "martha-elizabeth-castellanos-nino",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Martha Elizabeth Castellanos Niño",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "45",
-      "formacion": [
-        "Licenciada en Ciencias Sociales",
-        "Especialista en Educación Ambiental"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "monica-andrea-cortes-ardila",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Mónica Andrea Cortes Ardila",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "12",
-      "formacion": [
-        "Normalista superior",
-        "Licenciada en Matemáticas"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "fernando-cortes-serrano",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Fernando Cortés Serrano",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "3",
-      "formacion": [
-        "Físico",
-        "Magíster en Física"
-      ],
-      "investigacion": "",
-      "publicaciones": [
-        "Cortés Serrano, F., González Villegas, G. A. y Reina Medrano, Y. I. (2016). Potential density pairs for galaxy models obtained by superposition of the Kalnajs generalized disks and the Miyamoto-Nagai potentials. XV Latin American Regional IAU Meeting, Cartagena, Colombia, 3 al 7 de octubre de 2016."
-      ],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "carmen-sofia-corredor-duran",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Carmen Sofia Corredor Duran",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "32",
-      "formacion": [
-        "Licenciada en Educación Física, recreación y deportes",
-        "Especialista en Pedagogía de la Recreación Ecológica",
-        "Especialista en la Educación para la recreación comunitaria"
-      ],
-      "investigacion": "Asesora de proyectos de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "omaira-diaz-boavita",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Omaira Diaz Boavita",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "32",
-      "formacion": [
-        "Licenciada en Educación Básica con énfasis en Educación Física, Recreación y Deportes",
-        "Especialista en Pedagogía de la Recreación Ecológica",
-        "Especialista en Administración en Informática Educativa"
-      ],
-      "investigacion": "Asesora proyecto de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "yolanda-duarte-medina",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Yolanda Duarte Medina",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "16",
-      "formacion": [
-        "Licenciada en Filología e Idiomas",
-        "Magister en entornos virtuales de aprendizaje"
-      ],
-      "investigacion": "Asesora proyectos de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "ruth-fabiola-espinosa",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Ruth Fabiola Espinosa",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "36",
-      "formacion": [
-        "Licenciada en Ciencias Sociales",
-        "Especialista en Didáctica de la Ciencias Sociales",
-        "Especialista en Gerencia Informática"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "yamile-galvis-pelayo",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Yamile Galvis Pelayo",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "33",
-      "formacion": [
-        "Licenciada en Matemáticas",
-        "Magíster en Pedagogía"
-      ],
-      "investigacion": "Asesora de proyectos de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "yanive-garcia-baez",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Yanive García Báez",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "34",
-      "formacion": [
-        "Licenciada en Educación Rural y Desarrollo Comunitario",
-        "Especialista en Dificultades del Aprendizaje Escolar",
-        "Especialista en Docencia y Literatura Infantil"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "natalia-gomez-santamaria",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Natalia Gómez Santamaria",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "11",
-      "formacion": [
-        "Licenciada en Español y Filología Clásica",
-        "Magister en Educación"
-      ],
-      "investigacion": "Asesora del proyecto de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "Corrección de estilo de la Revista LEHES (Vol. 1)",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "magda-liliana-gomez-manrique",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Magda Liliana Gómez Manrique",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "17",
-      "formacion": [
-        "Licenciada en Lengua Castellana y Comunicación",
-        "Magister en Educación"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "martha-cecilia-hernandez-saenz",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Martha Cecilia Hernández Sáenz",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "36",
-      "formacion": [
-        "Licenciada en Educación, Especialidad, Química y Biología",
-        "Especialista en Pedagogía en la Recreación Ecológica",
-        "Especialista en Lúdica Educativa"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "maritza-jaimes-jaimes",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Maritza Jaimes Jaimes",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "25",
-      "formacion": [
-        "Licenciada en Matemática e Informática Educativa",
-        "Especialista en Docencia Superior",
-        "Magister en Administración y Planificación Educativa"
-      ],
-      "investigacion": "Asesora de proyecto de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
       "id": "jorge-leonardo-lopez-agredo",
       "autoriza_publicacion": true,
       "ejemplo": false,
       "nombre": "Jorge Leonardo López Agredo",
       "tipo": "docente",
-      "nucleo": "por-asignar",
+      "nucleo": "cientifico-tecnologico",
       "cargo": "Docente de Matemáticas y Programación",
       "aula": "Grados décimo y once",
       "foto": "img/docentes/jorge-leonardo-lopez-agredo.jpg",
@@ -621,12 +121,563 @@
       "aparecer_en_buscadores": true
     },
     {
+      "id": "maritza-jaimes-jaimes",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Maritza Jaimes Jaimes",
+      "tipo": "docente",
+      "nucleo": "cientifico-tecnologico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "25",
+      "formacion": [
+        "Licenciada en Matemática e Informática Educativa",
+        "Especialista en Docencia Superior",
+        "Magister en Administración y Planificación Educativa"
+      ],
+      "investigacion": "Asesora de proyecto de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "martha-cecilia-hernandez-saenz",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Martha Cecilia Hernández Sáenz",
+      "tipo": "docente",
+      "nucleo": "cientifico-tecnologico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "36",
+      "formacion": [
+        "Licenciada en Educación, Especialidad, Química y Biología",
+        "Especialista en Pedagogía en la Recreación Ecológica",
+        "Especialista en Lúdica Educativa"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "pedro-anibal-beltran-carreno",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Pedro Aníbal Beltrán Carreño",
+      "tipo": "docente",
+      "nucleo": "cientifico-tecnologico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "21",
+      "formacion": [
+        "Ingeniero Electrónico",
+        "Especialista en Administración de la información educativa",
+        "Magíster en Gestión de la Tecnología Educativa"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "omaira-diaz-boavita",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Omaira Diaz Boavita",
+      "tipo": "docente",
+      "nucleo": "cientifico-tecnologico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "32",
+      "formacion": [
+        "Licenciada en Educación Básica con énfasis en Educación Física, Recreación y Deportes",
+        "Especialista en Pedagogía de la Recreación Ecológica",
+        "Especialista en Administración en Informática Educativa"
+      ],
+      "investigacion": "Asesora proyecto de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "margy-mildred-santander-mieles",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Margy Mildred Santander Mieles",
+      "tipo": "docente",
+      "nucleo": "cientifico-tecnologico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "28",
+      "formacion": [
+        "Licenciada en Educación Básica con énfasis en Ciencias Naturales y Educación Ambiental",
+        "Especialista en Administración de la Informática Educativa",
+        "Magíster en Pedagogía"
+      ],
+      "investigacion": "Asesora proyectos de investigación del PFC. Tutora proyectos PFC. Proyectos del programa ONDAS.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "mario-augusto-osorio-pereira",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Mario Augusto Osorio Pereira",
+      "tipo": "docente",
+      "nucleo": "cientifico-tecnologico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "35",
+      "formacion": [
+        "Licenciado en Supervisión Educativa",
+        "Especialista en Educación Ambiental"
+      ],
+      "investigacion": "Asesor proyectos de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "monica-andrea-cortes-ardila",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Mónica Andrea Cortes Ardila",
+      "tipo": "docente",
+      "nucleo": "cientifico-tecnologico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "12",
+      "formacion": [
+        "Normalista superior",
+        "Licenciada en Matemáticas"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "ricardo-alfredo-sanchez-sanchez",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Ricardo Alfredo Sánchez Sánchez",
+      "tipo": "docente",
+      "nucleo": "cientifico-tecnologico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "10",
+      "formacion": [
+        "Ingeniero Químico",
+        "Especialista en Aplicación de TIC para la enseñanza",
+        "Magister en tecnologías digitales aplicadas a la educación"
+      ],
+      "investigacion": "Asesor proyectos de investigación PFC. Coordinador del semillero Ecociencias.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "fernando-cortes-serrano",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Fernando Cortés Serrano",
+      "tipo": "docente",
+      "nucleo": "cientifico-tecnologico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "3",
+      "formacion": [
+        "Físico",
+        "Magíster en Física"
+      ],
+      "investigacion": "",
+      "publicaciones": [
+        "Cortés Serrano, F., González Villegas, G. A. y Reina Medrano, Y. I. (2016). Potential density pairs for galaxy models obtained by superposition of the Kalnajs generalized disks and the Miyamoto-Nagai potentials. XV Latin American Regional IAU Meeting, Cartagena, Colombia, 3 al 7 de octubre de 2016."
+      ],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "natalia-gomez-santamaria",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Natalia Gómez Santamaria",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "11",
+      "formacion": [
+        "Licenciada en Español y Filología Clásica",
+        "Magister en Educación"
+      ],
+      "investigacion": "Asesora del proyecto de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "Corrección de estilo de la Revista LEHES (Vol. 1)",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "luz-angela-vega-vargas",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Luz Angela Vega Vargas",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "22",
+      "formacion": [
+        "Licenciada en Educación Básica con Énfasis en Matemáticas, Humanidades y Lengua Castellana",
+        "Magister en Tecnología Educativa y Medios Innovadores para la Educación"
+      ],
+      "investigacion": "Asesora proyectos de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "Editora asistente de la Revista LEHES",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "jose-useda-gomez",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "José Useda Gómez",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "44",
+      "formacion": [
+        "Licenciado en Ciencias Sociales",
+        "Especialista en dificultades del Aprendizaje Escolar"
+      ],
+      "investigacion": "Asesor proyectos de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "martha-elizabeth-castellanos-nino",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Martha Elizabeth Castellanos Niño",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "45",
+      "formacion": [
+        "Licenciada en Ciencias Sociales",
+        "Especialista en Educación Ambiental"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "valentina-cardenas-pachon",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Valentina Cárdenas Pachón",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "10",
+      "formacion": [
+        "Licenciada en Lengua extranjera e inglés",
+        "Especialista en pedagogía en educación superior"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "andres-santiago-medina-pedraza",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Andrés Santiago Medina Pedraza",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "15",
+      "formacion": [
+        "Licenciado en Lengua Extranjera",
+        "Especialista en Gerencia Educativa"
+      ],
+      "investigacion": "Asesor proyectos de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "Traducción de resúmenes al inglés de la Revista LEHES (Vol. 1)",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "henry-ramirez-quiroga",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Henry Ramírez Quiroga",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "27",
+      "formacion": [
+        "Licenciado en Español y Comunicación",
+        "Especialista en Literatura Hispanoamericana, crítica y Docencia",
+        "Magíster en Pedagogía"
+      ],
+      "investigacion": "Asesor proyectos de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "magda-liliana-gomez-manrique",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Magda Liliana Gómez Manrique",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "17",
+      "formacion": [
+        "Licenciada en Lengua Castellana y Comunicación",
+        "Magister en Educación"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "yary-zulay-perez-solano",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Yary Zulay Pérez Solano",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "13",
+      "formacion": [
+        "Licenciada en Lengua Castellana y Comunicación",
+        "Magíster en Gestión de la Tecnología Educativa"
+      ],
+      "investigacion": "Asesora proyecto de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "Diseño de portada y separadores de la Revista LEHES (Vol. 1)",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "martha-isabel-salcedo-de-cala",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Martha Isabel Salcedo de Cala",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "47",
+      "formacion": [
+        "Licenciada en Supervisión Educativa",
+        "Especialista en Gerencia Informática",
+        "Especialista en Educación Ambiental"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "ruth-fabiola-espinosa",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Ruth Fabiola Espinosa",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "36",
+      "formacion": [
+        "Licenciada en Ciencias Sociales",
+        "Especialista en Didáctica de la Ciencias Sociales",
+        "Especialista en Gerencia Informática"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
       "id": "alexandra-lopez-garcia",
       "autoriza_publicacion": true,
       "ejemplo": false,
       "nombre": "Alexandra López García",
       "tipo": "docente",
-      "nucleo": "por-asignar",
+      "nucleo": "social-cultural",
       "cargo": "Docente",
       "aula": "",
       "foto": "",
@@ -648,23 +699,239 @@
       "aparecer_en_buscadores": false
     },
     {
-      "id": "ana-lucia-mancilla-arenas",
+      "id": "yolanda-duarte-medina",
       "autoriza_publicacion": true,
       "ejemplo": false,
-      "nombre": "Ana Lucia Mancilla Arenas",
+      "nombre": "Yolanda Duarte Medina",
       "tipo": "docente",
-      "nucleo": "por-asignar",
+      "nucleo": "social-cultural",
       "cargo": "Docente",
       "aula": "",
       "foto": "",
-      "anios_experiencia": "8",
+      "anios_experiencia": "16",
       "formacion": [
-        "Normalista Superior",
-        "Licenciada en Educación Básica con énfasis en Lengua Castellana, Humanidades y Matemáticas",
-        "Especialista en didáctica de las Matemáticas",
-        "Magíster en didáctica de las Matemáticas"
+        "Licenciada en Filología e Idiomas",
+        "Magister en entornos virtuales de aprendizaje"
+      ],
+      "investigacion": "Asesora proyectos de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "elisabeth-saavedra-lizarazo",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Elisabeth Saavedra Lizarazo",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "31",
+      "formacion": [
+        "Licenciada en Educación en Básica Primaria",
+        "Especialista en Ludopedagogía de la Educación Motriz"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "laura-nataly-ayala-garces",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Laura Nataly Ayala Garcés",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "13",
+      "formacion": [
+        "Licenciada en Sociales",
+        "Magíster en TIC para la educación"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "milena-mejia-bravo",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Milena Mejía Bravo",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "28",
+      "formacion": [
+        "Licenciada en ciencias de la educación: inglés y español",
+        "Magíster en pedagogía"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "miguel-angel-martinez-agudelo",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Miguel Ángel Martínez Agudelo",
+      "tipo": "docente",
+      "nucleo": "ludico-pedagogico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "22",
+      "formacion": [
+        "Licenciado en Lengua Castellana y Comunicación",
+        "Maestría en aplicación de TIC para la educación"
+      ],
+      "investigacion": "",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "carmen-sofia-corredor-duran",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Carmen Sofia Corredor Duran",
+      "tipo": "docente",
+      "nucleo": "ludico-pedagogico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "32",
+      "formacion": [
+        "Licenciada en Educación Física, recreación y deportes",
+        "Especialista en Pedagogía de la Recreación Ecológica",
+        "Especialista en la Educación para la recreación comunitaria"
       ],
       "investigacion": "Asesora de proyectos de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "mireya-penuela-garces",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Mireya Peñuela Garces",
+      "tipo": "docente",
+      "nucleo": "ludico-pedagogico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "31",
+      "formacion": [
+        "Licenciada en Educación Básica con énfasis en Educación Física, Recreación y Deportes",
+        "Especialista en Metrología de la Educación Artística"
+      ],
+      "investigacion": "Asesora de proyectos de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "yamile-galvis-pelayo",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Yamile Galvis Pelayo",
+      "tipo": "docente",
+      "nucleo": "ludico-pedagogico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "33",
+      "formacion": [
+        "Licenciada en Matemáticas",
+        "Magíster en Pedagogía"
+      ],
+      "investigacion": "Asesora de proyectos de investigación del PFC.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "erly-carolina-mora-cerdas",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Erly Carolina Mora Cerdas",
+      "tipo": "docente",
+      "nucleo": "ludico-pedagogico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "26",
+      "formacion": [
+        "Licenciada en Educación Básica con énfasis en Matemáticas, Humanidades y Lengua Castellana",
+        "Especialista en Administración de la Informática Educativa",
+        "Magíster en Gestión de la Tecnología Educativa"
+      ],
+      "investigacion": "Asesora proyectos de investigación PFC.",
       "publicaciones": [],
       "otros_cargos": "",
       "enlaces": {
@@ -682,7 +949,7 @@
       "ejemplo": false,
       "nombre": "Mónica Mateus Mateus",
       "tipo": "docente",
-      "nucleo": "por-asignar",
+      "nucleo": "ludico-pedagogico",
       "cargo": "Docente",
       "aula": "",
       "foto": "",
@@ -707,148 +974,12 @@
       "aparecer_en_buscadores": false
     },
     {
-      "id": "miguel-angel-martinez-agudelo",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Miguel Ángel Martínez Agudelo",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "22",
-      "formacion": [
-        "Licenciado en Lengua Castellana y Comunicación",
-        "Maestría en aplicación de TIC para la educación"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "santiago-andres-medina-pedraza",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Santiago Andrés Medina Pedraza",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "15",
-      "formacion": [
-        "Licenciado en Lengua Extranjera",
-        "Especialista en Gerencia Educativa"
-      ],
-      "investigacion": "Asesor proyectos de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "Traducción de resúmenes al inglés de la Revista LEHES (Vol. 1)",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "milena-mejia-bravo",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Milena Mejía Bravo",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "28",
-      "formacion": [
-        "Licenciada en ciencias de la educación: inglés y español",
-        "Magíster en pedagogía"
-      ],
-      "investigacion": "",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "erly-carolina-mora-cerdas",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Erly Carolina Mora Cerdas",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "26",
-      "formacion": [
-        "Licenciada en Educación Básica con énfasis en Matemáticas, Humanidades y Lengua Castellana",
-        "Especialista en Administración de la Informática Educativa",
-        "Magíster en Gestión de la Tecnología Educativa"
-      ],
-      "investigacion": "Asesora proyectos de investigación PFC.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "mario-augusto-osorio-pereira",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Mario Augusto Osorio Pereira",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "35",
-      "formacion": [
-        "Licenciado en Supervisión Educativa",
-        "Especialista en Educación Ambiental"
-      ],
-      "investigacion": "Asesor proyectos de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
       "id": "leidy-catherine-parra-rincon",
       "autoriza_publicacion": true,
       "ejemplo": false,
       "nombre": "Leidy Catherine Parra Rincón",
       "tipo": "docente",
-      "nucleo": "por-asignar",
+      "nucleo": "ludico-pedagogico",
       "cargo": "Docente",
       "aula": "",
       "foto": "",
@@ -872,101 +1003,20 @@
       "aparecer_en_buscadores": false
     },
     {
-      "id": "mireya-penuela-garces",
+      "id": "yanive-garcia-baez",
       "autoriza_publicacion": true,
       "ejemplo": false,
-      "nombre": "Mireya Peñuela Garces",
+      "nombre": "Yanive García Báez",
       "tipo": "docente",
-      "nucleo": "por-asignar",
+      "nucleo": "ludico-pedagogico",
       "cargo": "Docente",
       "aula": "",
       "foto": "",
-      "anios_experiencia": "31",
+      "anios_experiencia": "34",
       "formacion": [
-        "Licenciada en Educación Básica con énfasis en Educación Física, Recreación y Deportes",
-        "Especialista en Metrología de la Educación Artística"
-      ],
-      "investigacion": "Asesora de proyectos de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "yary-zulay-perez-solano",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Yary Zulay Pérez Solano",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "13",
-      "formacion": [
-        "Licenciada en Lengua Castellana y Comunicación",
-        "Magíster en Gestión de la Tecnología Educativa"
-      ],
-      "investigacion": "Asesora proyecto de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "Diseño de portada y separadores de la Revista LEHES (Vol. 1)",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "henry-ramirez-quiroga",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Henry Ramírez Quiroga",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "27",
-      "formacion": [
-        "Licenciado en Español y Comunicación",
-        "Especialista en Literatura Hispanoamericana, crítica y Docencia",
-        "Magíster en Pedagogía"
-      ],
-      "investigacion": "Asesor proyectos de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "elisabeth-saavedra-lizarazo",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Elisabeth Saavedra Lizarazo",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "31",
-      "formacion": [
-        "Licenciada en Educación en Básica Primaria",
-        "Especialista en Ludopedagogía de la Educación Motriz"
+        "Licenciada en Educación Rural y Desarrollo Comunitario",
+        "Especialista en Dificultades del Aprendizaje Escolar",
+        "Especialista en Docencia y Literatura Infantil"
       ],
       "investigacion": "",
       "publicaciones": [],
@@ -981,20 +1031,45 @@
       "aparecer_en_buscadores": false
     },
     {
-      "id": "martha-isabel-salcedo-de-cala",
+      "id": "yazmin-rocio-barbosa-hernandez",
       "autoriza_publicacion": true,
       "ejemplo": false,
-      "nombre": "Martha Isabel Salcedo de Cala",
+      "nombre": "Yazmin Rocío Barbosa Hernández",
       "tipo": "docente",
-      "nucleo": "por-asignar",
+      "nucleo": "ludico-pedagogico",
+      "cargo": "Docente",
+      "aula": "",
+      "foto": "",
+      "anios_experiencia": "3",
+      "formacion": [
+        "Licenciada en educación para la primera infancia"
+      ],
+      "investigacion": "Asesora de proyectos de investigación PFC.",
+      "publicaciones": [],
+      "otros_cargos": "",
+      "enlaces": {
+        "orcid": "",
+        "cvlac": "",
+        "scholar": ""
+      },
+      "hobbies": "",
+      "frase": "",
+      "aparecer_en_buscadores": false
+    },
+    {
+      "id": "ana-joaquina-becerra-chaparro",
+      "autoriza_publicacion": true,
+      "ejemplo": false,
+      "nombre": "Ana Joaquina Becerra Chaparro",
+      "tipo": "docente",
+      "nucleo": "social-cultural",
       "cargo": "Docente",
       "aula": "",
       "foto": "",
       "anios_experiencia": "47",
       "formacion": [
-        "Licenciada en Supervisión Educativa",
-        "Especialista en Gerencia Informática",
-        "Especialista en Educación Ambiental"
+        "Licenciada en ciencias sociales y políticas",
+        "Especialista en didáctica de las ciencias sociales"
       ],
       "investigacion": "",
       "publicaciones": [],
@@ -1009,106 +1084,25 @@
       "aparecer_en_buscadores": false
     },
     {
-      "id": "ricardo-alfredo-sanchez-sanchez",
+      "id": "ana-lucia-mancilla-arenas",
       "autoriza_publicacion": true,
       "ejemplo": false,
-      "nombre": "Ricardo Alfredo Sánchez Sánchez",
+      "nombre": "Ana Lucia Mancilla Arenas",
       "tipo": "docente",
-      "nucleo": "por-asignar",
+      "nucleo": "cientifico-tecnologico",
       "cargo": "Docente",
       "aula": "",
       "foto": "",
-      "anios_experiencia": "10",
+      "anios_experiencia": "8",
       "formacion": [
-        "Ingeniero Químico",
-        "Especialista en Aplicación de TIC para la enseñanza",
-        "Magister en tecnologías digitales aplicadas a la educación"
+        "Normalista Superior",
+        "Licenciada en Educación Básica con énfasis en Lengua Castellana, Humanidades y Matemáticas",
+        "Especialista en didáctica de las Matemáticas",
+        "Magíster en didáctica de las Matemáticas"
       ],
-      "investigacion": "Asesor proyectos de investigación PFC. Coordinador del semillero Ecociencias.",
+      "investigacion": "Asesora de proyectos de investigación del PFC.",
       "publicaciones": [],
       "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "margy-mildred-santander-mieles",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Margy Mildred Santander Mieles",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "28",
-      "formacion": [
-        "Licenciada en Educación Básica con énfasis en Ciencias Naturales y Educación Ambiental",
-        "Especialista en Administración de la Informática Educativa",
-        "Magíster en Pedagogía"
-      ],
-      "investigacion": "Asesora proyectos de investigación del PFC. Tutora proyectos PFC. Proyectos del programa ONDAS.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "jose-useda-gomez",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "José Useda Gómez",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "44",
-      "formacion": [
-        "Licenciado en Ciencias Sociales",
-        "Especialista en dificultades del Aprendizaje Escolar"
-      ],
-      "investigacion": "Asesor proyectos de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "",
-      "enlaces": {
-        "orcid": "",
-        "cvlac": "",
-        "scholar": ""
-      },
-      "hobbies": "",
-      "frase": "",
-      "aparecer_en_buscadores": false
-    },
-    {
-      "id": "luz-angela-vega-vargas",
-      "autoriza_publicacion": true,
-      "ejemplo": false,
-      "nombre": "Luz Angela Vega Vargas",
-      "tipo": "docente",
-      "nucleo": "por-asignar",
-      "cargo": "Docente",
-      "aula": "",
-      "foto": "",
-      "anios_experiencia": "22",
-      "formacion": [
-        "Licenciada en Educación Básica con Énfasis en Matemáticas, Humanidades y Lengua Castellana",
-        "Magister en Tecnología Educativa y Medios Innovadores para la Educación"
-      ],
-      "investigacion": "Asesora proyectos de investigación del PFC.",
-      "publicaciones": [],
-      "otros_cargos": "Editora asistente de la Revista LEHES",
       "enlaces": {
         "orcid": "",
         "cvlac": "",
