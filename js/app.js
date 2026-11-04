@@ -354,6 +354,7 @@
       ${retrato(p)}
       <span class="docente-texto">
         <b>${mostrarValor(p.nombre, "Por designar")}</b>
+        ${n.coordinador === p.id ? `<span class="coord">Coordinación</span>` : ""}
         <span class="cargo-d">${mostrarValor(p.cargo, "")}</span>
         ${vacio(p.aula) ? "" : `<span class="aula">${esc(p.aula)}</span>`}
         ${anios(p)}
@@ -406,11 +407,14 @@
           <span class="chip" style="--c: var(--${n.color}); --t: ${n.color === "color-hablar" ? "var(--azul-noche)" : "#fff"}">${esc(n.nombre)}</span>
           <h1>${mostrarValor(p.nombre)}</h1>
           <p class="lead" style="margin:0">${mostrarValor(p.cargo, "")}${vacio(p.aula) ? "" : ` · ${esc(p.aula)}`}</p>
+          ${n.coordinador === p.id ? `<span class="coord">Coordinación del ${esc(n.nombre.charAt(0).toLowerCase() + n.nombre.slice(1))}</span>` : ""}
           ${anios(p)}
           ${vacio(p.frase) ? "" : `<p class="frase-grande">«${esc(p.frase)}»</p>`}
         </div>
       </div>
+      ${vacio(p.sobre_mi) ? "" : `<p class="sobre-mi">${esc(p.sobre_mi)}</p>`}
       <div class="perfil-rejilla">
+        ${(p.experiencia || []).length ? `<div class="caja caja-exp"><h3>Experiencia</h3><ul class="experiencia">${p.experiencia.map((x) => `<li><b>${esc(x.tiempo)}</b><span>${esc(x.descripcion)}</span></li>`).join("")}</ul></div>` : ""}
         <div class="caja"><h3>Formación</h3>${formacion.length ? `<ul>${formacion.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : `<p class="por-llenar">Por completar</p>`}</div>
         ${vacio(p.investigacion) && !pubs.length && vacio(p.otros_cargos) && !enlaces.length ? "" : `<div class="caja"><h3>Trayectoria en investigación</h3>
           ${vacio(p.investigacion) ? "" : `<p>${esc(p.investigacion)}</p>`}

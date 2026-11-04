@@ -504,7 +504,7 @@ def pagina_docente(p):
     suyos = [a for a in A if any(sin_tilde(x["nombre"]) == sin_tilde(p["nombre"]) for x in a["autores"])]
     anios = "" if vacio(p.get("anios_experiencia")) else str(p["anios_experiencia"])
     titulo = f"{p['nombre']} · {cargo or 'Docente'} · {R['institucion']} ({SIGLA})"
-    desc = (f"{p['nombre']}, {(cargo or 'docente').lower()} de la {R['institucion']} ({SIGLA}), Oiba, Santander. "
+    desc = (p["sobre_mi"] if len(p["sobre_mi"]) <= 300 else p["sobre_mi"][:297].rsplit(" ", 1)[0] + "…") if not vacio(p.get("sobre_mi")) else (f"{p['nombre']}, {(cargo or 'docente').lower()} de la {R['institucion']} ({SIGLA}), Oiba, Santander. "
             + (f"{n['nombre']}. " if n.get("nombre") else "") + (f"Formación: {'; '.join(formacion)}." if formacion else ""))[:300]
     enl = p.get("enlaces", {}) or {}
     same = [x for x in [f"https://orcid.org/{enl['orcid']}" if enl.get("orcid") else "", enl.get("cvlac", ""), enl.get("scholar", "")] if x]
@@ -517,7 +517,10 @@ def pagina_docente(p):
     foto_og = f'\n<meta property="og:image" content="{BASE}/{e(p["foto"])}">' if p.get("foto") and not vacio(p["foto"]) else ""
     extra = f'{robots}{foto_og}\n<meta property="og:type" content="profile">\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
     color_chip = "var(--azul-noche)" if n["color"] == "color-hablar" else "#fff"
-    cajas = f'<div class="caja"><h3>Formación</h3>' + (f'<ul>{"".join(f"<li>{e(f)}</li>" for f in formacion)}</ul>' if formacion else '<p class="por-llenar">Por completar</p>') + "</div>"
+    exp = p.get("experiencia") or []
+    items_exp = "".join('<li><b>{}</b><span>{}</span></li>'.format(e(x["tiempo"]), e(x["descripcion"])) for x in exp)
+    cajas = f'<div class="caja caja-exp"><h3>Experiencia</h3><ul class="experiencia">{items_exp}</ul></div>' if exp else ""
+    cajas += f'<div class="caja"><h3>Formación</h3>' + (f'<ul>{"".join(f"<li>{e(f)}</li>" for f in formacion)}</ul>' if formacion else '<p class="por-llenar">Por completar</p>') + "</div>"
     if not vacio(p.get("investigacion")) or pubs or not vacio(p.get("otros_cargos")) or same:
         cajas += ('<div class="caja"><h3>Trayectoria en investigación</h3>'
                   + ("" if vacio(p.get("investigacion")) else f"<p>{e(p['investigacion'])}</p>")
@@ -537,11 +540,13 @@ def pagina_docente(p):
     <div>
       {f'<span class="chip" style="--c: var(--{n["color"]}); --t: {color_chip}">{e(n["nombre"])}</span>' if n.get("nombre") else ""}
       <h1>{e(p['nombre'])}</h1>
+      {f'<span class="coord">Coordinación del {e(n["nombre"][0].lower() + n["nombre"][1:])}</span>' if n.get("coordinador") == p["id"] else ""}
       <p class="lead" style="margin:0">{e(cargo)}{'' if vacio(p.get('aula')) else ' · ' + e(p['aula'])} · {e(R['institucion'])} ({e(SIGLA)})</p>
       {f'<span class="anios"><b>{e(anios)}</b> años enseñando</span>' if anios else ''}
       {'' if vacio(p.get('frase')) else f'<p class="frase-grande">«{e(p["frase"])}»</p>'}
     </div>
   </div>
+  {'' if vacio(p.get('sobre_mi')) else f'<p class="sobre-mi">{e(p["sobre_mi"])}</p>'}
   <div class="perfil-rejilla">{cajas}</div>
 </section>
 """
@@ -558,7 +563,9 @@ def pagina_maestros():
             continue
         tarjetas = "".join(
             f'<a class="docente" href="{raiz}docente/{e(p["id"])}/" style="--c: var(--{n["color"]})">{retrato(p, raiz)}'
-            f'<span class="docente-texto"><b>{e(p["nombre"])}</b><span class="cargo-d">{e(p.get("cargo", ""))}</span>'
+            f'<span class="docente-texto"><b>{e(p["nombre"])}</b>'
+            + ('<span class="coord">Coordinación</span>' if n.get("coordinador") == p["id"] else "")
+            + f'<span class="cargo-d">{e(p.get("cargo", ""))}</span>'
             + ("" if vacio(p.get("anios_experiencia")) else f'<span class="anios"><b>{e(p["anios_experiencia"])}</b> años enseñando</span>')
             + "</span></a>" for p in g)
         bloques += (f'<section class="nucleo" style="--c: var(--{n["color"]})"><h2><span class="punto" aria-hidden="true"></span>{e(n["nombre"])}</h2>'
