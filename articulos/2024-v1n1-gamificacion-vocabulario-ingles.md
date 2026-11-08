@@ -130,7 +130,7 @@ Para la intervención pedagógica se diseñó una secuencia didáctica, respalda
 
 Ahora bien, es pertinente resaltar los criterios que se tuvieron en cuenta para la selección de las plataformas mencionadas anteriormente. En ese sentido, se consideró la funcionalidad de las mismas, pues cuentan con una gama amplia de herramientas que incluyen la posibilidad de agregar imágenes y elementos interactivos como sonidos y animaciones de personajes. Además, son aplicaciones visualmente llamativas y creativas para los usuarios, en este caso los estudiantes, ya que incluyen diversas tipografías, tonalidades y elementos como tablas de clasificación, puntos, recompensas y ayudas que generan interés y agrado. De igual modo, se consideró la gratuidad de las mismas y la oportunidad de crear actividades desde cero, teniendo en cuenta los objetivos de cada sesión, la edad de los estudiantes, sus intereses y la adaptación al contexto. En adición, se tuvo en cuenta la utilidad de las actividades creadas para las clases y grados posteriores, pues el docente cooperador y los padres de familia podrán utilizarlas como herramientas de apoyo para reforzar el aprendizaje en casa y en la escuela.
 
-![Tabla 1. Sesiones de la secuencia didáctica .](articulos/img/2024-v1n1-gamificacion-vocabulario-ingles-tabla-1.png)
+![Tabla 1. Sesiones de la secuencia didáctica.](articulos/img/2024-v1n1-gamificacion-vocabulario-ingles-tabla-1.png)
 
 Nota: La tabla muestra las sesiones implementadas en la secuencia didáctica y el objetivo de cada una.
 
@@ -184,7 +184,7 @@ Teniendo en cuenta lo anterior, es preciso señalar que los resultados obtenidos
 
 Asimismo, es importante resaltar que, en la entrevista realizada al docente cooperador luego de la implementación de la secuencia didáctica, se evidencia desde su percepción el avance que tuvieron los estudiantes en el aprendizaje de vocabulario. De ese modo, se destaca la respuesta dada en la pregunta 4 y 5: ¿Cree que los estudiantes avanzaron en su nivel de vocabulario tras la implementación de la propuesta investigativa? ¿Cómo lo pudo evidenciar?
 
-“Por supuesto que los niños avanzaron en el nivel de vocabulario eso se evidencio en las diversas evaluaciones creativas que la estudiante implementó a través de las TIC y eso permitió que los estudiantes demostraran su conocimiento” ¿Qué comparación puede hacer entre el nivel inicial de vocabulario en los estudiantes y el nivel final de vocabulario?
+“Por supuesto que los niños avanzaron en el nivel de vocabulario eso se evidenció en las diversas evaluaciones creativas que la estudiante implementó a través de las TIC y eso permitió que los estudiantes demostraran su conocimiento” ¿Qué comparación puede hacer entre el nivel inicial de vocabulario en los estudiantes y el nivel final de vocabulario?
 
 “Bueno los estudiantes antes de empezar a trabajar pues tenían un vocabulario muy escaso para el nivel en el que estaban y gracias al proyecto los niños aprendieron nuevas palabras en inglés a escribirlas a pronunciarlas entonces si se puede decir que hubo un progreso en el aprendizaje respecto al inglés en los estudiantes del grado segundo uno.”
 
@@ -216,7 +216,7 @@ Finalmente, es relevante mencionar que la aplicación de la secuencia didáctica
 
 Por otro lado, es importante resaltar que en la entrevista realizada al docente cooperador se buscó conocer su percepción sobre la estrategia implementada, donde se puede resaltar lo siguiente: ¿Qué opina de la estrategia didáctica implementada en el proyecto investigativo para fortalecer el vocabulario en inglés de los estudiantes?
 
-“Fue una estrategia muy bien orientada porque, bueno, busca que los estudiantes aprendan jugando y con el uso de las TIC, entonces apunta a los lineamientos educativos actuales que buscan vincular la tecnología y que, pues los niños aprendan jugando, fue muy bonita se evidencio el trabajo que fue ordenado organizado y sistematizado.” ¿En qué medida considera que la gamificación fue útil para fortalecer el vocabulario en inglés en los estudiantes?
+“Fue una estrategia muy bien orientada porque, bueno, busca que los estudiantes aprendan jugando y con el uso de las TIC, entonces apunta a los lineamientos educativos actuales que buscan vincular la tecnología y que, pues los niños aprendan jugando, fue muy bonita se evidenció el trabajo que fue ordenado organizado y sistematizado.” ¿En qué medida considera que la gamificación fue útil para fortalecer el vocabulario en inglés en los estudiantes?
 
 “Fue útil para fortalecer el vocabulario de los estudiantes porque los involucró en juegos, aspecto que los niños de esa edad del grado segundo valoran mucho ellos quisieran a toda hora estar en ese tipo de actividades y eso fue lo que le dio un poco más de interés a los niños que participaron en juegos online, evaluaciones online, entonces fue un trabajo bastante motivante y agradable para ellos.”
 
@@ -252,7 +252,9 @@ Finalmente, es preciso recomendar que se replanteen las estrategias de enseñanz
 
 El presente estudio contó con la aprobación del comité de investigación de la Escuela Normal Superior Oiba.
 
-## Contribución de los autores edición.
+## Contribución de los autores
+
+Autora: recolección de datos, investigación, redacción del manuscrito original, revisión y edición.
 
 ## Declaración de fuentes de financiación
 
@@ -272,15 +274,15 @@ Alqahtani, M. (2015). The importance of vocabulary in language learningand how t
 
 Ambarwati, R., y Mandasari, B. (2020). The influence of the Cambridge online dictionary on students' pronunciation and vocabulary proficiency. Journal of English Language Teaching and Learning, 1(2), 50-55.
 
-Arnal, J. (1992). Investigación educativa. Fundamentos y metodología. Barcelona (España): Labor
+Arnal, J. (1992). Investigación educativa. Fundamentos y metodología. Barcelona (España): Labor.
 
 Ayu, M., & Zuraida, Z. (2020). Enhancing Descriptive Paragraph Writing Of Secondary Students through Shared Writing. Journal of Research on Language Education, 1(1).
 
-Azzouz Boudadi, N. (2021). Gamification in learning English as a second language: A methodological framework to improve psychobehavioural factors and speaking fluency. Tesis doctoral. Universitat d'Andorra
+Azzouz Boudadi, N. (2021). Gamification in learning English as a second language: A methodological framework to improve psychobehavioural factors and speaking fluency. Tesis doctoral. Universitat d'Andorra.
 
-Barreiro Yáñez, M. (2021). Evaluación de una estrategia educativa basada en gamificación en el clima de aula, en la atención selectiva y aprendizaje. Tesis doctoral. Universidad UMECIT
+Barreiro Yáñez, M. (2021). Evaluación de una estrategia educativa basada en gamificación en el clima de aula, en la atención selectiva y aprendizaje. Tesis doctoral. Universidad UMECIT.
 
-Cabrera Montero, L. (2019). Gamificación como estrategia didáctica para la enseñanza– aprendizaje del Inglés en el grado transición del colegio Nuestra Señora del Carmen. [Tesis de pregrado, Corporación Universitaria Iberoamericana Villavicencio, Meta]. Repositorio Ibero. <https://repositorio.ibero.edu.co/entities/publication/52c6e565-fe14-4dc3-bbe1-> 3e473c26f38c
+Cabrera Montero, L. (2019). Gamificación como estrategia didáctica para la enseñanza– aprendizaje del Inglés en el grado transición del colegio Nuestra Señora del Carmen. [Tesis de pregrado, Corporación Universitaria Iberoamericana Villavicencio, Meta]. Repositorio Ibero. <https://repositorio.ibero.edu.co/entities/publication/52c6e565-fe14-4dc3-bbe1-3e473c26f38c>
 
 Cameron, L. (2005). Teaching Languages to Young Learners. (8 ed.). Cambridge University
 
@@ -306,19 +308,19 @@ EF English Proficiency Index.(2023). A Ranking of 113 countries and Regions by E
 
 Fombona, J. (2022). Análisis de investigaciones sobre gamificación en educación primaria. Universidad de Oviedo. España
 
-Gaitán, V. (2020). Gamificación: el aprendizaje divertido. <https://www.educativa.com/blog-> articulos/gamificacion-el-aprendizaje-divertido/
+Gaitán, V. (2020). Gamificación: el aprendizaje divertido. <https://www.educativa.com/blogarticulos/gamificacion-el-aprendizaje-divertido/>
 
 Gangaiamaran, R. & Pasupathi, M. (2017). Review on the use of mobile apps for language learning. International Journal of Applied Engineering Research.12(21): 11242–11251.
 
 García Gaitero, F., García Gaitero, Ó., & Martín Martín, M. (2018). La gamificación como recurso para la mejora del aprendizaje del Inglés en educación primaria [Gamification as a resource for improving English learning in primary education]. Red de Investigación sobre Liderazgo y Mejora de la Educación (RILME).
 
-García García, A. (2023). La gamificación como estrategia para el aprendizaje de vocabulario del medio ambiente en el idioma inglés en estudiantes de quinto grado de una institución privada. [Tesis de grado, Universidad La Gran Colombia]. Repositorio Institucional- Universidad La Gran Colombia. <http://hdl.handle.net/11396/7800>
+García García, A. (2023). La gamificación como estrategia para el aprendizaje de vocabulario del medio ambiente en el idioma inglés en estudiantes de quinto grado de una institución privada. [Tesis de grado, Universidad La Gran Colombia]. Repositorio InstitucionalUniversidad La Gran Colombia. <http://hdl.handle.net/11396/7800>
 
 García-Cárdenas, M.-D.-C., García-Herrera, D. G., Cárdenas-Cordero, N. M., Erazo-Álvarez, J. C. (2020). Gamificación como estrategia innovadora en la enseñanza del Inglés [Gamification as an innovative strategy in the teaching of English].Episteme Koinonia, Revista Electrónica de Ciencias de la Educación, Humanidades, Artes y Bellas Artes, 3(1), 163. Fundación Koinonia (F.K), Santa Ana de Coro, Venezuela <http://dx.doi.org/10.35381/e.k.v3i1.997>
 
 González Alonso, D. (2017). La gamificación como elemento motivador en la enseñanza de una segunda lengua en educación primaria. [Tesis de grado, Universidad de Burgos]. Repositorio Institucional Riubu. <http://hdl.handle.net/10259/4674>
 
-Hernández, E. (2014). El B-learning como estrategia metodológica para mejorar el proceso de enseñanza-aprendizaje de los estudiantes de inglés de la modalidad semipresencial del departamento especializado de idiomas de la Universidad Técnica de Ambato . Departamento de Didáctica y Organización Escolar, Facultad de Educación, Universidad Complutense de Madrid. España.
+Hernández, E. (2014). El B-learning como estrategia metodológica para mejorar el proceso de enseñanza-aprendizaje de los estudiantes de inglés de la modalidad semipresencial del departamento especializado de idiomas de la Universidad Técnica de Ambato. Departamento de Didáctica y Organización Escolar, Facultad de Educación, Universidad Complutense de Madrid. España.
 
 Hernandez, G. Lugo, C. y Montijo, E. (2012). El cuestionario de estilos de aprendizaje CHAEA y la escala de estrategias de aprendizaje ACRA como herramienta potencial para la tutoría académica. Revista de Estilos de Aprendizaje, 5(10).
 
@@ -332,11 +334,11 @@ Mangado, F. (2017). Proyectos y Competencias. Málaga, España: Recolectores Urb
 
 Marzano, R. & Kendall, J. (2007). The new taxonomy of educational objectives (2nded.). Corwin Press.
 
-Mendo Flores, A. J. (2021) Uso de las TIC para el Aprendizaje del idioma Inglés en estudiantes de educación básica. (Tesis doctoral). Universidad Cesar Vallejo. Tujillo Perú-
+Mendo Flores, A. J. (2021) Uso de las TIC para el Aprendizaje del idioma Inglés en estudiantes de educación básica. (Tesis doctoral). Universidad Cesar Vallejo. Tujillo Perú.
 
-Ministerio de Educación Nacional de Colombia. (2020). Estilos de vida saludables: Módulo conceptual. Colombia Aprende. <https://www.colombiaaprende.edu.co/sites/default/files/files_public/2021-> 07/M%C3%B3dulo%20conceptual%20EVS.pdf
+Ministerio de Educación Nacional. (2006, diciembre 20). Estándares de Competencias en Lenguas Extranjeras: Inglés, SERIEGUÍAS No 22. Cloudfront.net. <https://d3j4pzt8k2yqfj.cloudfront.net/s3fs-public/202207/estandares_basicos_competencia_en_lenguas_extranjeras_ingles-min.pdf>
 
-Ministerio de Educación Nacional. (2006, diciembre 20). Estándares de Competencias en Lenguas Extranjeras: Inglés, SERIEGUÍAS No 22. Cloudfront.net. <https://d3j4pzt8k2yqfj.cloudfront.net/s3fs-public/2022-> 07/estandares_basicos_competencia_en_lenguas_extranjeras_ingles-min.pdf
+Ministerio de Educación Nacional de Colombia. (2020). Estilos de vida saludables: Módulo conceptual. Colombia Aprende. <https://www.colombiaaprende.edu.co/sites/default/files/files_public/202107/M%C3%B3dulo%20conceptual%20EVS.pdf>
 
 Molina-García, P. F., Molina-García, A. R., & Gentry-Jones, J. (2021). La gamificación como estrategia didáctica para el aprendizaje del idioma inglés [Gamification as a didactic strategy for learning the English language]. Revista Cientifica Dominio de las Ciencias, 7(1), 722-730. DOI: <http://dx.doi.org/10.23857/dc.v7i1.1672>
 
@@ -344,7 +346,7 @@ Moreno Agurto, V. A. (2020). La importancia de la enseñanza del idioma inglés 
 
 National Council of Teachers of English. (2010). Vocabulary Rubrics. International Reading Association.
 
-Naufal, Maulana Wildan Mastery, V., & Study, A. C. (2018). Students’ Habit In Singing English Pop Songs And Their Vocabulary Mastery: A Correlational Study
+Naufal, Maulana Wildan Mastery, V., & Study, A. C. (2018). Students’ Habit In Singing English Pop Songs And Their Vocabulary Mastery: A Correlational Study.
 
 Nejati, E. & Jahangiri, A. (2018). The effect of using computer-assisted language learning (CALL) on Iranian EFL learners’ vocabulary learning:An experimental study. Cypriot Journal of Educational Sciences, 13(2): 113–124. <https://doi:10.18844/cjes.v13i2.752>
 
@@ -358,7 +360,7 @@ Rojas Camacho, Y. E. (2022). La gamificación en la competencia comunicativa del
 
 Saleh, A. M., & Ahmed Althaqafi, A. S. (2022). The Effect of Using Educational Games as a Tool in Teaching English Vocabulary to Arab Young Children: A Quasi-Experimental Study in a Kindergarten School in Saudi Arabia. Sage Open, 12(1). <https://doi.org/10.1177/21582440221079806>
 
-Sandoval Casilimas, C. A. (2002). Investigación cualitativa. Bogotá: ARFO Editores e Impresores Ltda
+Sandoval Casilimas, C. A. (2002). Investigación cualitativa. Bogotá: ARFO Editores e Impresores Ltda.
 
 Universidad Internacional de la Rioja. (2022). Creación de contenidos, Mobile learning y Gamificación en el aula. Tema 6: Gamificación. UNIR
 

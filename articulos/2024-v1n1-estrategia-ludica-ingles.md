@@ -1,6 +1,6 @@
 ## Introducción
 
-El inglés es un idioma universal, ya que su uso se ve reflejado en múltiples lugares y regiones del mundo, sirviendo de nexo para la creación de relaciones humanas interculturales entre diversas sociedades, esto a su vez da paso al diálogo y al intercambio de ideas. Ahora bien, la enseñanza del inglés durante los últimos años en latinoamérica ha tomado fuerza en la educación, pues cada vez más países tienen la convicción de que este idioma es sinónimo de una mejor calidad de vida y representa una oportunidad de crecimiento y superación.
+El inglés es un idioma universal, ya que su uso se ve reflejado en múltiples lugares y regiones del mundo, sirviendo de nexo para la creación de relaciones humanas interculturales entre diversas sociedades, esto a su vez da paso al diálogo y al intercambio de ideas. Ahora bien, la enseñanza del inglés durante los últimos años en Latinoamérica ha tomado fuerza en la educación, pues cada vez más países tienen la convicción de que este idioma es sinónimo de una mejor calidad de vida y representa una oportunidad de crecimiento y superación.
 
 Es así, como a través de los años, el Ministerio de Educación Nacional (MEN) en Colombia, ha venido implementando diferentes políticas y directrices educativas como por ejemplo, los Estándares Básicos de Competencias en la lengua Extranjera: Inglés; así como una Política Nacional de Bilingüismo (2023), con el fin de conocer y mejorar los procesos de enseñanza-aprendizaje de las competencias y habilidades en inglés, ya que es esencial ser bilingüe dentro de un mundo globalizado, pues esto posibilita mejores condiciones de vida.
 
@@ -50,7 +50,7 @@ Ahora bien, la estrategia lúdica se trata de un conjunto de actividades que pos
 
 ### El juego
 
-El juego es una actividad pura, donde no existe interés alguno; simplemente el jugar es espontáneo, es algo que nace y se exterioriza. Es placentero; hace que la persona se sienta bien (Díaz, 1993, como se cita en Meneses y Monge, 2001) . De ahí pues, se supone que el niño en primaria al jugar puede descubrir y entender su mundo exterior. Así pues, en el marco de la educación, el juego es funcional en la medida que este sea propuesto por el estudiante y mediado con el educador para que tenga un propósito o finalidad y por consiguiente un resultado satisfactorio en el aprendizaje. Igualmente, el juego se traduce en el comportamiento integral, así como en la expresión de la creatividad como resultado de las emociones, de los sentidos, del pensamiento y del sentimiento plasmada en la vida (Huizinga, 1972, como se citó en Ortiz, 2017).
+El juego es una actividad pura, donde no existe interés alguno; simplemente el jugar es espontáneo, es algo que nace y se exterioriza. Es placentero; hace que la persona se sienta bien (Díaz, 1993, como se cita en Meneses y Monge, 2001). De ahí pues, se supone que el niño en primaria al jugar puede descubrir y entender su mundo exterior. Así pues, en el marco de la educación, el juego es funcional en la medida que este sea propuesto por el estudiante y mediado con el educador para que tenga un propósito o finalidad y por consiguiente un resultado satisfactorio en el aprendizaje. Igualmente, el juego se traduce en el comportamiento integral, así como en la expresión de la creatividad como resultado de las emociones, de los sentidos, del pensamiento y del sentimiento plasmada en la vida (Huizinga, 1972, como se citó en Ortiz, 2017).
 
 ### Tipos de juegos y juegos de escritura
 
@@ -76,7 +76,7 @@ Se implementó el diseño metodológico conformado por cuatro momentos metodoló
 
 La Escuela Normal Superior Oiba para el año 2022 contó con una población de 917 estudiantes; de ellos, 22 estaban caracterizados en el SIMAT como personas con barreras educativas. Igualmente, del total, el 93,1% eran nacionales y el 6,6 %, extranjeros. Adicionalmente, el 50,3% pertenecían a la zona rural y el 49, 7% a la zona urbana.
 
-A partir de lo anterior, se estableció como población el grado cuarto de básica primaria, el cual está divido en dos grupos: cuarto uno y cuarto dos y se tomó como muestra el grado de cuarto uno, conformado por un total de 23 estudiantes, 12 de ellas son de género femenino y 11 de género masculino; quienes oscilan entre las edades de ocho a diez años.
+A partir de lo anterior, se estableció como población el grado cuarto de básica primaria, el cual está dividido en dos grupos: cuarto uno y cuarto dos y se tomó como muestra el grado de cuarto uno, conformado por un total de 23 estudiantes, 12 de ellas son de género femenino y 11 de género masculino; quienes oscilan entre las edades de ocho a diez años.
 
 ## Diseño e intervención
 
@@ -141,7 +141,7 @@ Esta categoría abarca el diseño y aplicación de las sesiones de la secuencia 
 **Tabla 1.** *Resumen secuencia didáctica*
 
 | Contenido temático | Sesiones | Objetivo |
-|---|:---:|---|
+|----------------|:-------:|-----------------------------------------|
 | *The alphabet* | 2 | Fomentar el aprendizaje del alfabeto en inglés, de manera clara y concisa, tomando en cuenta sus componentes individuales, letras y sonidos; para que los estudiantes experimenten y apliquen sus conocimientos del alfabeto en un segundo idioma por medio de diversas actividades prácticas y juegos dentro del aula. |
 | *Subject pronouns* | 1 | Fomentar el aprendizaje de los pronombres sujetos en inglés, según sus sonidos, con el fin de que los alumnos apliquen el conocimiento de estos pronombres para escribir palabras y crear frases simples de manera guiada por medio de actividades y juegos. |
 | *Verb to be present simple affirmative* | 2 | Fomentar el aprendizaje del *verb to be present simple affirmative* en inglés, con el propósito de que los estudiantes estén en capacidad de comprender la estructura gramatical de este verbo, así como de construir oraciones cortas en inglés, a través de diferentes actividades y juegos previamente establecidos. |
@@ -193,7 +193,7 @@ El autor declara no tener conflictos de interés.
 
 ## Referencias
 
-Abreu, O., Gallegos, M. C., Jácome, J. G., & Martínez, R. J. (2017). La Didáctica: Epistemología y Definición en la Facultad de Ciencias Administrativas y Económicas de la Universidad Técnica del Norte del Ecuador. Formación Universitaria, 10(3), 81- 92. <https://scielo.conicyt.cl/pdf/formuniv/v10n3/art09.pdf>
+Abreu, O., Gallegos, M. C., Jácome, J. G., & Martínez, R. J. (2017). La Didáctica: Epistemología y Definición en la Facultad de Ciencias Administrativas y Económicas de la Universidad Técnica del Norte del Ecuador. Formación Universitaria, 10(3), 8192.<https://scielo.conicyt.cl/pdf/formuniv/v10n3/art09.pdf>
 
 Altakhaineh, A. R., Alhloul, R., & Zibin, A. (2022). Foreign Language Processing of English Regular and Irregular Past Tense Verbs by Arabic-Speaking EFL Children. Psycholinguistics, 32(2), 6–28. <https://doi.org/10.31470/2309-1797-2022-32-2-6-28>
 
@@ -209,21 +209,21 @@ Baiq Sumarni, Dharma Dev Bhatta, & Kho, S. F.-C. (2022). The Use of Total Physic
 
 British Council. (2015). El inglés en Colombia: Estudio de políticas, percepciones y factores influyentes. <https://www.britishcouncil.co/sites/default/files/colombia_version_final_-_espanol.pdf>
 
-Brumfit, C. (1986). The Practice of Communicative Teaching Milestones in ELT. <https://www.teachingenglish.org.uk/sites/teacheng/files/F044%20ELT44%20The%20Practice%20of%20Communicative%20Teaching_v3.pdf>
+Brumfit, C. (1986). The Practice of Communicative Teaching. Milestones in ELT. <https://www.teachingenglish.org.uk/sites/teacheng/files/F044%20ELT44%20The%20Practice%20of%20Communicative%20Teaching_v3.pdf>
 
 Carrillo-Ojeda, M. J., Garcia-Herrera, D. G., Ávila-Mediavilla, C. M., & Erazo-Álvarez, J. C. (2020). El juego como motivación en el proceso de enseñanza aprendizaje del niño. Revista Arbitrada Interdisciplinaria Koinonía, 5(1), 430. <https://doi.org/10.35381/r.k.v5i1.791>
 
-Chomsky , N. (1974/2004). Estructuras sintácticas. Google Books; Siglo veintiuno de españa editores, s.a. de c.v. <https://www.google.com.co/books/edition/Estructuras_sint%C3%A1cticas/6tUv4IzUWtwC?hl=es419&gbpv=1&dq=La+teor%C3%ADa+ling%C3%BC%C3%ADstica+de+Noam+Chomsky+pdf&printsec=frontcover>
+Chomsky, N. (1974/2004). Estructuras sintácticas. Google Books; Siglo veintiuno de españa editores, s.a. de c.v. <https://www.google.com.co/books/edition/Estructuras_sint%C3%A1cticas/6tUv4IzUWtwC?hl=es419&gbpv=1&dq=La+teor%C3%ADa+ling%C3%BC%C3%ADstica+de+Noam+Chomsky+pdf&printsec=frontcover>
 
-Congreso de la República de Colombia . (2023, April 19). Texto aprobado en primer debate por la comisión sexta constitucional permanente de la cámara de representantes en sesiones del día diecinueve de abril de 2023 al proyecto de ley número 062 de 2022 cámara. Política Nacional de bilingüismo. <https://www.camara.gov.co/sites/default/files/202307/TAPDC%20PL%20062%2022C.pdf> Crespo, An, and Eva De Pinto. “El Desarrollo de La Escritura En Inglés En La Educación Secundaria: Una Misión Posible.” Dialógica: Revista Multidisciplinaria, vol. 13, no. 2, 2016, pp. 28–53, dialnet.unirioja.es/servlet/articulo?codigo=6219285, <https://dialnet.unirioja.es/descarga/articulo/6219285.pdf>
+Congreso de la República de Colombia. (2023, April 19). Texto aprobado en primer debate por la comisión sexta constitucional permanente de la cámara de representantes en sesiones del día diecinueve de abril de 2023 al proyecto de ley número 062 de 2022 cámara. Política Nacional de bilingüismo. <https://www.camara.gov.co/sites/default/files/202307/TAPDC%20PL%20062%2022C.pdf>
+
+Crespo, An, and Eva De Pinto. “El Desarrollo de La Escritura En Inglés En La Educación Secundaria: Una Misión Posible.” Dialógica: Revista Multidisciplinaria, vol. 13, no. 2, 2016, pp. 28–53, dialnet.unirioja.es/servlet/articulo?codigo=6219285, <https://dialnet.unirioja.es/descarga/articulo/6219285.pdf>
 
 Daza-Blanco, D. R., Picón-Blanco, L. M. y Martínez-Trujillo, N. E. (2022). Fortalecimiento de la participación de los padres de familia en el proceso de enseñanza y aprendizaje de los estudiantes de cuarto grado. Revista UNIMAR, 40(2), 194-216 <https://doi.org/10.31948/rev.unimar/unimar40-2-art9>
 
 De la Cueva González-Cotera J. (2019). La configuración del software como cuestión política. Teknokultura. Revista de Cultura Digital y Movimientos Sociales, 16(2), 159-180. <https://doi.org/10.5209/TEKN.63795>
 
-Díaz Barriga, A. (2013). Secuencias de aprendizaje. ¿un problema del enfoque de competencias o un reencuentro con perspectivas didácticas? Profesorado. Revista de Currículum y Formación de
-
-Profesorado, vol. 17, núm. 3. <https://www.redalyc.org/pdf/567/56729527002.pdf>
+Díaz Barriga, A. (2013). Secuencias de aprendizaje. ¿un problema del enfoque de competencias o un reencuentro con perspectivas didácticas? Profesorado. Revista de Currículum y Formación de Profesorado, vol. 17, núm. 3. <https://www.redalyc.org/pdf/567/56729527002.pdf>
 
 Douglas Brown, H. (2007). Principles of Language Learning and Teaching. Person Education. 10 Bank Street. White Plains, MY 10606. <https://gustavorubinoernesto.com/wp-content/uploads/2020/06/H-Douglas-Brown-Principles-of-Language-Learning-andTeaching.pdf>
 
@@ -233,7 +233,11 @@ Gonzalez Villamil, G., & Pinzón Ramírez, M. J. (2011). Nuevas estrategias did�
 
 Heritage, M. (2005). Gathering Evidence of Student Understanding. <https://www.sagepub.com/sites/default/files/upm-binaries/50739_ch_11.pdf>
 
-Hernández Sampieri, R. (2014). Metodología de la Investigación. McGRAW-HILL / INTERAMERICANA EDITORES, S.A. DE C.V. <https://www.esup.edu.pe/wp-content/uploads/2020/12/2.%20Hernandez,%20Fernandez%20y%20BaptistaMetodolog%C3%ADa%20Investigacion%20Cientifica%206ta%20ed.pdf> Icfes. (2023). Informe nacional de resultados Saber 11° – 2022 Boletín Saber 11° . <https://www.icfes.gov.co/documents/39286/16781399/Informe_Nacional_de_Resultados_Saber_11_22.pdf>
+Hernández Sampieri, R. (2014). Metodología de la Investigación. McGRAW-HILL / INTERAMERICANA EDITORES, S.A. DE C.V. <https://www.esup.edu.pe/wp-content/uploads/2020/12/2.%20Hernandez,%20Fernandez%20y%20BaptistaMetodolog%C3%ADa%20Investigacion%20Cientifica%206ta%20ed.pdf>
+
+Icfes. (2023). Informe nacional de resultados Saber 11° – 2022 Boletín Saber 11°. <https://www.icfes.gov.co/documents/39286/16781399/Informe_Nacional_de_Resultados_Saber_11_22.pdf>
+
+Instituto Colombiano para la Evaluación de la Educación [Icfes]. (2023). *Reporte de resultados por aplicación del examen Saber 11 para establecimientos educativos: Escuela Normal Superior Oiba (código DANE 168500000218), aplicación 2022-4* [Reporte institucional]. Icfes.
 
 Janzen, W. W. (2022). Una síntesis crítica mínima de las portaciones de los paradigmas interpretativo y sociocrítico a la investigación educacional. Enfoques, 34(2), 13–33. <https://doi.org/10.56487/enfoques.v34i2.1058>
 
@@ -249,17 +253,19 @@ Marco Común Europeo de Referencia para las Lenguas: aprendizaje, enseñanza, ev
 
 Martínez, D., Abreus, A., & Castiñeira, A. (2024). Vista de El desarrollo de la comprensión auditiva en inglés mediante la audición extensiva. Unibe.edu.ec. <https://revistas.unibe.edu.ec/index.php/qualitas/article/view/35/58>
 
-Men Chin , P. L. (2011). Stratégies d’apprentissage des langues secondes dans un environnement informatisé : une méta-analyse qualitative de l’utilisation du courrier électronique. <https://dalspace.library.dal.ca/bitstream/handle/10222/14212/Lee%20Men%20Chin,%20Patricia,%20PhD,%20FREN%20August%202011.pdf;jsessionid=B97CFA928B48818DB619CB030E211CDA?sequence=5>
+Men Chin, P. L. (2011). Stratégies d’apprentissage des langues secondes dans un environnement informatisé: une méta-analyse qualitative de l’utilisation du courrier électronique. <https://dalspace.library.dal.ca/bitstream/handle/10222/14212/Lee%20Men%20Chin,%20Patricia,%20PhD,%20FREN%20August%202011.pdf;jsessionid=B97CFA928B48818DB619CB030E211CDA?sequence=5>
 
 Mena Mayorga, J. I., Moreno Novillo, A. C., Mejía Calle, C. C., & Silva Valencia, J. C. (2020). Juegos de lenguaje para mejorar la habilidad del habla en estudiantes de los primeros niveles del idioma inglés en la universidad. ConcienciaDigital, 3(1.1), 408–426. <https://doi.org/10.33262/concienciadigital.v3i1.1.1157>
 
 Meneses Montero, M., & Monge Alvarado, M. D. L. Á. (2001). El juego en los niños: enfoque teórico (p. 121). <https://www.redalyc.org/pdf/440/44025210.pdf>
 
-Ministerio de Educación Nacional de Colombia . (2005). Bases para una nación bilingüe y competitiva. Ministerio de Educación Nacional de Colombia. Www.mineducacion.gov.co. <https://www.mineducacion.gov.co/1621/article-97498.html>
-
 Ministerio de Educación Nacional. (2006). Estándares Básicos de Competencias en Lenguas Extranjeras: Inglés. <https://www.mineducacion.gov.co/1759/articles-115174_archivo_pdf.pdf>
 
 Ministerio de Educación Nacional. (2016). Derechos Básicos de Aprendizaje de Inglés grados transición a 5o de primaria. <https://www.englishtimevalle2020.com/wp-content/uploads/2020/10/DBA-TRANSICIO%CC%81N-Y-PRIMARIA.pdf>
+
+Ministerio de Educación Nacional de Colombia. (2005). Bases para una nación bilingüe y competitiva.
+
+Ministerio de Educación Nacional de Colombia. Www.mineducacion.gov.co. <https://www.mineducacion.gov.co/1621/article-97498.html>
 
 Montero, M., Alvarado, M., De Los Ángeles, M., & Maureen. (2001). El juego en los niños: enfoque teórico (p. 121). <https://www.redalyc.org/pdf/440/44025210.pdf>
 
@@ -271,7 +277,9 @@ Ortiz, J. P. (2017). Juego, luego soy: Teoría de la Actividad Lúdica. In Googl
 
 Pallarozo, V., Barreno, C., Vilcacundo, G., Bonilla, G., Quizphi, J., & Viteri, G. (2016, July 11). Evaluacion final. SlideShare. <https://es.slideshare.net/slideshow/evaluacion-final-63896652/63896652>
 
-Pastor Lozano, A. (2007). El juego como herramienta en el aprendizaje de inglés. Retrieved May 3, 2024, from <https://uvadoc.uva.es/bitstream/handle/10324/7789/TFGG%20895.pdf;jsessionid=9C9D7510503166AE44ACAFB8A666D2A4?sequence=1Piña-Ferrer,L.S.(2023)>. El enfoque cualitativo: Una alternativa compleja dentro del mundo de la investigación. Revista Arbitrada Interdisciplinaria Koinonía, 8(15), 1–3. <https://doi.org/10.35381/r.k.v8i15.2440>
+Pastor Lozano, A. (2007). El juego como herramienta en el aprendizaje de inglés. Retrieved May 3, 2024, from <https://uvadoc.uva.es/bitstream/handle/10324/7789/TFGG%20895.pdf;jsessionid=9C9D7510503166AE44ACAFB8A666D2A4?sequence=1>
+
+Piña-Ferrer, L. S. (2023). El enfoque cualitativo: Una alternativa compleja dentro del mundo de la investigación. Revista Arbitrada Interdisciplinaria Koinonía, 8(15), 1–3. <https://doi.org/10.35381/r.k.v8i15.2440>
 
 Popkewitz, T. (1984). Paradigma e Ideología en Investigación Educativa. Scribd; Mondadori España, S.A. <https://es.scribd.com/doc/187940622/148659469-111141714-Popkewitz-Paradigmae-Ideologia-en-Investigacion-Educativa>
 
@@ -279,9 +287,7 @@ Posada González, R. (2014). La lúdica como estrategia didáctica. <https://rep
 
 Ramírez Chaparro, A. del P. (2015, Octubre). Implementación de estrategias lúdicas en la enseñanza aprendizaje del idioma inglés para el mejoramiento de las habilidades comunicativas en el grado segundo. <https://intellectum.unisabana.edu.co/bitstream/handle/10818/23083/Alejandra%20Del%20Pilar%20Ramirez%20Chaparro%20%28tesis%29.pdf?sequence=1&isAllowed=y>
 
-Ramírez Quiroga, H. (2018). El texto lírico: pretexto para incidir en la formación de habilidades de lectura crítica en los estudiantes del grado 7- de la escuela normal superior oiba. <https://noesis.uis.edu.co/items/3cf8d4ae-e65e-4c4f-9be2-47a6bf9cad78>
-
-Reporte de resultados del examen saber 11 por aplicación 2022-4. (2023, February 28). file:///C:/Users/Administrador/Downloads/Resultados%20Saber%2011%C2%B0_16850 0000218_2022-4.pdf
+Ramírez Quiroga, H. (2018). El texto lírico: pretexto para incidir en la formación de habilidades de lectura crítica en los estudiantes del grado 7de la escuela normal superior oiba. <https://noesis.uis.edu.co/items/3cf8d4ae-e65e-4c4f-9be2-47a6bf9cad78>
 
 Saborit Leiva, H., Texidor Pellón, R., & Portuondo Ferrer, N. (2014). Sugerencias para desarrollar la escritura en las clases de inglés. Revista Habanera de Ciencias Médicas, 13(4), 605-611. <https://www.redalyc.org/articulo.oa?id=180432137012>
 

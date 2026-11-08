@@ -54,7 +54,7 @@ La contextualización de las matemáticas permite que los estudiantes relacionen
 
 Las competencias básicas de matemáticas son cruciales para resolver problemas, ya que permiten a los estudiantes comprender situaciones, aplicar estrategias adecuadas y justificar sus soluciones. Al desarrollarlas, los estudiantes adquieren las habilidades necesarias para abordar problemas de manera eficaz y con confianza, mejorando su capacidad de análisis y resolución en diversos contextos (Tomalá 2024).
 
-Interpretar. Esta competencia es fundamental, ya que se busca que el estudiante desarrolle la capacidad de leer y escribir matemáticamente, empleando la comprensión del lenguaje numérico para la solución de operaciones que impliquen la interpretación de símbolos, gráficos y números y así, posibilitar soluciones a situaciones problemáticas que fueron planteadas. Mediante esta competencia, es posible evaluar al estudiante, al determinar la capacidad que tiene para identificar elementos matemáticos y valorar si los emplea para la comprensión de los datos que le son proporcionados (Aguilar 2024). De igual modo, el uso de esta competencia fortalece la creatividad y la imaginación en los actores del aprendizaje ya que se tiene como principal finalidad fortalecer el pensamiento crítico en los estudiantes. (Villadiego 2024) .
+Interpretar. Esta competencia es fundamental, ya que se busca que el estudiante desarrolle la capacidad de leer y escribir matemáticamente, empleando la comprensión del lenguaje numérico para la solución de operaciones que impliquen la interpretación de símbolos, gráficos y números y así, posibilitar soluciones a situaciones problemáticas que fueron planteadas. Mediante esta competencia, es posible evaluar al estudiante, al determinar la capacidad que tiene para identificar elementos matemáticos y valorar si los emplea para la comprensión de los datos que le son proporcionados (Aguilar, 2024). De igual modo, el uso de esta competencia fortalece la creatividad y la imaginación en los actores del aprendizaje ya que se tiene como principal finalidad fortalecer el pensamiento crítico en los estudiantes. (Villadiego, 2024).
 
 Ejecutar. Según Karenangel (2015), la ejecución representa el tercer paso en el proceso de resolución de problemas. En esta fase, se implementa un plan que se ha diseñado previamente con el objetivo de abordar y solucionar la situación problemática. La ejecución implica poner en marcha dicho plan porque se tiene un claro entendimiento de cómo resolver el problema en cuestión.
 
@@ -98,7 +98,7 @@ Asimismo, Torres (2024) resalta que este paradigma coloca a las personas en el c
 
 ### Diseño metodológico
 
-El diseño metodológico está basado en Kemmis (1998) citado en Latorre (2005) (figura 1) , quien establece cuatro fases para realizar un proceso de investigación acción, las cuales están interrelacionadas entre sí con el objetivo de promover la reflexión a través de la formación de un espiral.
+El diseño metodológico está basado en Kemmis (1998) citado en Latorre (2005) (figura 1), quien establece cuatro fases para realizar un proceso de investigación acción, las cuales están interrelacionadas entre sí con el objetivo de promover la reflexión a través de la formación de un espiral.
 
 ![Figura 1. Ciclo metodológico](articulos/img/2024-v1n1-ludica-problemas-multiplicativos-figura-1.png)
 
@@ -266,7 +266,9 @@ Por último, es relevante precisar que las tablas de multiplicar deben enseñars
 
 El presente estudio contó con la aprobación del comité de investigación de la Escuela Normal Superior Oiba.
 
-## Contribución de los autores edición.
+## Contribución de los autores
+
+Autora: recolección de datos, investigación, redacción del manuscrito original, revisión y edición.
 
 ## Declaración de fuentes de financiación
 
@@ -280,63 +282,113 @@ La autora declara no tener conflictos de interés.
 
 Aguilar, O. A. C. (2024). Impacto de la comprensión lectora en el aprendizaje de las matemáticas. RIDE Revista Iberoamericana para la Investigación y el Desarrollo Educativo, 14(28).
 
-Albertí, M. (2018). Las matemáticas de la vida cotidiana: la realidad como recurso de aprendizaje y las matemáticas como medio de comprensión. Catarata: Instituto de Ciencias Matemáticas; Federación Española de Sociedades de Profesores de Matemáticas. Alcedo, Y., & Chacón, C. (2011). El enfoque lúdico como estrategia metodológica para promover el aprendizaje del inglés en niños de educación primaria. SABER. Revista Multidisciplinaria del Consejo de Investigación de la Universidad de Oriente, 23(1), 69-76. Alcedo, Y., & Chacón, C. (2011). El Enfoque Lúdico como Estrategia Metodológica para Promover el Aprendizaje del Inglés en Niños de Educación Primaria. SABLE. Revista Multidisciplinaria del Consejo de Investigación de la Universidad de Oriente , 23 (1), 69-76.
+Albertí, M. (2018). Las matemáticas de la vida cotidiana: la realidad como recurso de aprendizaje y las matemáticas como medio de comprensión. Catarata: Instituto de Ciencias Matemáticas; Federación Española de Sociedades de Profesores de Matemáticas.
+
+Alcedo, Y., & Chacón, C. (2011). El enfoque lúdico como estrategia metodológica para promover el aprendizaje del inglés en niños de educación primaria. SABER. Revista Multidisciplinaria del Consejo de Investigación de la Universidad de Oriente, 23(1), 69-76.
+
+Alcedo, Y., & Chacón, C. (2011). El Enfoque Lúdico como Estrategia Metodológica para Promover el Aprendizaje del Inglés en Niños de Educación Primaria. SABLE. Revista Multidisciplinaria del Consejo de Investigación de la Universidad de Oriente, 23(1), 69-76.
 
 Alfaro, M. Y. C. (2019). Comprensión lectora y resolución de problemas matemáticos en estudiantes de un colegio privado de Lima. Revista de investigación en Psicología, 21(2), 215-224.
 
-Araya, R. G., & Mora, T. E. M. (2017). Actitudes y creencias hacia las matemáticas: un estudio comparativo entre estudiantes y profesores. Revista Electrónica" Actualidades Investigativas en Educación", 17(1), 1-45. Arcila Tovar, A., Arguello Pereira, M., Barragán Ramírez, L. Y., & Orduz Ramírez, E.,(2021). Hot Potatoes como herramienta para el fortalecimiento de la multiplicación en la resolución de situaciones problema en estudiantes de grado tercero del Colegio Integrado del Carare del municipio de Cimitarra (Santander). Universidad de Cartagena.[Trabajo de grado - Maestría, Universidad de Cartagena]. Repositorio UdeC. <https://repositorio.unicartagena.edu.co/handle/11227/14793> Baca Chávez, N., San, O. J., & Sicre, M. (n.d.). Capítulo 2. Propuestas para la enseñanza de las matemáticas APRENDIZAJE SIGNIFICATIVO DE LAS TABLAS DE MULTIPLICAR.
+Araya, R. G., & Mora, T. E. M. (2017). Actitudes y creencias hacia las matemáticas: un estudio comparativo entre estudiantes y profesores. Revista Electrónica" Actualidades Investigativas en Educación", 17(1), 1-45.
+
+Arcila Tovar, A., Arguello Pereira, M., Barragán Ramírez, L. Y., & Orduz Ramírez, E.,(2021). Hot Potatoes como herramienta para el fortalecimiento de la multiplicación en la resolución de situaciones problema en estudiantes de grado tercero del Colegio Integrado del Carare del municipio de Cimitarra (Santander). Universidad de Cartagena.[Trabajo de grado - Maestría, Universidad de Cartagena]. Repositorio UdeC. <https://repositorio.unicartagena.edu.co/handle/11227/14793>
+
+Baca Chávez, N., San, O. J., & Sicre, M. (n.d.). Capítulo 2. Propuestas para la enseñanza de las matemáticas APRENDIZAJE SIGNIFICATIVO DE LAS TABLAS DE MULTIPLICAR.
 
 Blasco, J. E., Pérez, J. A. (2007). Metodologías de investigación en las ciencias de la actividad física y el deporte: ampliando horizontes. España. Editorial Club Universitario.Borja G.
 
-Morales, L. E. M. (2015). dificultad para la solución de problemas matemáticos que involucran la operación aritmética de la multiplicación en estudiantes de grado tercero de la institución educativa gimnasio gran colombiano school de la ciudad de ibagué durante el año 2015 [proyecto de grado para especialización en Pedagogía, Universidad del Tolima]. Repositorio institucional Universidad del Tolima. <https://repository.ut.edu.co/entities/publication/ed2f0b79-8ba2-41f9-af6b-929f7f8f9bdc> Borja Ochoa, JC (2022). Importancia de las estrategias lúdicas para mejorar el aprendizaje de las operaciones matemáticas en los estudiantes de la primaria básica.[Traducir]https ://rep.tu.edu.co /transmisión de /flujo de bits /identificador /10596//51542//jcbor.pdf ?secuencia=1 y yo=y Bruner, J. S. (1960). The Process of Education. Harvard University Press.
+Borja Ochoa, JC (2022). Importancia de las estrategias lúdicas para mejorar el aprendizaje de las operaciones matemáticas en los estudiantes de la primaria básica.
 
-Carranza Rivera, N. A. (2019). Estrategias lúdicas para mejorar la resolución de problemas matemáticos en estudiantes del 5° grado de la institución educativa 11516”. Tumán.[Tesis de grado, Universidad Cesar Vallejo]. Repositorio de la Universidad César Vallejo. <https://repositorio.ucv.edu.pe/handle/20.500.12692/38345> Companioni, M. (2005). Alternativa didáctica para la solución de problemas “no rutinarios” en cuarto grado. [Tesis de doctorado]. Instituto Superior Pedagógico “José Martí”, Camagüey, Cuba.
+Bruner, J. S. (1960). The Process of Education. Harvard University Press.
 
-Da Silva, C. R. (2018). Johan Huizinga y el concepto de lo lúdico: la contribución de la filosofía a la literatura infantil matemática. Educación, 27(52), 140-159. De La Cruz, B., & Geonela, K. (2024). Estrategias didácticas para el fortalecimiento del aprendizaje de las tablas de multiplicar (Master's thesis, La Libertad, Universidad Estatal Península de Santa Elena, 2024).
+Carranza Rivera, N. A. (2019). Estrategias lúdicas para mejorar la resolución de problemas matemáticos en estudiantes del 5° grado de la institución educativa 11516”. Tumán.[Tesis de grado, Universidad Cesar Vallejo]. Repositorio de la Universidad César Vallejo. <https://repositorio.ucv.edu.pe/handle/20.500.12692/38345>
 
-Diaz-Barriga, Á. (2013). Guía para la elaboración de una secuencia didáctica. Universidad Nacional Autónoma de México.
+Companioni, M. (2005). Alternativa didáctica para la solución de problemas “no rutinarios” en cuarto grado. [Tesis de doctorado]. Instituto Superior Pedagógico “José Martí”, Camagüey, Cuba.
+
+Da Silva, C. R. (2018). Johan Huizinga y el concepto de lo lúdico: la contribución de la filosofía a la literatura infantil matemática. Educación, 27(52), 140-159.
+
+De La Cruz, B., & Geonela, K. (2024). Estrategias didácticas para el fortalecimiento del aprendizaje de las tablas de multiplicar (Master's thesis, La Libertad, Universidad Estatal Península de Santa Elena, 2024).
 
 Díaz-Barriga, Á. (2013). Guía para la elaboración de una secuencia didáctica. UNAM, México, consultada el, 10(04), 1-15.
 
+Diaz-Barriga, Á. (2013). Guía para la elaboración de una secuencia didáctica. Universidad Nacional Autónoma de México.
+
 Douek, N. (2007). Some remarks about argumentation and proof. En P. Boero (ed.). Theorems in school: From history, epistemology and cognition to classroom practice. Rotterdam, Holanda: Sense Publishers, pp. 163-181.
 
-Espinosa, A. J., & Bohórquez, L. M. P. (2013). Comunicación y argumentación en clase de matemáticas. Educación y ciencia, (16). Ferrero L. (2001). El juego y la matemática. Ed, La Muralla, S.A. Madrid <http://puentefichas.com/JICH/BADI/HEJD/capitulo.pdf>.
+Espinosa, A. J., & Bohórquez, L. M. P. (2013). Comunicación y argumentación en clase de matemáticas. Educación y ciencia, (16).
+
+Ferrero L. (2001). El juego y la matemática. Ed, La Muralla, S.A. Madrid <http://puentefichas.com/JICH/BADI/HEJD/capitulo.pdf>.
 
 Flores, L. C., & Santos, S. C. (2017). La Matemática en el desarrollo cognitivo y metacognitivo del escolar primario. EduSol, 17(60), 45-59.
 
-Flores, P. (2003). Aprendizaje en matemáticas. <https://www.ugr.es/~pflores/textos/cLASES/CAP/APRENDI.pdf> Franquiz. (2023, agosto 22). ¿Por qué es importante aprender las tablas de multiplicar? Lecto. <https://www.lecto.com.mx/por-que-es-importante-aprender-las-tablas-de-multiplicar/> Gómez Rodríguez, T., Molano, O. P., & Rodríguez Calderón, S. (2015). La actividad lúdica como estrategia pedagógica para fortalecer el aprendizaje de los niños de la institución educativa niño Jesús de Praga. Grupo Geard. (2020). ¿Cómo se evalúa la prueba de matemáticas? | Saber 11° . Grupo Geard Colombia
+Flores, P. (2003). Aprendizaje en matemáticas. <https://www.ugr.es/~pflores/textos/cLASES/CAP/APRENDI.pdf>
 
-Gualdrón, E., Pinzón, L., & Avila, A. (2020). Las operaciones básicas y el método heurístico de Pólya como pretexto para fortalecer la competencia matemática resolución de problemas. Espacios, 41(48), 106- 116.
+Franquiz. (2023, agosto 22). ¿Por qué es importante aprender las tablas de multiplicar? Lecto. <https://www.lecto.com.mx/por-que-es-importante-aprender-las-tablas-de-multiplicar/>
 
-<http://ve.scielo.org/scielo.php?script=sci_arttext&pid=S101029142015000100004&lng=es&tlng=es>. https ://gr.com /co /ayuda/icfes-s/evalua -prueba-icfes -s-11 /#:~:text=Prueba %20de%%20Matem %C3 %A1ticas,y %20la%%20soluci %C3 %B%20de %20problemas.
+Gómez Rodríguez, T., Molano, O. P., & Rodríguez Calderón, S. (2015). La actividad lúdica como estrategia pedagógica para fortalecer el aprendizaje de los niños de la institución educativa niño Jesús de Praga.
 
-Huizinga, J. (1987), Homo ludens.
+Grupo Geard. (2020). ¿Cómo se evalúa la prueba de matemáticas? | Saber 11°. Grupo Geard Colombia
 
-Alianza Editorial Kamii, C. (1989). Young Children Continue to Reinvent Arithmetic: 2nd Grade -Implications of Piaget 's Theory. Teachers College Press.
+Gualdrón, E., Pinzón, L., & Avila, A. (2020). Las operaciones básicas y el método heurístico de Pólya como pretexto para fortalecer la competencia matemática resolución de problemas. Espacios, 41(48), 106116. <http://ve.scielo.org/scielo.php?script=sci_arttext&pid=S101029142015000100004&lng=es&tlng=es.https> ://gr.com /co /ayuda/icfes-s/evalua -prueba-icfes -s-11 /#:~:text=Prueba %20de%%20Matem %C3 %A1ticas,y %20la%%20soluci %C3 %B%20de %20problemas.
+
+Huizinga, J. (1987), Homo ludens. Alianza Editorial
+
+Kamii, C. (1989). Young Children Continue to Reinvent Arithmetic: 2nd Grade -Implications of Piaget 's Theory. Teachers College Press.
 
 Karenangel. (2015, 23 marzo). Ejecutar – divirtámonos con las matematicas. Divirtámonos con las Matematicas. <https://matematicabasicaysecundaria.wordpress.com/tag/ejecutar>
 
 Latorre, A. (2005). La investigación-acción Conocer y cambiar la práctica educativa. Editorial Graó
 
-Leal Huise & Bong Anderson. (2015). La resolución de problemas matemáticos en el contexto de los proyectos de aprendizaje. Revista de Investigación, 39(84), 71-93. Recuperado en 30 de marzo de 2024, de <http://ve.scielo.org/scielo.php?script=sci_arttext&pid=S1010-> 29142015000100004&lng=es&tlng=es.
-
 Leal, H. & Bong A. (2015). La resolución de problemas matemáticos en el contexto de los proyectos de aprendizaje. Revista de Investigación, 39(84), 71-93.
 
-Luna, F. V. (2024). La interpretación matemática: su importancia en el contexto educativo y la influencia docente. Franz Tamayo-Revista de Educación, 6(15), 51-69. Méndez Rendón, JC, Espinal Patiño, C., Arbeláez Vera, DC, Gómez Gómez, JA, & Serna Aristizábal, C. (2014). La lectura crítica en la educación superior: un estado de la cuestión. Revista Virtual Universidad Católica del Norte, (41), 4-18. Ministerio de educación Nacional (2016) Derechos básicos de aprendizaje. <https://www.colombiaaprende.edu.co/sites/default/files/files_public/2022-> 06/DBA_Matematicas-min.pdf Ministerio de Educación Nacional de Colombia. (2006). Estándares Básicos de Competencias en Matemáticas. Santa Fé de Bogotá: MEN. Muñoz (2019). El pensamiento crítico para la solución a un problema. Revista de Marina, 136(970). <https://revistamarina.cl/es/articulo/el-pensamiento-critico-para-la-solucion-a-un-problema>
+Leal Huise & Bong Anderson. (2015). La resolución de problemas matemáticos en el contexto de los proyectos de aprendizaje. Revista de Investigación, 39(84), 71-93. Recuperado en 30 de marzo de 2024, de <http://ve.scielo.org/scielo.php?script=sci_arttext&pid=S101029142015000100004&lng=es&tlng=es>.
+
+Luna, F. V. (2024). La interpretación matemática: su importancia en el contexto educativo y la influencia docente. Franz Tamayo-Revista de Educación, 6(15), 51-69.
+
+Méndez Rendón, JC, Espinal Patiño, C., Arbeláez Vera, DC, Gómez Gómez, JA, & Serna Aristizábal, C. (2014). La lectura crítica en la educación superior: un estado de la cuestión. Revista Virtual Universidad Católica del Norte, (41), 4-18.
+
+Ministerio de educación Nacional (2016) Derechos básicos de aprendizaje. <https://www.colombiaaprende.edu.co/sites/default/files/files_public/202206/DBA_Matematicas-min.pdf>
+
+Ministerio de Educación Nacional de Colombia. (2006). Estándares Básicos de Competencias en Matemáticas. Santa Fé de Bogotá: MEN.
+
+Morales, L. E. M. (2015). dificultad para la solución de problemas matemáticos que involucran la operación aritmética de la multiplicación en estudiantes de grado tercero de la institución educativa gimnasio gran colombiano school de la ciudad de ibagué durante el año 2015 [proyecto de grado para especialización en Pedagogía, Universidad del Tolima]. Repositorio institucional Universidad del Tolima. <https://repository.ut.edu.co/entities/publication/ed2f0b79-8ba2-41f9-af6b-929f7f8f9bdc>
+
+Muñoz (2019). El pensamiento crítico para la solución a un problema. Revista de Marina, 136(970). <https://revistamarina.cl/es/articulo/el-pensamiento-critico-para-la-solucion-a-un-problema>
 
 Núñez-Altamirano, D. G. (2023). Metodologías para mejorar el proceso de enseñanza-aprendizaje de las tablas de multiplicar online. YUYAY: Estrategias, Metodologías & Didácticas Educativas, 2(1), 164-177.
 
 Paredes Bermeo, E. E. (2020). Importancia del factor lúdico en el proceso enseñanza-aprendizaje: propuesta de un manual de actividades lúdicas para la asignatura de Estudios Sociales (Master's thesis, Quito, EC: Universidad Andina Simón Bolívar, Sede Ecuador).
 
-Piaget, J. (1967). Etapas del desarrollo cognitivo. Gallimard: Paris Profuturo (2022). Aprendizaje cooperativo en la nueva normalidad educativa. <https://profuturo.education/observatorio/soluciones-innovadoras/el-aprendizaje-> cooperativo-en-la-nueva-normalidad- educativa/#:~:text=Los%20hermanos%20Johnson%20pensaban%20que,juntos%20para%2 0alcanzar%20objetivos%20comunes Pruebas PISA. (2022). Colombia, un sistema educativo resiliente que requiere cambios estructurales para mejorar su calidad. (s/f). <https://www.mineducacion.gov.co/portal/salaprensa/Comunicados/417751:Pruebas-PISA-> 2022-Colombia-un-sistema-educativo-resiliente-que-requiere-cambios-estructurales-para- mejorar-su-calidad Quilindo Sevilla, W. H. (2006). El proceso de enseñanza aprendizaje de las tablas de multiplicar a partir de una estrategia lúdico-pedagógica [Tesis de grado, Universidad del Cauca]. <http://repositorio.unicauca.edu.co:8080/bitstream/handle/123456789/7911/El%20proceso%> 20de%20ense%C3%B1anza%20aprendizaje%20de%20las%20tablas%20de%20multiplicar%20 a%20partir%20de%20una%20estrategia%20l%C3%BAdico- pedag%C3%B3gica.pdf?sequence=1&isAllowed=y Ramírez Oviedo, L. F. (2024). Prácticas argumentativas en la educación matemática costarricense. Revista Innovaciones Educativas, 26(41), 231-241.
+Piaget, J. (1967). Etapas del desarrollo cognitivo. Gallimard: Paris
 
-Rivadeneira (2011). Las matemáticas por competencias. Norma educativa. <https://issuu.com/gusipep/docs/guia_de_matematicas_por_competencias> Rivas, J. C. (2024). Aprendizaje Significativo Mediante la Contextualización de los Saberes en el Área de Matemáticas y Física. Ciencia Latina: Revista Multidisciplinar, 8(1), 5903-5931.
+Profuturo (2022). Aprendizaje cooperativo en la nueva normalidad educativa. <https://profuturo.education/observatorio/soluciones-innovadoras/el-aprendizajecooperativo-en-la-nueva-normalidadeducativa/#:~:text=Los%20hermanos%20Johnson%20pensaban%20que,juntos%20para%20alcanzar%20objetivos%20comunes>
 
-Sagasti, M. (2019). La ansiedad matemática. Matemáticas, Educación y Sociedad, 2(2), 1-18 <https://www.researchgate.net/profile/Maria_Sagasti_Escalona2/publication/335842850_La> _ansiedad_matematica/links/5d7ff7a192851c22d5dd28a1/La- ansiedadmatematica.pdf?origin=publication_detail Skvarc, D. R., & Fuller-Tyszkiewicz, M. (2024). Calculating Repeated-Measures Meta-Analytic Effects for Continuous Outcomes: A Tutorial on Pretest–Posttest-Controlled Designs. Advances in Methods and Practices in Psychological Science, 7(1), 25152459231217238. <https://grupogeard.com> /co /blog /icfes -s/icfes -saber-11 /evaluación-prueba- m Solera Ozuna, A. A., & Navarro Julio, L. M. (2024). Fortalecimiento de las competencias Matemáticas evaluadas en la prueba Saber 11° por medio del aprendizaje basado en problemas a través de un sitio web (Blogger) en los estudiantes de grado undécimo de la Institución Educativa Colegio Naval de Coveñas–Sucre (Doctoral dissertation, Universidad de Cartagena.).
+Pruebas PISA. (2022). Colombia, un sistema educativo resiliente que requiere cambios estructurales para mejorar su calidad. (s/f). <https://www.mineducacion.gov.co/portal/salaprensa/Comunicados/417751:Pruebas-PISA2022-Colombia-un-sistema-educativo-resiliente-que-requiere-cambios-estructurales-paramejorar-su-calidad>
+
+Quilindo Sevilla, W. H. (2006). El proceso de enseñanza aprendizaje de las tablas de multiplicar a partir de una estrategia lúdico-pedagógica [Tesis de grado, Universidad del Cauca]. <http://repositorio.unicauca.edu.co:8080/bitstream/handle/123456789/7911/El%20proceso%20de%20ense%C3%B1anza%20aprendizaje%20de%20las%20tablas%20de%20multiplicar%20a%20partir%20de%20una%20estrategia%20l%C3%BAdicopedag%C3%B3gica.pdf?sequence=1&isAllowed=y>
+
+Ramírez Oviedo, L. F. (2024). Prácticas argumentativas en la educación matemática costarricense. Revista Innovaciones Educativas, 26(41), 231-241.
+
+Rivadeneira (2011). Las matemáticas por competencias. Norma educativa. <https://issuu.com/gusipep/docs/guia_de_matematicas_por_competencias>
+
+Rivas, J. C. (2024). Aprendizaje Significativo Mediante la Contextualización de los Saberes en el Área de Matemáticas y Física. Ciencia Latina: Revista Multidisciplinar, 8(1), 5903-5931.
+
+Sagasti, M. (2019). La ansiedad matemática. Matemáticas, Educación y Sociedad, 2(2), 1-18 <https://www.researchgate.net/profile/Maria_Sagasti_Escalona2/publication/335842850_La_ansiedad_matematica/links/5d7ff7a192851c22d5dd28a1/Laansiedadmatematica.pdf?origin=publication_detail>
+
+Skvarc, D. R., & Fuller-Tyszkiewicz, M. (2024). Calculating Repeated-Measures Meta-Analytic Effects for Continuous Outcomes: A Tutorial on Pretest–Posttest-Controlled Designs. Advances in Methods and Practices in Psychological Science, 7(1), 25152459231217238. <https://doi.org/10.1177/25152459231217238>
+
+Solera Ozuna, A. A., & Navarro Julio, L. M. (2024). Fortalecimiento de las competencias Matemáticas evaluadas en la prueba Saber 11° por medio del aprendizaje basado en problemas a través de un sitio web (Blogger) en los estudiantes de grado undécimo de la Institución Educativa Colegio Naval de Coveñas–Sucre (Doctoral dissertation, Universidad de Cartagena.).
 
 Tomalá Malavé, I. A. (2024). Desarrollo de competencias matemáticas a través de actividades lúdicas interactivas para estudiantes del tercer grado (Master's thesis, La Libertad: Universidad Estatal Península de Santa Elena, 2024.).
 
-Tórrez, J. M. P. (2024). Paradigmas epistemológicos de investigación y la relación con la generación y adopción de Tecnologías agrícolas. Revista Multi-Ensayos, 10(20), 62-69. Valencia Sanchez, et al (2015). La lúdica como agente dinamizador en la enseñanza-aprendizaje de las matemáticas en el grado tercero de la institución educativa Guadalupe del municipio de Medellín. [Trabajo de grado para especialización, Fundación Universitaria Los Libertadores]. Repositorio Libertadores. <https://repository.libertadores.edu.co/handle/11371/118> Valverde, G. V. V. (2024). El Aprendizaje Invertido en la Competencia Matemática una Experiencia en la Educación Básica Peruana. Ciencia Latina Revista Científica Multidisciplinar, 8(2), 99-118. Vásquez, F., & Juana, M. (2024). El constructivismo actual y la necesaria reflexión en torno a su aplicación en la planificación didáctica.
+Tórrez, J. M. P. (2024). Paradigmas epistemológicos de investigación y la relación con la generación y adopción de Tecnologías agrícolas. Revista Multi-Ensayos, 10(20), 62-69.
+
+Valencia Sanchez, et al (2015). La lúdica como agente dinamizador en la enseñanza-aprendizaje de las matemáticas en el grado tercero de la institución educativa Guadalupe del municipio de Medellín. [Trabajo de grado para especialización, Fundación Universitaria Los Libertadores]. Repositorio Libertadores. <https://repository.libertadores.edu.co/handle/11371/118>
+
+Valverde, G. V. V. (2024). El Aprendizaje Invertido en la Competencia Matemática una Experiencia en la Educación Básica Peruana. Ciencia Latina Revista Científica Multidisciplinar, 8(2), 99-118.
+
+Vásquez, F., & Juana, M. (2024). El constructivismo actual y la necesaria reflexión en torno a su aplicación en la planificación didáctica.
 
 Vilaña Ñacato, V. E., Elizabeth Villegas González, M. A., & Ortiz Aguilar, W. (2024). Sistema de tareas lúdicas para el desarrollo de habilidades en la resolución de problemas matemáticos en los estudiantes de sexto año de básica. Sinergia Académica, 7.
 

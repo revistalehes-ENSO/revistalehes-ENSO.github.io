@@ -363,3 +363,12 @@ aside.ficha { align-self: start; display: grid; gap: 14px; }
 .perfil-rejilla .caja-exp { grid-column: 1 / -1; }
 .perfil-rejilla ul.experiencia { padding-left: 0; }
 .experiencia li { grid-template-columns: 140px 1fr; }
+.tapa-img { width: 100%; max-width: 210px; aspect-ratio: auto; border-radius: 10px; box-shadow: var(--sombra); transform: rotate(-1.5deg); transition: transform var(--vel-normal) var(--curva); }
+.tapa-img:hover { transform: rotate(0deg) scale(1.02); }
+
+/* Contra desbordes: palabras y enlaces largos se parten antes de salirse del margen */
+.cuerpo, .resumen, .ficha, .tarjeta, main { overflow-wrap: break-word; min-width: 0; }
+.cuerpo a, .cita a { overflow-wrap: anywhere; }
+.cuerpo table { display: block; max-width: 100%; overflow-x: auto; }
+.cuerpo img { max-width: 100%; height: auto; }
+.cuerpo [lang="en"], .abstract { hyphens: auto; }
