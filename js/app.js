@@ -103,6 +103,22 @@
       </span></a>`;
   }
 
+  /* Edición impresa: se hojea en una pestaña nueva (sin descargar) o se descarga */
+  const botonNumero = (n) => n.pdf_completo && !window.LEHES_EMBEBIDO
+    ? `<p class="botones-numero">
+        <a class="btn ambar" href="${esc(n.pdf_completo)}" target="_blank" rel="noopener" data-numero-pdf="${esc(n.id)}" data-accion="leer">Hojear la edición impresa</a>
+        <a class="btn claro" href="${esc(n.pdf_completo)}" download data-numero-pdf="${esc(n.id)}" data-accion="descarga">Descargar el número completo (PDF)</a>
+      </p>` : "";
+  const tapaNumero = (n) => {
+    const img = n.portada ? `<img class="tapa-img" src="${esc(rutaRecurso(n.portada))}" alt="Portada de LEHES, Vol. ${n.volumen}, Núm. ${n.numero}">` : `<div class="tapa" aria-hidden="true">
+          <small>Vol. ${n.volumen} · Núm. ${n.numero}</small>
+          <img src="${rutaRecurso("img/logo-lehes@2x.png")}" alt="">
+          <div class="barras"><i></i><i></i><i></i><i></i></div>
+        </div>`;
+    return n.pdf_completo && !window.LEHES_EMBEBIDO
+      ? `<a class="tapa-enlace" href="${esc(n.pdf_completo)}" target="_blank" rel="noopener" data-numero-pdf="${esc(n.id)}" data-accion="leer" title="Hojear la edición impresa (PDF)">${img}<span>Hojear la edición impresa</span></a>`
+      : img;
+  };
   const convocatoria = () => `<div class="convocatoria">
       <p class="mano">¡Tu investigación puede ser la próxima!</p>
       <p>Está abierta la convocatoria para el siguiente número. Pueden publicar docentes, estudiantes del PFC y semilleros de la ENSO.</p>
@@ -130,14 +146,11 @@
         </div>
       </div>
       <div class="numero-destacado">
-        <div class="tapa" aria-hidden="true">
-          <small>Vol. ${n.volumen} · Núm. ${n.numero}</small>
-          <img src="${rutaRecurso("img/logo-lehes@2x.png")}" alt="">
-          <div class="barras"><i></i><i></i><i></i><i></i></div>
-        </div>
+        ${tapaNumero(n)}
         <div>
-          <p class="meta">VOL. ${n.volumen} · NÚM. ${n.numero} · ${esc(n.fecha).toUpperCase()} · ISSN ${vacio(R.issn) ? "EN TRÁMITE" : esc(R.issn)}</p>
-          <h2>${esc(n.titulo)}</h2>
+          <p class="meta"><a href="#numero-actual">VOL. ${n.volumen} · NÚM. ${n.numero}</a> · ${esc(n.fecha).toUpperCase()} · ISSN ${vacio(R.issn) ? "EN TRÁMITE" : esc(R.issn)}</p>
+          <h2><a href="#numero-actual">${esc(n.titulo)}</a></h2>
+          ${botonNumero(n)}
           <div class="lista">${arts.map(tarjeta).join("")}</div>
           <div class="lista">${convocatoria()}</div>
         </div>
@@ -155,6 +168,15 @@
         <h3>Nota del editor</h3>
         <p>${mostrarValor(n.nota_editor, "La nota del editor de este número está por escribirse.")}</p>
       </div>
+      <div class="numero-destacado numero-impreso">
+        ${tapaNumero(n)}
+        <div>
+          <h2>Edición impresa</h2>
+          <p>La revista completa, tal como se imprime: portada, créditos, presentación, los ${arts.length} artículos con su paginación oficial y las normas para autores.</p>
+          ${botonNumero(n)}
+        </div>
+      </div>
+      <h2 style="margin-top:34px">Artículos de este número</h2>
       <div class="lista">${arts.map(tarjeta).join("")}</div>
     </section>`;
   };
@@ -566,6 +588,13 @@
     scrollTo(0, 0);
     progreso();
   }
+
+  document.addEventListener("click", (ev) => {
+    const x = ev.target.closest && ev.target.closest("[data-numero-pdf]");
+    if (!x) return;
+    const accion = x.dataset.accion === "descarga" ? "descarga" : "lectura";
+    contar({ path: `/${accion}-numero/${x.dataset.numeroPdf}`, title: `${accion === "descarga" ? "Descarga" : "Lectura"} del número completo: ${x.dataset.numeroPdf}` });
+  });
 
   const SITIOS = () => [
     [R.enlaces.sitio_enso, "Escuela Normal Superior Oiba", "Sitio institucional"],

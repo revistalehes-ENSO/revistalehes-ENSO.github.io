@@ -64,7 +64,7 @@
       "fecha": "Noviembre de 2024",
       "fecha_iso": "2024-11-20",
       "titulo": "Número inaugural",
-      "nota_editor": "[NOTA DEL EDITOR DEL VOL. 1, NÚM. 1]",
+      "nota_editor": "Con este primer número nace LEHES, la revista de investigación educativa de la Escuela Normal Superior Oiba. Su nombre reúne cuatro verbos que se aprenden en el aula y se practican toda la vida: leer, escribir, hablar y escuchar. Son también los cuatro gestos de quien investiga, porque investigar es leer con atención la realidad, escribir para comprenderla, hablar para compartirla y escuchar a quienes la habitan.",
       "creditos": [
         [
           "Revisión editorial",
@@ -103,7 +103,9 @@
           "[POR REGISTRAR]"
         ]
       ],
-      "edicion_impresa": "Tamaño 17 × 24 cm, papel propalibros de 70 g a una tinta, carátula en propalcote de 70 g plastificado en mate."
+      "edicion_impresa": "Tamaño carta (21,6 × 27,9 cm), 94 páginas: portada, créditos, comités, presentación, índice, tres artículos (pp. 1–86), normas para autores y contraportada.",
+      "portada": "img/portada-v1n1.jpg",
+      "pdf_completo": "pdf/Revista-LEHES-Vol1-Num1-2024.pdf"
     }
   ],
   "numero_actual": "v1n1",
