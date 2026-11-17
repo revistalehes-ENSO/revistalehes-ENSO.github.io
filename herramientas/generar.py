@@ -119,6 +119,53 @@ def cuerpo_html(a):
     return h, indice
 
 
+# ---------------------------------------------------------------- Índice del buscador
+def texto_plano(md):
+    t = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", md)                 # imágenes
+    t = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", t)               # enlaces
+    t = re.sub(r"<(https?://[^>]+)>", r"\1", t)
+    t = re.sub(r"[*_`]+", "", t)
+    t = re.sub(r"^\s*\|?[-: |]+\|?\s*$", "", t, flags=re.M)        # separadores de tablas
+    t = t.replace("|", " · ")
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def indice_busqueda():
+    """datos/busqueda.json: cada artículo partido en bloques (párrafos) con la sección y el ancla donde está."""
+    salida = []
+    for a in A:
+        n = numero(a["numero"])
+        bloques = [{"s": "Resumen", "a": "resumen", "k": "resumen", "t": a.get("resumen", "")}]
+        if a.get("abstract"):
+            bloques.append({"s": "Abstract", "a": "resumen", "k": "resumen", "t": a["abstract"]})
+        md = (RAIZ / a["texto"]).read_text(encoding="utf-8")
+        seccion_actual, ancla, en_refs = "Introducción", "", False
+        for parrafo in re.split(r"\n\s*\n", md):
+            p = parrafo.strip()
+            m = re.match(r"^(#{2,4})\s+(.*)$", p)
+            if m:
+                seccion_actual = re.sub(r"[*_]", "", m.group(2)).strip()
+                ancla = slug(seccion_actual)
+                en_refs = sin_tilde(seccion_actual).startswith(("referencias", "bibliografia"))
+                continue
+            t = texto_plano(p)
+            if len(t) < 25:
+                continue
+            b = {"s": seccion_actual, "a": ancla, "t": t}
+            if en_refs:
+                b["ref"] = 1
+            bloques.append(b)
+        salida.append({
+            "id": a["id"], "titulo": a["titulo"], "titulo_ingles": a.get("titulo_ingles", ""),
+            "autores": [x["nombre"] for x in a["autores"]], "anio": a["anio"],
+            "numero": f"Vol. {n['volumen']}, Núm. {n['numero']}", "seccion": seccion(a["seccion"])["nombre"],
+            "palabras_clave": a.get("palabras_clave", []), "keywords": a.get("keywords", []),
+            "paginas": a.get("paginas", ""), "bloques": bloques,
+        })
+    (RAIZ / "datos/busqueda.json").write_text(json.dumps({"generado": HOY, "articulos": salida}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"  buscador: {sum(len(x['bloques']) for x in salida)} fragmentos de {len(salida)} artículos")
+
+
 # ---------------------------------------------------------------- Imagen para compartir
 def imagen_compartir(a):
     try:
@@ -207,7 +254,8 @@ def ris(a):
 
 # ---------------------------------------------------------------- Página del artículo
 NAV = [("inicio", "Inicio"), ("numero-actual", "Número actual"), ("secciones", "Secciones"), ("archivo", "Archivo"),
-       ("docentes", "Nuestros maestros"), ("envios", "Publicar"), ("comite", "Comité editorial"), ("acerca", "Acerca de")]
+       ("docentes", "Nuestros maestros"), ("envios", "Publicar"), ("comite", "Comité editorial"), ("acerca", "Acerca de"),
+       ("contacto", "Contacto")]
 
 
 def pagina_articulo(a, cuerpo, indice, img_compartir):
@@ -306,6 +354,7 @@ def pagina_articulo(a, cuerpo, indice, img_compartir):
     </a>
     <div class="barra-der">
       <img class="escudo" src="../../img/escudo-enso.png" alt="Escudo de la Escuela Normal Superior Oiba" width="44" height="45">
+      <a class="btn-lupa" href="../../#buscar" aria-label="Buscar en la revista" title="Buscar en la revista"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></a>
       <a class="btn" href="../../#suscribirse">Suscribirme</a>
     </div>
   </div>
@@ -334,7 +383,7 @@ def pagina_articulo(a, cuerpo, indice, img_compartir):
   </div>
   <div class="articulo">
     <div class="cuerpo">
-      <div class="resumen">
+      <div class="resumen" id="resumen">
         <div class="idiomas" role="group" aria-label="Idioma del resumen">
           <button type="button" data-idioma="es" aria-pressed="true">RESUMEN</button>
           <button type="button" data-idioma="en" aria-pressed="false">ABSTRACT</button>
@@ -382,6 +431,7 @@ def pagina_articulo(a, cuerpo, indice, img_compartir):
         <div class="cc" aria-hidden="true"><span>CC</span><span>BY</span><span>NC</span><span>ND</span></div>
         <p style="margin:0">Este artículo se publica bajo licencia <a href="{e(R["licencia"]["url"])}" rel="license noopener">{e(R["licencia"]["sigla"])}</a>: se puede compartir citando a su autor, sin fines comerciales y sin modificarlo.</p>
       </div>
+      <div class="caja"><h3>¿Tienes una pregunta o un comentario?</h3><p style="margin:0 0 6px">Escríbele al equipo editorial sobre este artículo.</p><a class="btn claro" href="../../?sobre={e(a["id"])}#contacto">Escribir a LEHES</a></div>
       {f'<div class="caja"><h3>Correspondencia</h3><p style="margin:0">{e(a["autores"][0]["nombre"])}, {e(R["ciudad"])}.<br><a href="mailto:{e(correo)}">{e(correo)}</a></p></div>' if correo else ""}
     </aside>
   </div>
@@ -399,6 +449,8 @@ def pagina_articulo(a, cuerpo, indice, img_compartir):
 </footer>
 <script src="../../js/indice.js"></script>
 <script src="../../js/articulo.js"></script>
+<script src="../../js/buscador.js"></script>
+<script src="../../js/asistente.js"></script>
 </body>
 </html>
 """
@@ -438,6 +490,7 @@ def cabecera(raiz, actual, titulo, desc, url, extra_head=""):
     </a>
     <div class="barra-der">
       <img class="escudo" src="{raiz}img/escudo-enso.png" alt="Escudo de la Escuela Normal Superior Oiba" width="44" height="45">
+      <a class="btn-lupa" href="{raiz}#buscar" aria-label="Buscar en la revista" title="Buscar en la revista"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></a>
       <a class="btn" href="{raiz}#suscribirse">Suscribirme</a>
     </div>
   </div>
@@ -468,6 +521,8 @@ def pie(raiz):
     {sitios_html()}
   </div>
 </footer>
+<script src="{raiz}js/buscador.js"></script>
+<script src="{raiz}js/asistente.js"></script>
 </body>
 </html>
 """
@@ -646,6 +701,7 @@ def principal():
     (RAIZ / "maestros").mkdir(exist_ok=True)
     (RAIZ / "maestros/index.html").write_text(pagina_maestros(), encoding="utf-8")
     print(f"  perfiles: {len(perfiles())} y el directorio maestros/")
+    indice_busqueda()
     (RAIZ / "sitemap.xml").write_text(sitemap(), encoding="utf-8")
     (RAIZ / "feed.xml").write_text(feed(), encoding="utf-8")
     # Metadatos de la portada (index.html), entre las marcas SEO

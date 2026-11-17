@@ -14,7 +14,7 @@
     hablar:   { nombre: "Hablar",   frase: "Para poner las ideas en común." },
     escuchar: { nombre: "Escuchar", frase: "A la comunidad y a sus voces." }
   };
-  const VISTAS_FIJAS = ["inicio", "numero-actual", "secciones", "archivo", "docentes", "envios", "comite", "acerca", "suscribirse"];
+  const VISTAS_FIJAS = ["inicio", "numero-actual", "secciones", "archivo", "docentes", "envios", "comite", "acerca", "suscribirse", "contacto", "buscar"];
 
   let R = null;       // datos de la revista
   let A = [];         // artículos
@@ -515,8 +515,134 @@
       <p>${esc(R.institucion)}${R.direccion ? `<br>${esc(R.direccion)}` : ""}
       ${vacio(R.correo_contacto) ? "" : `<br>Correo: <a href="mailto:${esc(R.correo_contacto)}">${esc(R.correo_contacto)}</a>`}
       ${R.whatsapp && !vacio(R.whatsapp.numero) ? `<br>WhatsApp: <a href="${esc(R.enlaces.canal_whatsapp)}" rel="noopener">${esc(R.whatsapp.numero)}</a> (${esc(R.whatsapp.nombre)}, ${esc(R.whatsapp.cargo)})` : ""}</p>
+      ${bloqueCifras()}
       ${R.estado_legal ? `<p class="aviso">Estado legal: NIT ${esc(R.estado_legal.nit)} · DANE ${esc(R.estado_legal.dane)}</p>` : ""}
     </section>`;
+
+
+  /* ---------- Contacto: el mensaje llega al correo de la revista ---------- */
+  const TIPOS = ["Comentario", "Sugerencia", "Pregunta sobre un artículo", "Quiero publicar en LEHES", "Error en el sitio", "Otro"];
+  const ROLES = ["Estudiante", "Maestro en formación (PFC)", "Docente", "Madre, padre o acudiente", "Investigador o lector externo", "Otro"];
+  V.contacto = () => {
+    const c = R.contacto_revista || {};
+    const sobre = new URLSearchParams(location.search).get("sobre");
+    const art = A.find((a) => a.id === sobre);
+    return `<section class="vista contacto">
+      <div class="contacto-intro">
+        <p class="mano">Te leemos con atención</p>
+        <h1>Escríbenos</h1>
+        <p class="lead">Déjanos un comentario, una sugerencia, una pregunta sobre un artículo o una idea para la revista. Tu mensaje llega directamente al correo del equipo editorial y no se publica en el sitio.</p>
+        <ul class="contacto-promesas">
+          <li><b>Respondemos a tu correo</b>, normalmente en pocos días hábiles.</li>
+          <li><b>Tu mensaje es privado:</b> solo lo lee el equipo editorial.</li>
+          <li><b>Tus datos</b> se usan únicamente para responderte (Ley 1581 de 2012).</li>
+        </ul>
+        ${vacio(c.correo) ? "" : `<p class="aviso">¿Prefieres tu propio correo? Escríbenos a <a href="mailto:${esc(c.correo)}">${esc(c.correo)}</a>.</p>`}
+      </div>
+      <form class="formulario caja" id="form-contacto" novalidate>
+        <div class="campo"><label for="c-nombre">Tu nombre</label><input id="c-nombre" name="nombre" autocomplete="name" required maxlength="120"></div>
+        <div class="campo"><label for="c-correo">Tu correo electrónico</label><input id="c-correo" name="email" type="email" autocomplete="email" required maxlength="160">
+          <small>Lo necesitamos para responderte. No se publica ni se comparte.</small></div>
+        <div class="campo-doble">
+          <div class="campo"><label for="c-rol">Eres…</label><select id="c-rol" name="rol">${ROLES.map((r) => `<option>${esc(r)}</option>`).join("")}</select></div>
+          <div class="campo"><label for="c-tipo">Tu mensaje es…</label><select id="c-tipo" name="tipo">${TIPOS.map((t) => `<option${art && t.startsWith("Pregunta") ? " selected" : ""}>${esc(t)}</option>`).join("")}</select></div>
+        </div>
+        <div class="campo"><label for="c-art">Sobre el artículo <span class="opcional">(opcional)</span></label>
+          <select id="c-art" name="articulo"><option value="">Ninguno en particular</option>${A.map((a) => `<option value="${esc(a.titulo)}"${art && art.id === a.id ? " selected" : ""}>${esc(a.titulo)}</option>`).join("")}</select></div>
+        <div class="campo"><label for="c-msj">Mensaje</label><textarea id="c-msj" name="mensaje" rows="6" required minlength="10" maxlength="4000"></textarea></div>
+        <div class="trampa" aria-hidden="true"><label>No llenar <input name="_honey" tabindex="-1" autocomplete="off"></label></div>
+        <label class="acepto"><input type="checkbox" id="c-acepto" required> Autorizo a la Revista LEHES a usar mis datos solo para responder este mensaje, según la Ley 1581 de 2012.</label>
+        <p class="form-error" id="c-error" role="alert" hidden></p>
+        <button class="btn" type="submit" id="c-enviar">Enviar mensaje</button>
+      </form>
+    </section>`;
+  };
+  function activarContacto() {
+    const f = document.getElementById("form-contacto");
+    if (!f) return;
+    const c = R.contacto_revista || {};
+    const err = document.getElementById("c-error"), bt = document.getElementById("c-enviar");
+    const fallo = (t) => { err.innerHTML = t; err.hidden = false; };
+    f.addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+      err.hidden = true;
+      const d = Object.fromEntries(new FormData(f).entries());
+      if (d._honey) return;                                   // robot
+      if (!d.nombre.trim()) return fallo("Escribe tu nombre."), f.nombre.focus();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email.trim())) return fallo("Revisa tu correo electrónico: lo necesitamos para responderte."), f.email.focus();
+      if (d.mensaje.trim().length < 10) return fallo("Cuéntanos un poco más en el mensaje."), f.mensaje.focus();
+      if (!document.getElementById("c-acepto").checked) return fallo("Para enviarlo, marca la autorización de tratamiento de datos.");
+      if (vacio(c.formulario)) return fallo(`El formulario aún no está activo. Mientras tanto escríbenos a <a href="mailto:${esc(c.correo || R.correo_contacto)}">${esc(c.correo || R.correo_contacto)}</a>.`);
+      bt.disabled = true; bt.textContent = "Enviando…";
+      const cuerpo = {
+        _subject: `LEHES · ${d.tipo}${d.articulo ? " · " + d.articulo.slice(0, 60) : ""} · ${d.nombre}`,
+        _template: "table", _captcha: "false", _replyto: d.email.trim(),
+        Nombre: d.nombre.trim(), email: d.email.trim(), Rol: d.rol, Tipo: d.tipo,
+        Artículo: d.articulo || "—", Mensaje: d.mensaje.trim(), Página: location.href,
+      };
+      try {
+        const r = await fetch(c.formulario, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(cuerpo) });
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok || String(j.success) === "false") throw new Error(j.message || r.status);
+        contar({ path: "/contacto-enviado", title: "Mensaje enviado desde Contacto" });
+        f.outerHTML = `<div class="caja enviado" role="status"><p class="mano">¡Gracias, ${esc(d.nombre.split(" ")[0])}!</p>
+          <h2>Tu mensaje ya va en camino</h2><p>Lo recibimos en el correo de la revista. Te responderemos a <b>${esc(d.email)}</b>.</p>
+          <a class="btn claro" href="#inicio">Volver al inicio</a></div>`;
+      } catch (e) {
+        bt.disabled = false; bt.textContent = "Enviar mensaje";
+        fallo(`No pudimos enviar el mensaje (${esc(e.message)}). Inténtalo de nuevo en un momento o escríbenos a <a href="mailto:${esc(c.correo || R.correo_contacto)}">${esc(c.correo || R.correo_contacto)}</a>.`);
+      }
+    });
+  }
+
+  /* ---------- Buscador de texto completo ---------- */
+  V.buscar = () => {
+    const q = new URLSearchParams(location.search).get("q") || "";
+    return `<section class="vista buscar">
+      <p class="mano">Todo lo publicado, en un solo lugar</p>
+      <h1>Buscar en LEHES</h1>
+      <form class="buscar-form" id="form-buscar" role="search">
+        <label class="visualmente-oculto" for="b-q">Buscar en los artículos</label>
+        <input id="b-q" type="search" value="${esc(q)}" placeholder="Un tema, un autor, una palabra clave…" autocomplete="off" maxlength="200">
+        <button class="btn" type="submit">Buscar</button>
+      </form>
+      <label class="b-refs"><input type="checkbox" id="b-refs"> Buscar también en las referencias bibliográficas</label>
+      <div id="b-resultados" aria-live="polite"><p class="aviso">Busca en el texto completo de los artículos: títulos, resúmenes, palabras clave, cada sección y, si lo marcas, las referencias.</p></div>
+    </section>`;
+  };
+  function activarBuscar() {
+    const f = document.getElementById("form-buscar"), q = document.getElementById("b-q"), caja = document.getElementById("b-resultados"), refs = document.getElementById("b-refs");
+    const B = window.LEHESBuscador;
+    if (!B) return;
+    let t = null;
+    const pintar = async () => {
+      const texto = q.value.trim();
+      if (texto.length < 2) return;
+      try { await B.cargar(""); } catch (_) { caja.innerHTML = `<p class="aviso">No se pudo cargar el índice de búsqueda.</p>`; return; }
+      const r = B.buscar(texto, { pasajes: 4, referencias: refs.checked });
+      const url = new URL(location.href); url.searchParams.set("q", texto); history.replaceState(null, "", url);
+      if (!r.length) { caja.innerHTML = `<p class="aviso">No encontramos «${esc(texto)}» en los artículos publicados. Prueba con otra palabra, un sinónimo o en inglés.</p>`; return; }
+      caja.innerHTML = `<p class="b-cuenta">${r.length} ${r.length === 1 ? "artículo" : "artículos"} con «${esc(texto)}»</p>` + r.map(({ articulo: a, pasajes }) => `
+        <article class="b-res">
+          <a class="b-tit" href="${esc(enlaceArticulo(a.id))}">${esc(a.titulo)}</a>
+          <p class="meta">${esc(a.autores.join(", "))} · ${esc(a.seccion)} · ${esc(a.numero)} (${a.anio}) · pp. ${esc(a.paginas)}</p>
+          ${pasajes.map((p) => `<a class="b-pasaje${p.ref ? " ref" : ""}" href="${esc(enlaceArticulo(a.id) + (window.LEHES_EMBEBIDO ? "" : "#" + p.ancla))}"><span>${esc(p.seccion)}</span>${p.html}</a>`).join("")}
+        </article>`).join("");
+    };
+    f.addEventListener("submit", (e) => { e.preventDefault(); clearTimeout(t); pintar(); contar({ path: "/busqueda", title: "Búsqueda en la revista" }); });
+    q.addEventListener("input", () => { clearTimeout(t); t = setTimeout(pintar, 250); });
+    refs.addEventListener("change", pintar);
+    if (q.value) pintar();
+    q.focus();
+  }
+
+  /* ---------- Cifras del sitio (para Acerca de) ---------- */
+  const bloqueCifras = () => GC.codigo ? `<h2>LEHES en cifras</h2>
+      <div class="cifras">
+        <div><b data-cifra="TOTAL">…</b><span>visitas al sitio</span></div>
+        ${A.map((a) => `<div><b data-cifra="/articulo/${esc(a.id)}">…</b><span>lecturas de «${esc(a.titulo.split(":")[0].slice(0, 48))}${a.titulo.length > 48 ? "…" : ""}»</span></div>`).join("")}
+      </div>
+      <p class="aviso">Cifras desde que se activó el contador. No usamos cookies ni guardamos datos personales de los lectores.</p>` : "";
 
   V.suscribirse = () => {
     const e = R.enlaces;
@@ -581,6 +707,9 @@
     });
     if (h === "archivo") activarArchivo();
     if (h === "docentes") activarDocentes();
+    if (h === "contacto") activarContacto();
+    if (h === "buscar") activarBuscar();
+    if (h === "acerca") pintarCifras(app);
     if (!h.startsWith("articulo-")) contar({ path: "/" + h, title: document.title + " · " + h });
     if (h.startsWith("articulo-")) activarArticulo(h.slice(9));
     if (h === "inicio") maquinaDeEscribir();

@@ -159,5 +159,10 @@
     "nombre": "Sandra Zulay Jáuregui Mora",
     "cargo": "Coordinadora ENSO",
     "numero": "+57 311 823 3637"
+  },
+  "contacto_revista": {
+    "_ayuda": "Correo que recibe los mensajes del formulario de Contacto. El formulario usa FormSubmit (gratis): la primera vez llega un correo de activación a esta cuenta; hay que abrirlo y pulsar «Activate Form». Después FormSubmit ofrece un código secreto que puede reemplazar el correo en 'formulario' para ocultarlo.",
+    "correo": "revistalehes@gmail.com",
+    "formulario": "https://formsubmit.co/ajax/revistalehes@gmail.com"
   }
 }

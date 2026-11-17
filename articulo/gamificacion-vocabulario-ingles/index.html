@@ -57,11 +57,12 @@
     </a>
     <div class="barra-der">
       <img class="escudo" src="../../img/escudo-enso.png" alt="Escudo de la Escuela Normal Superior Oiba" width="44" height="45">
+      <a class="btn-lupa" href="../../?#buscar" aria-label="Buscar en la revista" title="Buscar en la revista"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></a>
       <a class="btn" href="../../#suscribirse">Suscribirme</a>
     </div>
   </div>
   <nav class="envoltura pestanas" aria-label="Secciones de la revista">
-    <a href="../../#inicio">Inicio</a><a href="../../#numero-actual">Número actual</a><a href="../../#secciones">Secciones</a><a href="../../#archivo" aria-current="page">Archivo</a><a href="../../#docentes">Nuestros maestros</a><a href="../../#envios">Publicar</a><a href="../../#comite">Comité editorial</a><a href="../../#acerca">Acerca de</a>
+    <a href="../../#inicio">Inicio</a><a href="../../#numero-actual">Número actual</a><a href="../../#secciones">Secciones</a><a href="../../#archivo" aria-current="page">Archivo</a><a href="../../#docentes">Nuestros maestros</a><a href="../../#envios">Publicar</a><a href="../../#comite">Comité editorial</a><a href="../../#acerca">Acerca de</a><a href="../../#contacto">Contacto</a>
   </nav>
 </header>
 <main id="contenido" class="envoltura" tabindex="-1">
@@ -85,7 +86,7 @@
   </div>
   <div class="articulo">
     <div class="cuerpo">
-      <div class="resumen">
+      <div class="resumen" id="resumen">
         <div class="idiomas" role="group" aria-label="Idioma del resumen">
           <button type="button" data-idioma="es" aria-pressed="true">RESUMEN</button>
           <button type="button" data-idioma="en" aria-pressed="false">ABSTRACT</button>
@@ -319,6 +320,7 @@
         <div class="cc" aria-hidden="true"><span>CC</span><span>BY</span><span>NC</span><span>ND</span></div>
         <p style="margin:0">Este artículo se publica bajo licencia <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es" rel="license noopener">CC BY-NC-ND 4.0</a>: se puede compartir citando a su autor, sin fines comerciales y sin modificarlo.</p>
       </div>
+      <div class="caja"><h3>¿Tienes una pregunta o un comentario?</h3><p style="margin:0 0 6px">Escríbele al equipo editorial sobre este artículo.</p><a class="btn claro" href="../../?sobre=gamificacion-vocabulario-ingles#contacto">Escribir a LEHES</a></div>
       <div class="caja"><h3>Correspondencia</h3><p style="margin:0">Lizeth Dayana López Martínez, Oiba, Santander, Colombia.<br><a href="mailto:lizethdayanalopez02@gmail.com">lizethdayanalopez02@gmail.com</a></p></div>
     </aside>
   </div>
@@ -336,5 +338,7 @@
 </footer>
 <script src="../../js/indice.js"></script>
 <script src="../../js/articulo.js"></script>
+<script src="../../js/buscador.js"></script>
+<script src="../../js/asistente.js"></script>
 </body>
 </html>
